@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "677615375301",
+    "firebase_url": "https://eraapp-2588d.firebaseio.com",
+    "project_id": "eraapp-2588d",
+    "storage_bucket": "eraapp-2588d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:677615375301:android:b94d1e88ae148c14f8f1ac",
+        "android_client_info": {
+          "package_name": "com.example.ERA"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "677615375301-sactehe2kutdjf28l6qhoa4574m7o2re.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ERA",
+            "certificate_hash": "a1c38f7b7d89ac25dd3a6c64f42956226253145a"
+          }
+        },
+        {
+          "client_id": "677615375301-lifprd9rpbrd54cq9la7c6fve8gd9sla.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrQ2ESI7cbTsze99OahA78t3wyG15Xm1o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "677615375301-lifprd9rpbrd54cq9la7c6fve8gd9sla.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
