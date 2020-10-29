@@ -11,14 +11,15 @@ class VideoPage extends StatefulWidget {
 }
 
 class _VideoPageState extends State<VideoPage> {
-  TextEditingController textcontroller = TextEditingController();
-  String query = " ";
+  TextEditingController textcontroller;
+  String query = '';
   List<VideoDetail> videoList = List<VideoDetail>();
   GetVideo getVideo = GetVideo();
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
+    textcontroller = TextEditingController(text: '');
     getVideo.fetchAllVideos().then((List<VideoDetail> value) {
       setState(() {
         videoList = value;
@@ -36,7 +37,6 @@ class _VideoPageState extends State<VideoPage> {
   @override
   Widget build(BuildContext context) {
     buildSuggestions(String query) {
-      print(query);
       final List<VideoDetail> suggestionList = query.isEmpty
           ? []
           : videoList != null
@@ -91,7 +91,7 @@ class _VideoPageState extends State<VideoPage> {
       }
     }
 
-    allvideo() {
+    allvideo(String query) {
       return ListView.builder(
         // reverse: true,
         itemCount: videoList.length,
@@ -128,81 +128,69 @@ class _VideoPageState extends State<VideoPage> {
           style: TextStyle(color: Colors.amber),
         ),
       ),
-      body: Container(
-        color: Colors.grey[300],
-        // decoration: BoxDecoration(
-        //   image: DecorationImage(
-        //     image: AssetImage('assets/images/splash.png'),
-        //     fit: BoxFit.cover,
-        //   ),
-        // ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Container(
-              height: SizeConfig.orientation == Orientation.landscape
-                  ? 60
-                  : getProportionateScreenHeight(75),
-              margin: EdgeInsets.all(3),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(5),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Videos",
-                    style: TextStyle(
-                        fontSize: getProportionateScreenWidth(22),
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xff03258C)),
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Card(
-                    elevation: 10,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)),
-                    child: Container(
-                      height: SizeConfig.orientation == Orientation.landscape
-                          ? 40
-                          : getProportionateScreenHeight(40),
-                      width:
-                          MediaQuery.of(context).size.width > 500 ? 450 : 250,
-                      // decoration: BoxDecoration(
-                      //   shape: BoxShape.rectangle,
-                      //   border: Border.all(
-                      //     color: Colors.black,
-                      //     width: 1.0,
-                      //   ),
-                      // ),
-                      child: TextField(
-                        controller: textcontroller,
-                        onChanged: (value) {
-                          setState(() {
-                            query = value;
-                          });
-                        },
-                        textInputAction: TextInputAction.done,
-                        style: TextStyle(fontSize: 18),
-                        keyboardType: TextInputType.name,
-                        textAlign: TextAlign.left,
-                        decoration: const InputDecoration(
-                          prefixIcon: Icon(Icons.search),
-                          border: InputBorder.none,
-                        ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Container(
+            height: SizeConfig.orientation == Orientation.landscape
+                ? 60
+                : getProportionateScreenHeight(75),
+            margin: EdgeInsets.all(3),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(5),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Videos",
+                  style: TextStyle(
+                      fontSize: getProportionateScreenWidth(22),
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white),
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Card(
+                  elevation: 10,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Container(
+                    height: SizeConfig.orientation == Orientation.landscape
+                        ? 40
+                        : getProportionateScreenHeight(40),
+                    width: MediaQuery.of(context).size.width > 500 ? 450 : 250,
+                    // decoration: BoxDecoration(
+                    //   shape: BoxShape.rectangle,
+                    //   border: Border.all(
+                    //     color: Colors.black,
+                    //     width: 1.0,
+                    //   ),
+                    // ),
+                    child: TextField(
+                      controller: textcontroller,
+                      onChanged: (value) {
+                        query = value;
+                      },
+                      textInputAction: TextInputAction.done,
+                      style: TextStyle(fontSize: 18),
+                      keyboardType: TextInputType.name,
+                      textAlign: TextAlign.left,
+                      decoration: const InputDecoration(
+                        prefixIcon: Icon(Icons.search),
+                        border: InputBorder.none,
                       ),
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
-            Flexible(
-              child: query.isEmpty ? allvideo() : buildSuggestions(query),
-            ),
-          ],
-        ),
+          ),
+          Flexible(
+            child: query.isEmpty ? allvideo(query) : buildSuggestions(query),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         elevation: 10,
