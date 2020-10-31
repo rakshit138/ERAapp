@@ -19,6 +19,7 @@ class Users {
   Map toMap(Users users) {
     var map = Map<String, dynamic>();
     map['uid'] = users.uid;
+    map['email'] = users.email;
     map['name'] = users.name;
     map['class'] = users.class_name;
     map['phone'] = users.phone;
@@ -32,5 +33,6 @@ class Users {
     this.class_name = map['class'];
     this.timestamp = map['timestamp'];
     this.phone = map['phone'];
+    this.email = map['email'];
   }
 }

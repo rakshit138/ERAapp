@@ -2,6 +2,8 @@ import 'package:ERA/HomeScreen/homescreen.dart';
 import 'package:ERA/Start.dart';
 import 'package:ERA/VideoLibrary/MyHomePage.dart';
 import 'package:ERA/loading.dart';
+import 'package:ERA/models/users.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +19,8 @@ class _HomePageState extends State<HomePage> {
   bool isloggedin = false;
   bool _loading = false;
   User firebaseUser;
+  DocumentSnapshot _documentSnapshot;
+  Users users;
 
   Future<void> checkAuthentification() async {
     _auth.authStateChanges().listen((user) {
@@ -38,6 +42,7 @@ class _HomePageState extends State<HomePage> {
     firebaseUser = _auth.currentUser;
     await firebaseUser?.reload();
     firebaseUser = _auth.currentUser;
+
     if (firebaseUser != null) {
       setState(() {
         this.user = firebaseUser;
@@ -53,10 +58,21 @@ class _HomePageState extends State<HomePage> {
     _auth.signOut();
   }
 
+  Future<void> getName() async {
+    _documentSnapshot = await FirebaseFirestore.instance
+        .collection("Students")
+        .doc(firebaseUser.uid)
+        .get();
+    setState(() {
+      users = Users.fromMap(_documentSnapshot.data());
+    });
+  }
+
   @override
   void initState() {
     this.checkAuthentification();
     this.getUser();
+    this.getName();
     super.initState();
     final fbm = FirebaseMessaging();
     fbm.requestNotificationPermissions();
@@ -132,7 +148,9 @@ class _HomePageState extends State<HomePage> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => HomeScreen(),
+                                  builder: (context) => HomeScreen(
+                                    users: users,
+                                  ),
                                 ),
                               );
                             },

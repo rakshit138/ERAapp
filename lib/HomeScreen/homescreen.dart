@@ -1,4 +1,6 @@
 import 'package:ERA/VideoLibrary/MyHomePage.dart';
+import 'package:ERA/models/users.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'intro.dart';
@@ -19,6 +21,9 @@ import 'package:ERA/courses/coding.dart';
 
 class HomeScreen extends StatelessWidget {
   final FirebaseAuth _auth = FirebaseAuth.instance;
+  final Users users;
+  HomeScreen({this.users});
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -39,38 +44,54 @@ class HomeScreen extends StatelessWidget {
           child: ListView(
             padding: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 0.0),
             children: <Widget>[
-              DrawerHeader(
-                child: Column(
-                  children: <Widget>[
-                    Image(
-                      image: AssetImage('assets/images/logo png 3.png'),
-                      height: 50,
-                      width: 50,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.all(5),
-                      child: Text('ERA',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 24,
-                              fontFamily: 'Merriweather')),
-                    ),
-                    Text('Assistant to Redefine Education',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                            fontFamily: 'Dancing Script')),
-                  ],
+              // DrawerHeader(
+              //   child: Column(
+              //     children: <Widget>[
+              //       Image(
+              //         image: AssetImage('assets/images/logo png 3.png'),
+              //         height: 50,
+              //         width: 50,
+              //       ),
+              //       Padding(
+              //         padding: EdgeInsets.all(5),
+              //         child: Text('ERA',
+              //             style: TextStyle(
+              //                 color: Colors.white,
+              //                 fontSize: 24,
+              //                 fontFamily: 'Merriweather')),
+              //       ),
+              //       Text('Assistant to Redefine Education',
+              //           style: TextStyle(
+              //               color: Colors.white,
+              //               fontSize: 20,
+              //               fontFamily: 'Dancing Script')),
+              //     ],
+              //   ),
+              //   decoration: BoxDecoration(
+              //       color: Colors.blueGrey,
+              //       image: DecorationImage(
+              //           colorFilter: new ColorFilter.mode(
+              //             Colors.grey.withOpacity(0.2),
+              //             BlendMode.dstATop,
+              //           ),
+              //           image: AssetImage('assets/images/headerBackground.jpg'),
+              //           fit: BoxFit.cover)),
+              // ),
+              UserAccountsDrawerHeader(
+                accountName: Text(users.name),
+                accountEmail: Text(users.email),
+                currentAccountPicture: CircleAvatar(
+                  backgroundColor:
+                      Theme.of(context).platform == TargetPlatform.iOS
+                          ? Colors.blue
+                          : Colors.white,
+                  child: Text(
+                    users.name
+                        .substring(0, 2)
+                        .toUpperCase(), //User First and second name letter
+                    style: TextStyle(fontSize: 40.0),
+                  ),
                 ),
-                decoration: BoxDecoration(
-                    color: Colors.blueGrey,
-                    image: DecorationImage(
-                        colorFilter: new ColorFilter.mode(
-                          Colors.grey.withOpacity(0.2),
-                          BlendMode.dstATop,
-                        ),
-                        image: AssetImage('assets/images/headerBackground.jpg'),
-                        fit: BoxFit.cover)),
               ),
               ListTile(
                 leading: Icon(Icons.home),
