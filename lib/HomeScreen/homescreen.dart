@@ -78,13 +78,27 @@ class HomeScreen extends StatelessWidget {
               //           fit: BoxFit.cover)),
               // ),
               UserAccountsDrawerHeader(
-                accountName: Text(users.name),
-                accountEmail: Text(users.email),
+                accountName: Text(
+                  '${users.name}',
+                  style: TextStyle(
+                      fontSize: 15,
+                      color: Color(0xff03258C),
+                      fontWeight: FontWeight.w500,
+                      fontFamily: 'Merriweather'),
+                ),
+                accountEmail: Text(
+                  '${users.email}',
+                  style: TextStyle(
+                      fontSize: 15,
+                      color: Color(0xff03258C),
+                      fontWeight: FontWeight.w500,
+                      fontFamily: 'Merriweather'),
+                ),
                 currentAccountPicture: CircleAvatar(
                   backgroundColor:
                       Theme.of(context).platform == TargetPlatform.iOS
-                          ? Colors.blue
-                          : Colors.white,
+                          ? Colors.white
+                          : Color(0xff03258C),
                   child: Text(
                     users.name
                         .substring(0, 2)
@@ -100,8 +114,7 @@ class HomeScreen extends StatelessWidget {
                   style: TextStyle(fontSize: 15),
                 ),
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => HomeScreen()));
+                  Navigator.pop(context);
                 },
                 dense: true,
               ),
@@ -252,146 +265,156 @@ class HomeScreen extends StatelessWidget {
             ],
           ),
         ),
-        body: Container(
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                // HeaderImg(),
-                // VideoExample(),
-                Intro(),
-                Padding(
-                  padding: EdgeInsets.all(10),
-                  child: Text(
-                    'Why ERA ?',
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontFamily: 'Merriweather',
-                        fontSize: 35,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ),
-                Features(),
-                Padding(
-                  padding: EdgeInsets.all(10),
-                  child: Text(
-                    'Our Awe-inspiring Faculty',
-                    style: TextStyle(
-                        fontFamily: 'Merriweather',
-                        color: Colors.black,
-                        fontSize: 40.0,
-                        fontWeight: FontWeight.bold),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                Faculty(),
-                Align(
-                  alignment: Alignment.topLeft,
-                  child: Padding(
-                    padding: EdgeInsets.fromLTRB(20, 5, 5, 5),
-                    child: Text(
-                      'Our Packages include',
-                      style: TextStyle(
-                          fontFamily: 'Merriweather',
-                          color: Color(0xff03258C),
-                          fontSize: 25.0,
-                          fontWeight: FontWeight.bold),
-                      textAlign: TextAlign.left,
+        body: Stack(children: [
+          // Container(
+          //   decoration: new BoxDecoration(
+          //       image: DecorationImage(
+          //           image: AssetImage("assets/images/Home Page.png"),
+          //           fit: BoxFit.cover)),
+          // ),
+          Container(
+            child: SingleChildScrollView(
+              child: Container(
+                child: Column(
+                  children: [
+                    // HeaderImg(),
+                    // VideoExample(),
+                    Intro(),
+                    Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Text(
+                        'Why ERA ?',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontFamily: 'Merriweather',
+                            fontSize: 35,
+                            fontWeight: FontWeight.bold),
+                      ),
                     ),
-                  ),
-                ),
-                Align(
-                  alignment: Alignment.topLeft,
-                  child: Padding(
-                    padding: EdgeInsets.fromLTRB(20.0, 5, 5, 5),
-                    child: Text(
-                      'For classes 6,7 and 8',
-                      style: TextStyle(
-                          fontFamily: 'Merriweather',
-                          color: Color(0xff03258C),
-                          fontSize: 20.0,
-                          fontWeight: FontWeight.normal),
+                    Features(),
+                    Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Text(
+                        'Our Awe-inspiring Faculty',
+                        style: TextStyle(
+                            fontFamily: 'Merriweather',
+                            color: Colors.black,
+                            fontSize: 40.0,
+                            fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.center,
+                      ),
                     ),
-                  ),
-                ),
-                Packages(),
-                Align(
-                  alignment: Alignment.topLeft,
-                  child: Padding(
-                    padding: EdgeInsets.fromLTRB(20.0, 5, 5, 5),
-                    child: Text(
-                      'For class 9 and 10',
-                      style: TextStyle(
-                          fontFamily: 'Merriweather',
-                          color: Color(0xff03258C),
-                          fontSize: 20.0,
-                          fontWeight: FontWeight.normal),
+                    Faculty(),
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Padding(
+                        padding: EdgeInsets.fromLTRB(20, 5, 5, 5),
+                        child: Text(
+                          'Our Packages include',
+                          style: TextStyle(
+                              fontFamily: 'Merriweather',
+                              color: Color(0xff03258C),
+                              fontSize: 25.0,
+                              fontWeight: FontWeight.bold),
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
                     ),
-                  ),
-                ),
-                HigheClassPackages(),
-                // Padding(
-                //   padding: EdgeInsets.all(10),
-                //   child: Text(
-                //     'Our Monsoon Offers...',
-                //     style: TextStyle(
-                //         fontFamily: 'Merriweather',
-                //         color: Colors.grey[600],
-                //         fontSize: 35.0,
-                //         fontWeight: FontWeight.bold),
-                //     textAlign: TextAlign.center,
-                //   ),
-                // ),
-                // Offers(),
-                Align(
-                  alignment: Alignment.topLeft,
-                  child: Padding(
-                    padding: EdgeInsets.all(10),
-                    child: Text(
-                      'Parents Testimonials',
-                      style: TextStyle(
-                          fontFamily: 'Merriweather',
-                          color: Color(0xff03258C),
-                          fontSize: 25.0,
-                          fontWeight: FontWeight.bold),
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Padding(
+                        padding: EdgeInsets.fromLTRB(20.0, 5, 5, 5),
+                        child: Text(
+                          'For classes 6,7 and 8',
+                          style: TextStyle(
+                              fontFamily: 'Merriweather',
+                              color: Color(0xff03258C),
+                              fontSize: 20.0,
+                              fontWeight: FontWeight.normal),
+                        ),
+                      ),
                     ),
-                  ),
-                ),
-                Testimonials(),
-                ImageSlider(),
-                Align(
-                  alignment: Alignment.topLeft,
-                  child: Padding(
-                    padding: EdgeInsets.fromLTRB(10.0, 20.0, 0.0, 20.0),
-                    child: Text(
-                      'Always at your service...',
-                      style: TextStyle(
-                          fontFamily: 'Merriweather',
-                          color: Color(0xff03258C),
-                          fontSize: 25.0,
-                          fontWeight: FontWeight.bold),
-                      textAlign: TextAlign.center,
+                    Packages(),
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Padding(
+                        padding: EdgeInsets.fromLTRB(20.0, 5, 5, 5),
+                        child: Text(
+                          'For class 9 and 10',
+                          style: TextStyle(
+                              fontFamily: 'Merriweather',
+                              color: Color(0xff03258C),
+                              fontSize: 20.0,
+                              fontWeight: FontWeight.normal),
+                        ),
+                      ),
                     ),
-                  ),
+                    HigheClassPackages(),
+                    // Padding(
+                    //   padding: EdgeInsets.all(10),
+                    //   child: Text(
+                    //     'Our Monsoon Offers...',
+                    //     style: TextStyle(
+                    //         fontFamily: 'Merriweather',
+                    //         color: Colors.grey[600],
+                    //         fontSize: 35.0,
+                    //         fontWeight: FontWeight.bold),
+                    //     textAlign: TextAlign.center,
+                    //   ),
+                    // ),
+                    // Offers(),
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Padding(
+                        padding: EdgeInsets.all(10),
+                        child: Text(
+                          'Parents Testimonials',
+                          style: TextStyle(
+                              fontFamily: 'Merriweather',
+                              color: Color(0xff03258C),
+                              fontSize: 25.0,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                    ),
+                    Testimonials(),
+                    ImageSlider(),
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Padding(
+                        padding: EdgeInsets.fromLTRB(10.0, 20.0, 0.0, 20.0),
+                        child: Text(
+                          'Always at your service...',
+                          style: TextStyle(
+                              fontFamily: 'Merriweather',
+                              color: Color(0xff03258C),
+                              fontSize: 25.0,
+                              fontWeight: FontWeight.bold),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ),
+                    // Padding(
+                    //   padding: EdgeInsets.all(10.0),
+                    //   child: Text(
+                    //     'Our Academic Advisors',
+                    //     style: TextStyle(
+                    //         fontFamily: 'Merriweather',
+                    //         color: Colors.grey[800],
+                    //         fontSize: 20.0,
+                    //         fontWeight: FontWeight.normal),
+                    //     textAlign: TextAlign.center,
+                    //   ),
+                    // ),
+                    Advisors(),
+                    Footer()
+                  ],
                 ),
-                // Padding(
-                //   padding: EdgeInsets.all(10.0),
-                //   child: Text(
-                //     'Our Academic Advisors',
-                //     style: TextStyle(
-                //         fontFamily: 'Merriweather',
-                //         color: Colors.grey[800],
-                //         fontSize: 20.0,
-                //         fontWeight: FontWeight.normal),
-                //     textAlign: TextAlign.center,
-                //   ),
-                // ),
-                Advisors(),
-                Footer()
-              ],
+              ),
             ),
           ),
-        ),
+        ]),
       ),
     );
   }
