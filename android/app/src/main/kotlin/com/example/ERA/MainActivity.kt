@@ -1,4 +1,4 @@
-package com.example.ERA
+package com.assitantera.strot
 
 import io.flutter.embedding.android.FlutterActivity
 
