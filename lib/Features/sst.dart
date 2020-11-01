@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:ERA/footer.dart';
 
-class Coding extends StatefulWidget {
+class Sst extends StatefulWidget {
   @override
-  _CodingState createState() => _CodingState();
+  _SstState createState() => _SstState();
 }
 
-class _CodingState extends State<Coding> {
+class _SstState extends State<Sst> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -27,7 +27,7 @@ class _CodingState extends State<Coding> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                CodingHeading(),
+                SstHeading(),
                 Footer(),
               ],
             ),
@@ -38,7 +38,7 @@ class _CodingState extends State<Coding> {
   }
 }
 
-class CodingHeading extends StatelessWidget {
+class SstHeading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -54,7 +54,7 @@ class CodingHeading extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.fromLTRB(30, 10, 10, 10),
               child: Text(
-                'Coding',
+                'Strot Scholarship Test',
                 style: TextStyle(
                     color: Colors.white,
                     fontFamily: 'Merriweather',
@@ -71,7 +71,7 @@ class CodingHeading extends StatelessWidget {
               child: Container(
                 width: MediaQuery.of(context).size.width / 1.25,
                 child: Text(
-                  'Something about Coding',
+                  'Something about Sst',
                   textAlign: TextAlign.start,
                   style: TextStyle(
                       fontFamily: 'Merriweather',

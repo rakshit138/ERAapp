@@ -93,6 +93,8 @@ flutter:
     - assets/images/splash.png
     - assets/images/Frame 1.png
     - assets/images/Home Page 2.png
+    - assets/images/LoginBG.png
+    - assets/images/Log-In.png
     - assets/videos/Intro.mp4
     - assets/text/
 

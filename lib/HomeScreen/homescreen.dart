@@ -1,6 +1,6 @@
+import 'package:ERA/Features/sst.dart';
 import 'package:ERA/VideoLibrary/MyHomePage.dart';
 import 'package:ERA/models/users.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'intro.dart';
@@ -232,11 +232,12 @@ class HomeScreen extends StatelessWidget {
               ListTile(
                 leading: Icon(Icons.school),
                 title: Text(
-                  'Start Scholarship Test',
+                  'Strot Scholarship Test',
                   style: TextStyle(fontSize: 15),
                 ),
                 onTap: () {
-                  Navigator.pop(context);
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => Sst()));
                 },
                 dense: true,
               ),

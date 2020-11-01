@@ -44,12 +44,9 @@ class MathsHeading extends StatelessWidget {
     return Container(
       height: 250,
       decoration: new BoxDecoration(
-        color: Color(0xff03258C),
-        borderRadius: BorderRadius.only(
-          bottomLeft: Radius.elliptical(250, 150),
-          bottomRight: Radius.elliptical(350, 250),
-        ),
-      ),
+          image: DecorationImage(
+              image: AssetImage("assets/images/Home Page 2.png"),
+              fit: BoxFit.fill)),
       child: Column(
         children: [
           Align(
