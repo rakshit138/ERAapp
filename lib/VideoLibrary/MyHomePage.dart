@@ -59,10 +59,11 @@ class _VideoPageState extends State<VideoPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "Oop! Sorry result found...",
+                  "Oops! Sorry No result found...",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontSize: getProportionateScreenWidth(25),
+                    fontFamily: 'Merriweather',
+                    fontSize: getProportionateScreenWidth(20),
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                   ),

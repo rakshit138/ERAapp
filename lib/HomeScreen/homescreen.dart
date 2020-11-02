@@ -17,6 +17,8 @@ import 'package:ERA/courses/science.dart';
 import 'package:ERA/courses/aptitudeAndLogic.dart';
 import 'package:ERA/courses/softSkills.dart';
 import 'package:ERA/courses/coding.dart';
+import 'package:ERA/deleteLater.dart';
+
 // import 'package:video_player/video_player.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -29,7 +31,7 @@ class HomeScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         resizeToAvoidBottomPadding: false,
-        backgroundColor: Colors.grey[200],
+        backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Color(0xff03258C),
           title: Text(
@@ -248,7 +250,8 @@ class HomeScreen extends StatelessWidget {
                   style: TextStyle(fontSize: 15),
                 ),
                 onTap: () {
-                  Navigator.pop(context);
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Delete()));
                 },
                 dense: true,
               ),
