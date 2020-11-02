@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'packages.dart';
 
 class HigheClassPackages extends StatefulWidget {
   @override
@@ -90,33 +91,7 @@ class _HigheClassPackagesState extends State<HigheClassPackages> {
               SizedBox(
                 height: 80,
               ),
-              Container(
-                width: 200,
-                decoration: new BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey[700],
-                        offset: Offset(4.0, 4.0),
-                        blurRadius: 5.0,
-                        spreadRadius: 2.0)
-                  ],
-                ),
-                child: FlatButton(
-                  padding: EdgeInsets.only(left: 15, right: 15),
-                  onPressed: null,
-                  child: Text(
-                    'More Details',
-                    style: TextStyle(
-                      fontFamily: 'Merriweather',
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xff03258C),
-                    ),
-                  ),
-                ),
-              ),
+              OneYear()
             ],
           )),
           packageColumn(
@@ -175,33 +150,7 @@ class _HigheClassPackagesState extends State<HigheClassPackages> {
               SizedBox(
                 height: 80,
               ),
-              Container(
-                width: 200,
-                decoration: new BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey[700],
-                        offset: Offset(4.0, 4.0),
-                        blurRadius: 5.0,
-                        spreadRadius: 2.0)
-                  ],
-                ),
-                child: FlatButton(
-                  padding: EdgeInsets.only(left: 15, right: 15),
-                  onPressed: null,
-                  child: Text(
-                    'More Details',
-                    style: TextStyle(
-                      fontFamily: 'Merriweather',
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xff03258C),
-                    ),
-                  ),
-                ),
-              ),
+              SixMonths()
             ],
           )),
           packageColumn(
@@ -260,33 +209,7 @@ class _HigheClassPackagesState extends State<HigheClassPackages> {
               SizedBox(
                 height: 80,
               ),
-              Container(
-                width: 200,
-                decoration: new BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey[700],
-                        offset: Offset(4.0, 4.0),
-                        blurRadius: 5.0,
-                        spreadRadius: 2.0)
-                  ],
-                ),
-                child: FlatButton(
-                  padding: EdgeInsets.only(left: 15, right: 15),
-                  onPressed: null,
-                  child: Text(
-                    'More Details',
-                    style: TextStyle(
-                      fontFamily: 'Merriweather',
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xff03258C),
-                    ),
-                  ),
-                ),
-              ),
+              ThreeMonths()
             ],
           )),
           packageColumn(
@@ -344,33 +267,7 @@ class _HigheClassPackagesState extends State<HigheClassPackages> {
               SizedBox(
                 height: 80,
               ),
-              Container(
-                width: 200,
-                decoration: new BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey[700],
-                        offset: Offset(4.0, 4.0),
-                        blurRadius: 5.0,
-                        spreadRadius: 2.0)
-                  ],
-                ),
-                child: FlatButton(
-                  padding: EdgeInsets.only(left: 15, right: 15),
-                  onPressed: null,
-                  child: Text(
-                    'More Details',
-                    style: TextStyle(
-                      fontFamily: 'Merriweather',
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xff03258C),
-                    ),
-                  ),
-                ),
-              ),
+              YearlyCombo()
             ],
           )),
           packageColumn(
@@ -429,33 +326,7 @@ class _HigheClassPackagesState extends State<HigheClassPackages> {
               SizedBox(
                 height: 80,
               ),
-              Container(
-                width: 200,
-                decoration: new BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey[700],
-                        offset: Offset(4.0, 4.0),
-                        blurRadius: 5.0,
-                        spreadRadius: 2.0)
-                  ],
-                ),
-                child: FlatButton(
-                  padding: EdgeInsets.only(left: 15, right: 15),
-                  onPressed: null,
-                  child: Text(
-                    'More Details',
-                    style: TextStyle(
-                      fontFamily: 'Merriweather',
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xff03258C),
-                    ),
-                  ),
-                ),
-              ),
+              HalfYearlyCombo()
             ],
           )),
           packageColumn(
@@ -513,33 +384,7 @@ class _HigheClassPackagesState extends State<HigheClassPackages> {
               SizedBox(
                 height: 80,
               ),
-              Container(
-                width: 200,
-                decoration: new BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey[700],
-                        offset: Offset(4.0, 4.0),
-                        blurRadius: 5.0,
-                        spreadRadius: 2.0)
-                  ],
-                ),
-                child: FlatButton(
-                  padding: EdgeInsets.only(left: 15, right: 15),
-                  onPressed: null,
-                  child: Text(
-                    'More Details',
-                    style: TextStyle(
-                      fontFamily: 'Merriweather',
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xff03258C),
-                    ),
-                  ),
-                ),
-              ),
+              QuaterlyCombo()
             ],
           )),
         ],

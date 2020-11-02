@@ -2,6 +2,7 @@ import 'package:ERA/models/users.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+
 import 'HomePage.dart';
 
 class SignUp extends StatefulWidget {
@@ -15,7 +16,6 @@ class _SignUpState extends State<SignUp> {
 
   String _name, _email, _password, _phone, _class;
   bool _acceptTerms = false;
-  // bool _acceptPrivacy = false;
 
   checkAuthentication() async {
     _auth.authStateChanges().listen((user) async {
@@ -30,64 +30,6 @@ class _SignUpState extends State<SignUp> {
   void initState() {
     super.initState();
     this.checkAuthentication();
-  }
-
-  terms() {
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: Text(
-            'Terms & Conditions',
-            style: TextStyle(color: Color(0xff03258C)),
-          ),
-          content: RichText(
-              text: TextSpan(children: <TextSpan>[
-            TextSpan(
-                text:
-                    ' Welcome to the Strot Associate under the brand name of ERA – Assistant to Redefine Education. terms and condition. These terms and conditions (“T&C”), are between Strot Associate and you, (hereinafter referred to as “You” or “Your” or “User(s)”). By accessing our website and products, you agree to be bound by the provisions of these Terms and Conditions.'),
-          ])),
-          actions: <Widget>[
-            FlatButton(
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-                child: Text(
-                  'Go Back',
-                  style: TextStyle(color: Color(0xff03258C), fontSize: 14),
-                ))
-          ],
-        );
-      },
-    );
-  }
-
-  privacy() {
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: Text(
-            'Privacy Policy',
-            style: TextStyle(color: Color(0xff03258C)),
-          ),
-          content: RichText(
-              text: TextSpan(children: <TextSpan>[
-            TextSpan(text: 'some huge text line'),
-          ])),
-          actions: <Widget>[
-            FlatButton(
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-                child: Text(
-                  'Go Back',
-                  style: TextStyle(color: Color(0xff03258C), fontSize: 14),
-                ))
-          ],
-        );
-      },
-    );
   }
 
   signUp() async {

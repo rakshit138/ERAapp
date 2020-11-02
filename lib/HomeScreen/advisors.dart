@@ -13,7 +13,7 @@ class _AdvisorsState extends State<Advisors> {
       height: 400.0,
       width: (MediaQuery.of(context).size.width) / 1.15,
       decoration: new BoxDecoration(
-        color: Colors.white,
+        color: Colors.grey[200],
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(

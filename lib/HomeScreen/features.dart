@@ -6,21 +6,24 @@ class Features extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        ListTile(
-          leading: FaIcon(
-            FontAwesomeIcons.users,
-            size: 30,
-            color: Colors.blue[900],
-          ),
-          title: Padding(
-            padding: EdgeInsets.all(10),
-            child: Text(
-              'Only 7 students  per class.',
-              style: TextStyle(
-                  color: Colors.black,
-                  fontFamily: 'Merriweather',
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold),
+        Padding(
+          padding: EdgeInsets.fromLTRB(13, 5, 10, 10),
+          child: ListTile(
+            leading: FaIcon(
+              FontAwesomeIcons.users,
+              size: 40,
+              color: Colors.blue[900],
+            ),
+            title: Padding(
+              padding: EdgeInsets.all(10),
+              child: Text(
+                'Only 7 students  per class.',
+                style: TextStyle(
+                    color: Colors.black,
+                    fontFamily: 'Merriweather',
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold),
+              ),
             ),
           ),
         ),
@@ -32,27 +35,30 @@ class Features extends StatelessWidget {
             style: TextStyle(
               fontStyle: FontStyle.italic,
               color: Colors.grey[800],
-              fontWeight: FontWeight.bold,
+              fontWeight: FontWeight.w500,
               fontFamily: 'Merriweather',
-              fontSize: 15,
+              fontSize: 14,
             ),
           ),
         ),
-        ListTile(
-          leading: FaIcon(
-            FontAwesomeIcons.graduationCap,
-            size: 30,
-            color: Colors.blue[900],
-          ),
-          title: Padding(
-            padding: EdgeInsets.all(10),
-            child: Text(
-              'All the students in a Class are of same level.',
-              style: TextStyle(
-                  color: Colors.black,
-                  fontFamily: 'Merriweather',
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold),
+        Padding(
+          padding: EdgeInsets.fromLTRB(10, 5, 10, 10),
+          child: ListTile(
+            leading: FaIcon(
+              FontAwesomeIcons.graduationCap,
+              size: 40,
+              color: Colors.blue[900],
+            ),
+            title: Padding(
+              padding: EdgeInsets.all(10),
+              child: Text(
+                'All the students in a Class are of same level.',
+                style: TextStyle(
+                    color: Colors.black,
+                    fontFamily: 'Merriweather',
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold),
+              ),
             ),
           ),
         ),
@@ -64,27 +70,30 @@ class Features extends StatelessWidget {
             style: TextStyle(
               fontStyle: FontStyle.italic,
               color: Colors.grey[800],
-              fontWeight: FontWeight.bold,
+              fontWeight: FontWeight.w500,
               fontFamily: 'Merriweather',
-              fontSize: 15,
+              fontSize: 14,
             ),
           ),
         ),
-        ListTile(
-          leading: FaIcon(
-            FontAwesomeIcons.userTie,
-            size: 30,
-            color: Colors.blue[900],
-          ),
-          title: Padding(
-            padding: EdgeInsets.all(10),
-            child: Text(
-              'Best Teacher of ERA at your Home.',
-              style: TextStyle(
-                  color: Colors.black,
-                  fontFamily: 'Merriweather',
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold),
+        Padding(
+          padding: EdgeInsets.fromLTRB(15, 5, 10, 10),
+          child: ListTile(
+            leading: FaIcon(
+              FontAwesomeIcons.userTie,
+              size: 40,
+              color: Colors.blue[900],
+            ),
+            title: Padding(
+              padding: EdgeInsets.all(10),
+              child: Text(
+                'Best Teacher of ERA at your Home.',
+                style: TextStyle(
+                    color: Colors.black,
+                    fontFamily: 'Merriweather',
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold),
+              ),
             ),
           ),
         ),
@@ -96,27 +105,30 @@ class Features extends StatelessWidget {
             style: TextStyle(
               fontStyle: FontStyle.italic,
               color: Colors.grey[800],
-              fontWeight: FontWeight.bold,
+              fontWeight: FontWeight.w500,
               fontFamily: 'Merriweather',
-              fontSize: 15,
+              fontSize: 14,
             ),
           ),
         ),
-        ListTile(
-          leading: FaIcon(
-            FontAwesomeIcons.listAlt,
-            size: 30,
-            color: Colors.blue[900],
-          ),
-          title: Padding(
-            padding: EdgeInsets.all(10),
-            child: Text(
-              'Personalized Mentor for every student & Parents.',
-              style: TextStyle(
-                  color: Colors.black,
-                  fontFamily: 'Merriweather',
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold),
+        Padding(
+          padding: EdgeInsets.fromLTRB(15, 5, 10, 10),
+          child: ListTile(
+            leading: FaIcon(
+              FontAwesomeIcons.listAlt,
+              size: 40,
+              color: Colors.blue[900],
+            ),
+            title: Padding(
+              padding: EdgeInsets.all(10),
+              child: Text(
+                'Personalized Mentor for every student & Parents.',
+                style: TextStyle(
+                    color: Colors.black,
+                    fontFamily: 'Merriweather',
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold),
+              ),
             ),
           ),
         ),
@@ -128,18 +140,18 @@ class Features extends StatelessWidget {
             style: TextStyle(
               fontStyle: FontStyle.italic,
               color: Colors.grey[800],
-              fontWeight: FontWeight.bold,
+              fontWeight: FontWeight.w500,
               fontFamily: 'Merriweather',
-              fontSize: 15,
+              fontSize: 14,
             ),
           ),
         ),
         Padding(
-          padding: EdgeInsets.fromLTRB(15, 0, 0, 0),
+          padding: EdgeInsets.fromLTRB(17, 5, 10, 10),
           child: ListTile(
             leading: FaIcon(
               FontAwesomeIcons.bolt,
-              size: 30,
+              size: 40,
               color: Colors.blue[900],
             ),
             title: Padding(
@@ -163,27 +175,30 @@ class Features extends StatelessWidget {
             style: TextStyle(
               fontStyle: FontStyle.italic,
               color: Colors.grey[800],
-              fontWeight: FontWeight.bold,
+              fontWeight: FontWeight.w500,
               fontFamily: 'Merriweather',
-              fontSize: 15,
+              fontSize: 14,
             ),
           ),
         ),
-        ListTile(
-          leading: FaIcon(
-            FontAwesomeIcons.rupeeSign,
-            size: 30,
-            color: Colors.blue[900],
-          ),
-          title: Padding(
-            padding: EdgeInsets.all(10),
-            child: Text(
-              'Available in affordable Prices.',
-              style: TextStyle(
-                  color: Colors.black,
-                  fontFamily: 'Merriweather',
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold),
+        Padding(
+          padding: EdgeInsets.fromLTRB(15, 5, 10, 10),
+          child: ListTile(
+            leading: FaIcon(
+              FontAwesomeIcons.rupeeSign,
+              size: 40,
+              color: Colors.blue[900],
+            ),
+            title: Padding(
+              padding: EdgeInsets.all(10),
+              child: Text(
+                'Available in affordable Prices.',
+                style: TextStyle(
+                    color: Colors.black,
+                    fontFamily: 'Merriweather',
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold),
+              ),
             ),
           ),
         ),
@@ -195,27 +210,30 @@ class Features extends StatelessWidget {
             style: TextStyle(
               fontStyle: FontStyle.italic,
               color: Colors.grey[800],
-              fontWeight: FontWeight.bold,
+              fontWeight: FontWeight.w500,
               fontFamily: 'Merriweather',
-              fontSize: 15,
+              fontSize: 14,
             ),
           ),
         ),
-        ListTile(
-          leading: FaIcon(
-            FontAwesomeIcons.moneyBillWave,
-            size: 30,
-            color: Colors.blue[900],
-          ),
-          title: Padding(
-            padding: EdgeInsets.all(10),
-            child: Text(
-              'Refund Policy',
-              style: TextStyle(
-                  color: Colors.black,
-                  fontFamily: 'Merriweather',
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold),
+        Padding(
+          padding: EdgeInsets.fromLTRB(15, 5, 10, 10),
+          child: ListTile(
+            leading: FaIcon(
+              FontAwesomeIcons.moneyBillWave,
+              size: 40,
+              color: Colors.blue[900],
+            ),
+            title: Padding(
+              padding: EdgeInsets.all(10),
+              child: Text(
+                'Refund Policy',
+                style: TextStyle(
+                    color: Colors.black,
+                    fontFamily: 'Merriweather',
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold),
+              ),
             ),
           ),
         ),
@@ -227,9 +245,9 @@ class Features extends StatelessWidget {
             style: TextStyle(
               fontStyle: FontStyle.italic,
               color: Colors.grey[800],
-              fontWeight: FontWeight.bold,
+              fontWeight: FontWeight.w500,
               fontFamily: 'Merriweather',
-              fontSize: 15,
+              fontSize: 14,
             ),
           ),
         ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:awesome_dialog/awesome_dialog.dart';
 
 class Packages extends StatefulWidget {
   @override
@@ -50,18 +51,6 @@ class _PackagesState extends State<Packages> {
                   ),
                 ),
               ),
-              // Padding(
-              //   padding: EdgeInsets.all(10),
-              //   child: Text(
-              //     'Class 6,7 and 8',
-              //     textAlign: TextAlign.center,
-              //     style: TextStyle(
-              //         fontFamily: 'Merriweather',
-              //         fontSize: 24,
-              //         fontWeight: FontWeight.bold,
-              //         color: Colors.grey[600]),
-              //   ),
-              // ),
               Padding(
                 padding: EdgeInsets.all(20),
                 child: Text(
@@ -90,33 +79,7 @@ class _PackagesState extends State<Packages> {
               SizedBox(
                 height: 80,
               ),
-              Container(
-                width: 200,
-                decoration: new BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey[700],
-                        offset: Offset(4.0, 4.0),
-                        blurRadius: 5.0,
-                        spreadRadius: 2.0)
-                  ],
-                ),
-                child: FlatButton(
-                  padding: EdgeInsets.only(left: 15, right: 15),
-                  onPressed: null,
-                  child: Text(
-                    'More Details',
-                    style: TextStyle(
-                      fontFamily: 'Merriweather',
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xff03258C),
-                    ),
-                  ),
-                ),
-              ),
+              OneYear()
             ],
           )),
           packageColumn(
@@ -175,33 +138,7 @@ class _PackagesState extends State<Packages> {
               SizedBox(
                 height: 80,
               ),
-              Container(
-                width: 200,
-                decoration: new BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey[700],
-                        offset: Offset(4.0, 4.0),
-                        blurRadius: 5.0,
-                        spreadRadius: 2.0)
-                  ],
-                ),
-                child: FlatButton(
-                  padding: EdgeInsets.only(left: 15, right: 15),
-                  onPressed: null,
-                  child: Text(
-                    'More Details',
-                    style: TextStyle(
-                      fontFamily: 'Merriweather',
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xff03258C),
-                    ),
-                  ),
-                ),
-              ),
+              SixMonths()
             ],
           )),
           packageColumn(
@@ -220,18 +157,6 @@ class _PackagesState extends State<Packages> {
                   ),
                 ),
               ),
-              // Padding(
-              //   padding: EdgeInsets.all(10),
-              //   child: Text(
-              //     'Class 6,7 and 8',
-              //     textAlign: TextAlign.center,
-              //     style: TextStyle(
-              //         fontFamily: 'Merriweather',
-              //         fontSize: 24,
-              //         fontWeight: FontWeight.bold,
-              //         color: Colors.grey[600]),
-              //   ),
-              // ),
               Padding(
                 padding: EdgeInsets.all(20),
                 child: Text(
@@ -260,33 +185,7 @@ class _PackagesState extends State<Packages> {
               SizedBox(
                 height: 80,
               ),
-              Container(
-                width: 200,
-                decoration: new BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey[700],
-                        offset: Offset(4.0, 4.0),
-                        blurRadius: 5.0,
-                        spreadRadius: 2.0)
-                  ],
-                ),
-                child: FlatButton(
-                  padding: EdgeInsets.only(left: 15, right: 15),
-                  onPressed: null,
-                  child: Text(
-                    'More Details',
-                    style: TextStyle(
-                      fontFamily: 'Merriweather',
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xff03258C),
-                    ),
-                  ),
-                ),
-              ),
+              ThreeMonths()
             ],
           )),
           packageColumn(
@@ -305,18 +204,6 @@ class _PackagesState extends State<Packages> {
                   ),
                 ),
               ),
-              // Padding(
-              //   padding: EdgeInsets.all(10),
-              //   child: Text(
-              //     'Class 6,7 and 8',
-              //     textAlign: TextAlign.center,
-              //     style: TextStyle(
-              //         fontFamily: 'Merriweather',
-              //         fontSize: 24,
-              //         fontWeight: FontWeight.bold,
-              //         color: Colors.grey[600]),
-              //   ),
-              // ),
               Padding(
                 padding: EdgeInsets.all(20),
                 child: Text(
@@ -344,33 +231,7 @@ class _PackagesState extends State<Packages> {
               SizedBox(
                 height: 80,
               ),
-              Container(
-                width: 200,
-                decoration: new BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey[700],
-                        offset: Offset(4.0, 4.0),
-                        blurRadius: 5.0,
-                        spreadRadius: 2.0)
-                  ],
-                ),
-                child: FlatButton(
-                  padding: EdgeInsets.only(left: 15, right: 15),
-                  onPressed: null,
-                  child: Text(
-                    'More Details',
-                    style: TextStyle(
-                      fontFamily: 'Merriweather',
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xff03258C),
-                    ),
-                  ),
-                ),
-              ),
+              YearlyCombo()
             ],
           )),
           packageColumn(
@@ -389,18 +250,6 @@ class _PackagesState extends State<Packages> {
                   ),
                 ),
               ),
-              // Padding(
-              //   padding: EdgeInsets.all(20),
-              //   child: Text(
-              //     'Class 6,7 and 8',
-              //     textAlign: TextAlign.center,
-              //     style: TextStyle(
-              //         fontFamily: 'Merriweather',
-              //         fontSize: 24,
-              //         fontWeight: FontWeight.bold,
-              //         color: Colors.grey[600]),
-              //   ),
-              // ),
               Padding(
                 padding: EdgeInsets.all(20),
                 child: Text(
@@ -429,33 +278,7 @@ class _PackagesState extends State<Packages> {
               SizedBox(
                 height: 80,
               ),
-              Container(
-                width: 200,
-                decoration: new BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey[700],
-                        offset: Offset(4.0, 4.0),
-                        blurRadius: 5.0,
-                        spreadRadius: 2.0)
-                  ],
-                ),
-                child: FlatButton(
-                  padding: EdgeInsets.only(left: 15, right: 15),
-                  onPressed: null,
-                  child: Text(
-                    'More Details',
-                    style: TextStyle(
-                      fontFamily: 'Merriweather',
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xff03258C),
-                    ),
-                  ),
-                ),
-              ),
+              HalfYearlyCombo(),
             ],
           )),
           packageColumn(
@@ -474,18 +297,6 @@ class _PackagesState extends State<Packages> {
                   ),
                 ),
               ),
-              // Padding(
-              //   padding: EdgeInsets.all(10),
-              //   child: Text(
-              //     'Class 6,7 and 8',
-              //     textAlign: TextAlign.center,
-              //     style: TextStyle(
-              //         fontFamily: 'Merriweather',
-              //         fontSize: 24,
-              //         fontWeight: FontWeight.bold,
-              //         color: Colors.grey[600]),
-              //   ),
-              // ),
               Padding(
                 padding: EdgeInsets.all(20),
                 child: Text(
@@ -514,36 +325,292 @@ class _PackagesState extends State<Packages> {
               SizedBox(
                 height: 80,
               ),
-              Container(
-                width: 200,
-                decoration: new BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey[700],
-                        offset: Offset(4.0, 4.0),
-                        blurRadius: 5.0,
-                        spreadRadius: 2.0)
-                  ],
-                ),
-                child: FlatButton(
-                  padding: EdgeInsets.only(left: 15, right: 15),
-                  onPressed: null,
-                  child: Text(
-                    'More Details',
-                    style: TextStyle(
-                      fontFamily: 'Merriweather',
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xff03258C),
-                    ),
-                  ),
-                ),
-              ),
+              QuaterlyCombo()
             ],
           )),
         ],
+      ),
+    );
+  }
+}
+
+class OneYear extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 200,
+      decoration: new BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+              color: Colors.grey[700],
+              offset: Offset(4.0, 4.0),
+              blurRadius: 5.0,
+              spreadRadius: 2.0)
+        ],
+      ),
+      child: FlatButton(
+        padding: EdgeInsets.only(left: 15, right: 15),
+        onPressed: () {
+          AwesomeDialog(
+              context: context,
+              headerAnimationLoop: false,
+              dialogType: DialogType.NO_HEADER,
+              body: Column(
+                children: [Text('Checking if column possible')],
+              ),
+              btnOkOnPress: () {
+                debugPrint('OnClcik');
+              },
+              btnOkIcon: Icons.check_circle,
+              btnOkColor: Colors.amberAccent)
+            ..show();
+        },
+        child: Text(
+          'More Details',
+          style: TextStyle(
+            fontFamily: 'Merriweather',
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: Color(0xff03258C),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class SixMonths extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 200,
+      decoration: new BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+              color: Colors.grey[700],
+              offset: Offset(4.0, 4.0),
+              blurRadius: 5.0,
+              spreadRadius: 2.0)
+        ],
+      ),
+      child: FlatButton(
+        padding: EdgeInsets.only(left: 15, right: 15),
+        onPressed: () {
+          AwesomeDialog(
+              context: context,
+              headerAnimationLoop: false,
+              dialogType: DialogType.NO_HEADER,
+              body: Column(
+                children: [Text('Checking if column possible')],
+              ),
+              btnOkOnPress: () {
+                debugPrint('OnClcik');
+              },
+              btnOkIcon: Icons.check_circle,
+              btnOkColor: Colors.amberAccent)
+            ..show();
+        },
+        child: Text(
+          'More Details',
+          style: TextStyle(
+            fontFamily: 'Merriweather',
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: Color(0xff03258C),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class ThreeMonths extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 200,
+      decoration: new BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+              color: Colors.grey[700],
+              offset: Offset(4.0, 4.0),
+              blurRadius: 5.0,
+              spreadRadius: 2.0)
+        ],
+      ),
+      child: FlatButton(
+        padding: EdgeInsets.only(left: 15, right: 15),
+        onPressed: () {
+          AwesomeDialog(
+              context: context,
+              headerAnimationLoop: false,
+              dialogType: DialogType.NO_HEADER,
+              body: Column(
+                children: [Text('Checking if column possible')],
+              ),
+              btnOkOnPress: () {
+                debugPrint('OnClcik');
+              },
+              btnOkIcon: Icons.check_circle,
+              btnOkColor: Colors.amberAccent)
+            ..show();
+        },
+        child: Text(
+          'More Details',
+          style: TextStyle(
+            fontFamily: 'Merriweather',
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: Color(0xff03258C),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class YearlyCombo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 200,
+      decoration: new BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+              color: Colors.grey[700],
+              offset: Offset(4.0, 4.0),
+              blurRadius: 5.0,
+              spreadRadius: 2.0)
+        ],
+      ),
+      child: FlatButton(
+        padding: EdgeInsets.only(left: 15, right: 15),
+        onPressed: () {
+          AwesomeDialog(
+              context: context,
+              headerAnimationLoop: false,
+              dialogType: DialogType.NO_HEADER,
+              body: Column(
+                children: [Text('Checking if column possible')],
+              ),
+              btnOkOnPress: () {
+                debugPrint('OnClcik');
+              },
+              btnOkIcon: Icons.check_circle,
+              btnOkColor: Colors.amberAccent)
+            ..show();
+        },
+        child: Text(
+          'More Details',
+          style: TextStyle(
+            fontFamily: 'Merriweather',
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: Color(0xff03258C),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class HalfYearlyCombo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 200,
+      decoration: new BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+              color: Colors.grey[700],
+              offset: Offset(4.0, 4.0),
+              blurRadius: 5.0,
+              spreadRadius: 2.0)
+        ],
+      ),
+      child: FlatButton(
+        padding: EdgeInsets.only(left: 15, right: 15),
+        onPressed: () {
+          AwesomeDialog(
+              context: context,
+              headerAnimationLoop: false,
+              dialogType: DialogType.NO_HEADER,
+              body: Column(
+                children: [Text('Checking if column possible')],
+              ),
+              btnOkOnPress: () {
+                debugPrint('OnClcik');
+              },
+              btnOkIcon: Icons.check_circle,
+              btnOkColor: Colors.amberAccent)
+            ..show();
+        },
+        child: Text(
+          'More Details',
+          style: TextStyle(
+            fontFamily: 'Merriweather',
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: Color(0xff03258C),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class QuaterlyCombo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 200,
+      decoration: new BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+              color: Colors.grey[700],
+              offset: Offset(4.0, 4.0),
+              blurRadius: 5.0,
+              spreadRadius: 2.0)
+        ],
+      ),
+      child: FlatButton(
+        padding: EdgeInsets.only(left: 15, right: 15),
+        onPressed: () {
+          AwesomeDialog(
+              context: context,
+              headerAnimationLoop: false,
+              dialogType: DialogType.NO_HEADER,
+              body: Column(
+                children: [Text('Checking if column possible')],
+              ),
+              btnOkOnPress: () {
+                debugPrint('OnClcik');
+              },
+              btnOkIcon: Icons.check_circle,
+              btnOkColor: Colors.amberAccent)
+            ..show();
+        },
+        child: Text(
+          'More Details',
+          style: TextStyle(
+            fontFamily: 'Merriweather',
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: Color(0xff03258C),
+          ),
+        ),
       ),
     );
   }

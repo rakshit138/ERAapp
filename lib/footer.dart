@@ -1,6 +1,9 @@
+import 'package:ERA/termsButton.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'privacyButton.dart';
+import 'termsButton.dart';
 
 class Footer extends StatelessWidget {
   @override
@@ -109,32 +112,10 @@ class Footer extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Expanded(
-                    child: FlatButton(
-                      onPressed: null,
-                      child: Text(
-                        'Privacy Policy ',
-                        style: TextStyle(
-                            fontFamily: 'Merriweather',
-                            color: Colors.white,
-                            fontSize: 16),
-                      ),
-                    ),
-                  ),
+                  PrivacyButton(),
                   Text('|',
                       style: TextStyle(color: Colors.white, fontSize: 20)),
-                  Expanded(
-                    child: FlatButton(
-                      onPressed: null,
-                      child: Text(
-                        ' Terms & Conditions',
-                        style: TextStyle(
-                            fontFamily: 'Merriweather',
-                            color: Colors.white,
-                            fontSize: 16),
-                      ),
-                    ),
-                  ),
+                  TermsButton()
                 ],
               ),
             ),
