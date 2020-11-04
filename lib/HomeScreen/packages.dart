@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:awesome_dialog/awesome_dialog.dart';
 
@@ -354,18 +356,87 @@ class OneYear extends StatelessWidget {
         padding: EdgeInsets.only(left: 15, right: 15),
         onPressed: () {
           AwesomeDialog(
-              context: context,
-              headerAnimationLoop: false,
-              dialogType: DialogType.NO_HEADER,
-              body: Column(
-                children: [Text('Checking if column possible')],
+            context: context,
+            headerAnimationLoop: false,
+            dialogType: DialogType.NO_HEADER,
+            body: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Image(
+                    image: AssetImage('assets/images/logopng.png'),
+                    width: 300,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 15),
+                    child: Text(
+                      'Details',
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Text(
+                      'Student can choose any one subjects (Maths/Science/Aptitude and Logical Reasoning/Soft Skills) for a period of 1 Year',
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Text(
+                      'To Register for this pack, Please contact our Academic Advisor',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Text(
+                      'Mr. Sourav Tiwari',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 0, 20, 2),
+                    child: Text(
+                      'Contact No. : 7226860512',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 15,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 0, 20, 2),
+                    child: Text(
+                      'Email: sauravtiwari@era-co.in',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 15,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                ],
               ),
-              btnOkOnPress: () {
-                debugPrint('OnClcik');
-              },
-              btnOkIcon: Icons.check_circle,
-              btnOkColor: Colors.amberAccent)
-            ..show();
+            ),
+          )..show();
         },
         child: Text(
           'More Details',
@@ -401,18 +472,87 @@ class SixMonths extends StatelessWidget {
         padding: EdgeInsets.only(left: 15, right: 15),
         onPressed: () {
           AwesomeDialog(
-              context: context,
-              headerAnimationLoop: false,
-              dialogType: DialogType.NO_HEADER,
-              body: Column(
-                children: [Text('Checking if column possible')],
+            context: context,
+            headerAnimationLoop: false,
+            dialogType: DialogType.NO_HEADER,
+            body: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Image(
+                    image: AssetImage('assets/images/logopng.png'),
+                    width: 300,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 15),
+                    child: Text(
+                      'Details',
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Text(
+                      'Student can choose any one subjects (Maths/Science/Aptitude and Logical Reasoning/Soft Skills) for a period of 6 Months',
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Text(
+                      'To Register for this pack, Please contact our Academic Advisor',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Text(
+                      'Mr. Sourav Tiwari',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 0, 20, 2),
+                    child: Text(
+                      'Contact No. : 7226860512',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 15,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 0, 20, 2),
+                    child: Text(
+                      'Email: sauravtiwari@era-co.in',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 15,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                ],
               ),
-              btnOkOnPress: () {
-                debugPrint('OnClcik');
-              },
-              btnOkIcon: Icons.check_circle,
-              btnOkColor: Colors.amberAccent)
-            ..show();
+            ),
+          )..show();
         },
         child: Text(
           'More Details',
@@ -448,18 +588,87 @@ class ThreeMonths extends StatelessWidget {
         padding: EdgeInsets.only(left: 15, right: 15),
         onPressed: () {
           AwesomeDialog(
-              context: context,
-              headerAnimationLoop: false,
-              dialogType: DialogType.NO_HEADER,
-              body: Column(
-                children: [Text('Checking if column possible')],
+            context: context,
+            headerAnimationLoop: false,
+            dialogType: DialogType.NO_HEADER,
+            body: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Image(
+                    image: AssetImage('assets/images/logopng.png'),
+                    width: 300,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 15),
+                    child: Text(
+                      'Details',
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Text(
+                      'Student can choose any one subjects (Maths/Science/Aptitude and Logical Reasoning/Soft Skills) for a period of 3 Months',
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Text(
+                      'To Register for this pack, Please contact our Academic Advisor',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Text(
+                      'Mr. Sourav Tiwari',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 0, 20, 2),
+                    child: Text(
+                      'Contact No. : 7226860512',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 15,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 0, 20, 2),
+                    child: Text(
+                      'Email: sauravtiwari@era-co.in',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 15,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                ],
               ),
-              btnOkOnPress: () {
-                debugPrint('OnClcik');
-              },
-              btnOkIcon: Icons.check_circle,
-              btnOkColor: Colors.amberAccent)
-            ..show();
+            ),
+          )..show();
         },
         child: Text(
           'More Details',
@@ -495,18 +704,87 @@ class YearlyCombo extends StatelessWidget {
         padding: EdgeInsets.only(left: 15, right: 15),
         onPressed: () {
           AwesomeDialog(
-              context: context,
-              headerAnimationLoop: false,
-              dialogType: DialogType.NO_HEADER,
-              body: Column(
-                children: [Text('Checking if column possible')],
+            context: context,
+            headerAnimationLoop: false,
+            dialogType: DialogType.NO_HEADER,
+            body: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Image(
+                    image: AssetImage('assets/images/logopng.png'),
+                    width: 300,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 15),
+                    child: Text(
+                      'Details',
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Text(
+                      'Student will get \n Maths + Science + one optional subject(Aptitude and Logical Reasoning / Soft Skills)\nfor a period of 1 Year',
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Text(
+                      'To Register for this pack, Please contact our Academic Advisor',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Text(
+                      'Mr. Sourav Tiwari',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 0, 20, 2),
+                    child: Text(
+                      'Contact No. : 7226860512',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 15,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 0, 20, 2),
+                    child: Text(
+                      'Email: sauravtiwari@era-co.in',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 15,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                ],
               ),
-              btnOkOnPress: () {
-                debugPrint('OnClcik');
-              },
-              btnOkIcon: Icons.check_circle,
-              btnOkColor: Colors.amberAccent)
-            ..show();
+            ),
+          )..show();
         },
         child: Text(
           'More Details',
@@ -542,18 +820,87 @@ class HalfYearlyCombo extends StatelessWidget {
         padding: EdgeInsets.only(left: 15, right: 15),
         onPressed: () {
           AwesomeDialog(
-              context: context,
-              headerAnimationLoop: false,
-              dialogType: DialogType.NO_HEADER,
-              body: Column(
-                children: [Text('Checking if column possible')],
+            context: context,
+            headerAnimationLoop: false,
+            dialogType: DialogType.NO_HEADER,
+            body: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Image(
+                    image: AssetImage('assets/images/logopng.png'),
+                    width: 300,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 15),
+                    child: Text(
+                      'Details',
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Text(
+                      'Student will get \n Maths + Science + one optional subject(Aptitude and Logical Reasoning / Soft Skills)\nfor a period of 6 Months',
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Text(
+                      'To Register for this pack, Please contact our Academic Advisor',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Text(
+                      'Mr. Sourav Tiwari',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 0, 20, 2),
+                    child: Text(
+                      'Contact No. : 7226860512',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 15,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 0, 20, 2),
+                    child: Text(
+                      'Email: sauravtiwari@era-co.in',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 15,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                ],
               ),
-              btnOkOnPress: () {
-                debugPrint('OnClcik');
-              },
-              btnOkIcon: Icons.check_circle,
-              btnOkColor: Colors.amberAccent)
-            ..show();
+            ),
+          )..show();
         },
         child: Text(
           'More Details',
@@ -589,18 +936,87 @@ class QuaterlyCombo extends StatelessWidget {
         padding: EdgeInsets.only(left: 15, right: 15),
         onPressed: () {
           AwesomeDialog(
-              context: context,
-              headerAnimationLoop: false,
-              dialogType: DialogType.NO_HEADER,
-              body: Column(
-                children: [Text('Checking if column possible')],
+            context: context,
+            headerAnimationLoop: false,
+            dialogType: DialogType.NO_HEADER,
+            body: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Image(
+                    image: AssetImage('assets/images/logopng.png'),
+                    width: 300,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 15),
+                    child: Text(
+                      'Details',
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Text(
+                      'Student will get \n Maths + Science + one optional subject(Aptitude and Logical Reasoning / Soft Skills)\nfor a period of 3 Months',
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Text(
+                      'To Register for this pack, Please contact our Academic Advisor',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Text(
+                      'Mr. Sourav Tiwari',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 0, 20, 2),
+                    child: Text(
+                      'Contact No. : 7226860512',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 15,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 0, 20, 2),
+                    child: Text(
+                      'Email: sauravtiwari@era-co.in',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 15,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                ],
               ),
-              btnOkOnPress: () {
-                debugPrint('OnClcik');
-              },
-              btnOkIcon: Icons.check_circle,
-              btnOkColor: Colors.amberAccent)
-            ..show();
+            ),
+          )..show();
         },
         child: Text(
           'More Details',
