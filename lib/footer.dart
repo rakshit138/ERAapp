@@ -10,7 +10,7 @@ class Footer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: (MediaQuery.of(context).size.width),
-      height: 450,
+      height: 420,
       decoration: new BoxDecoration(color: Colors.grey[600]),
       child: SingleChildScrollView(
         child: Column(
@@ -118,9 +118,6 @@ class Footer extends StatelessWidget {
                   TermsButton()
                 ],
               ),
-            ),
-            SizedBox(
-              height: 20,
             ),
             Align(
               alignment: Alignment.bottomCenter,

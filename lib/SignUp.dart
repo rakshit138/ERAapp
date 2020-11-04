@@ -2,6 +2,8 @@ import 'package:ERA/models/users.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'privacyButton.dart';
+import 'termsButton.dart';
 
 import 'HomePage.dart';
 
@@ -94,7 +96,7 @@ class _SignUpState extends State<SignUp> {
           child: Column(
             children: <Widget>[
               Container(
-                height: 200,
+                height: 150,
                 padding: EdgeInsets.fromLTRB(20, 40, 20, 20),
                 child: Image(
                   image: AssetImage("assets/images/logo png 3.png"),
@@ -288,6 +290,17 @@ class _SignUpState extends State<SignUp> {
                       ),
                     ),
                     // SizedBox(height: 20),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        PrivacyButton(),
+                        Text('|',
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 20)),
+                        TermsButton()
+                      ],
+                    ),
                     CheckboxListTile(
                       value: _acceptTerms,
                       onChanged: (bool value) {
