@@ -49,7 +49,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
             end: Alignment(1, 1), // 10% of the width, so there are ten blinds.
             colors: [
               const Color(0xFFFFFFFF),
-              const Color(0x12000000),
+              const Color(0x1F000000),
               const Color(0xFFFFFFFF),
             ],
             tileMode: TileMode.mirror, // repeats the gradient over the canvas
