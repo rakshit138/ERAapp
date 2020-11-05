@@ -45,6 +45,9 @@ dependencies:
   fluttertoast: ^7.1.1
   firebase_messaging: ^7.0.3
   awesome_dialog: ^1.2.1
+  introduction_screen: ^1.0.9
+  shared_preferences: ^0.5.12+4
+  
   
 
 dev_dependencies:
@@ -97,6 +100,7 @@ flutter:
     - assets/images/LoginBG.png
     - assets/images/Log-In.png
     - assets/videos/Intro.mp4
+    - assets/images/
     - assets/text/
 
   # An image asset can refer to one or more resolution-specific "variants", see
