@@ -17,7 +17,6 @@ import 'package:ERA/courses/science.dart';
 import 'package:ERA/courses/aptitudeAndLogic.dart';
 import 'package:ERA/courses/softSkills.dart';
 import 'package:ERA/courses/coding.dart';
-import 'package:ERA/deleteLater.dart';
 
 // import 'package:video_player/video_player.dart';
 
@@ -249,10 +248,7 @@ class HomeScreen extends StatelessWidget {
                   'Live Classroom',
                   style: TextStyle(fontSize: 15),
                 ),
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Delete()));
-                },
+                onTap: () {},
                 dense: true,
               ),
               ListTile(
