@@ -12,7 +12,7 @@ class _MathsState extends State<Maths> {
     return SafeArea(
       child: Scaffold(
         resizeToAvoidBottomPadding: false,
-        backgroundColor: Colors.grey[200],
+        backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Color(0xff03258C),
           title: Text(
@@ -28,6 +28,18 @@ class _MathsState extends State<Maths> {
             child: Column(
               children: [
                 MathsHeading(),
+                Padding(
+                  padding: EdgeInsets.all(10),
+                  child: Text(
+                    'Mathematics Trainers',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontFamily: 'Merriweather',
+                        fontSize: 35,
+                        color: Colors.grey[600]),
+                  ),
+                ),
+                MathsTrainer(),
                 Footer(),
               ],
             ),
@@ -71,7 +83,7 @@ class MathsHeading extends StatelessWidget {
               child: Container(
                 width: MediaQuery.of(context).size.width / 1.25,
                 child: Text(
-                  'Something about maths',
+                  'In this course, we provide knowledge about the basics of Arithmetic, Algebra, and geometry as well as the proper knowledge of the whole syllabus according to the respective class of student.',
                   textAlign: TextAlign.start,
                   style: TextStyle(
                       fontFamily: 'Merriweather',
@@ -82,6 +94,153 @@ class MathsHeading extends StatelessWidget {
               ),
             ),
           ),
+        ],
+      ),
+    );
+  }
+}
+
+class MathsTrainer extends StatefulWidget {
+  @override
+  _MathsTrainerState createState() => _MathsTrainerState();
+}
+
+class _MathsTrainerState extends State<MathsTrainer> {
+  Container buildKey({Column column}) {
+    return Container(
+      child: column,
+      margin: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+      height: 400.0,
+      width: (MediaQuery.of(context).size.width) / 1.15,
+      decoration: new BoxDecoration(
+        color: Colors.grey[200],
+        borderRadius: BorderRadius.circular(20),
+        boxShadow: [
+          BoxShadow(
+              color: Colors.grey,
+              offset: Offset(4.0, 4.0),
+              blurRadius: 5.0,
+              spreadRadius: 2.0)
+        ],
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.symmetric(
+        vertical: 20.0,
+      ),
+      height: 500.0,
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        children: <Widget>[
+          buildKey(
+              column: Column(
+            children: [
+              Image(
+                height: 400,
+                width: 400,
+                image: AssetImage('assets/images/mehak.png'),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(10, 0, 10, 10),
+                child: Text(
+                  'Mehak | Maths Trainer',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xff03258C),
+                    fontFamily: 'Merriweather',
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(10, 5, 10, 10),
+                child: Text(
+                  'NIT, Kurukshetra',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.grey[600],
+                    fontFamily: 'Merriweather',
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+            ],
+          )),
+          buildKey(
+              column: Column(
+            children: [
+              Image(
+                height: 400,
+                width: 400,
+                image: AssetImage('assets/images/Poornimapng.png'),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(10, 0, 10, 10),
+                child: Text(
+                  'Poornima | Maths Trainer',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xff03258C),
+                    fontFamily: 'Merriweather',
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(10, 5, 10, 10),
+                child: Text(
+                  'NIT, Nagpur',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.grey[600],
+                    fontFamily: 'Merriweather',
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+            ],
+          )),
+          buildKey(
+              column: Column(
+            children: [
+              Image(
+                height: 400,
+                width: 400,
+                image: AssetImage('assets/images/Raushanpng.png'),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(10, 0, 10, 10),
+                child: Text(
+                  'Raushan | Maths Trainer',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xff03258C),
+                    fontFamily: 'Merriweather',
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(10, 5, 10, 10),
+                child: Text(
+                  'NIT, Goa',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.grey[600],
+                    fontFamily: 'Merriweather',
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+            ],
+          )),
         ],
       ),
     );

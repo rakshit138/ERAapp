@@ -9,7 +9,6 @@ import 'HomePage.dart';
 import 'ExceptionHandling/auth-result-status.dart';
 import 'ExceptionHandling/auth-exception-handler.dart';
 import 'ExceptionHandling/firebase-auth-helper.dart';
-import 'package:modal_progress_hud/modal_progress_hud.dart';
 
 class SignUp extends StatefulWidget {
   @override

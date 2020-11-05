@@ -9,7 +9,6 @@ import 'SignUp.dart';
 import 'ExceptionHandling/auth-result-status.dart';
 import 'ExceptionHandling/auth-exception-handler.dart';
 import 'ExceptionHandling/firebase-auth-helper.dart';
-import 'package:modal_progress_hud/modal_progress_hud.dart';
 
 class ASignUp extends StatefulWidget {
   @override
@@ -111,7 +110,7 @@ class _ASignUpState extends State<ASignUp> {
                   fit: BoxFit.fill,
                 ),
               ),
-              Text("Sign In",
+              Text(" Admin Sign In",
                   style: new TextStyle(
                     fontSize: 20.0,
                     fontWeight: FontWeight.bold,
