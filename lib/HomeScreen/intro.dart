@@ -44,7 +44,9 @@ class Intro extends StatelessWidget {
                   textAlign: TextAlign.start,
                   style: TextStyle(
                       fontFamily: 'Merriweather',
-                      fontSize: 14,
+                      fontSize: 15,
+                      fontWeight: FontWeight.w400,
+                      fontStyle: FontStyle.italic,
                       color: Colors.grey[300]),
                 ),
               ),

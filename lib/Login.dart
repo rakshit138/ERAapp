@@ -1,10 +1,12 @@
 import 'package:ERA/ForgotPassword.dart';
 import 'package:ERA/HomePage.dart';
-// import 'package:ERA/loading.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'SignUp.dart';
 import 'ForgotPassword.dart';
+import 'ExceptionHandling/auth-result-status.dart';
+import 'ExceptionHandling/auth-exception-handler.dart';
+import 'ExceptionHandling/firebase-auth-helper.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -123,6 +125,7 @@ class _LoginState extends State<Login> {
                           padding: EdgeInsets.all(15),
                           child: Container(
                             child: TextFormField(
+                                // ignore: missing_return
                                 validator: (input) {
                                   if (input.isEmpty) return 'Enter Email';
                                 },
@@ -242,5 +245,30 @@ class _LoginState extends State<Login> {
         ),
       ]),
     );
+  }
+
+  _login() async {
+    {
+      final status =
+          await FirebaseAuthHelper().login(email: _email, pass: _password);
+      if (status == AuthResultStatus.invalidEmail) {
+        final errorMsg = AuthExceptionHandler.generateExceptionMessage(status);
+        _showAlertDialog(errorMsg);
+      }
+    }
+  }
+
+  _showAlertDialog(errorMsg) {
+    return showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            title: Text(
+              'Login Failed',
+              style: TextStyle(color: Colors.black),
+            ),
+            content: Text(errorMsg),
+          );
+        });
   }
 }

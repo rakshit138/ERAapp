@@ -1,4 +1,3 @@
-import 'AdminSignUp.dart';
 import 'package:ERA/models/users.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -6,16 +5,17 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'privacyButton.dart';
 import 'termsButton.dart';
 import 'HomePage.dart';
+import 'SignUp.dart';
 import 'ExceptionHandling/auth-result-status.dart';
 import 'ExceptionHandling/auth-exception-handler.dart';
 import 'ExceptionHandling/firebase-auth-helper.dart';
 
-class SignUp extends StatefulWidget {
+class ASignUp extends StatefulWidget {
   @override
-  _SignUpState createState() => _SignUpState();
+  _ASignUpState createState() => _ASignUpState();
 }
 
-class _SignUpState extends State<SignUp> {
+class _ASignUpState extends State<ASignUp> {
   FirebaseAuth _auth = FirebaseAuth.instance;
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
@@ -31,8 +31,8 @@ class _SignUpState extends State<SignUp> {
     });
   }
 
-  navigateToASignUp() async {
-    Navigator.push(context, MaterialPageRoute(builder: (context) => ASignUp()));
+  navigateToSignUp() async {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => SignUp()));
   }
 
   @override
@@ -41,7 +41,7 @@ class _SignUpState extends State<SignUp> {
     this.checkAuthentication();
   }
 
-  signUp() async {
+  AsignUp() async {
     if (_formKey.currentState.validate()) {
       _formKey.currentState.save();
 
@@ -110,7 +110,7 @@ class _SignUpState extends State<SignUp> {
                   fit: BoxFit.fill,
                 ),
               ),
-              Text("Sign In",
+              Text(" Admin Sign In",
                   style: new TextStyle(
                     fontSize: 20.0,
                     fontWeight: FontWeight.bold,
@@ -155,42 +155,6 @@ class _SignUpState extends State<SignUp> {
                               ),
                             ),
                             onSaved: (input) => _name = input),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.fromLTRB(15, 7, 15, 0),
-                      child: Container(
-                        padding: EdgeInsets.fromLTRB(5, 10, 0, 0),
-                        child: TextFormField(
-                            // ignore: missing_return
-                            validator: (input) {
-                              if (input.isEmpty) return 'Enter Class';
-                            },
-                            decoration: InputDecoration(
-                              contentPadding: const EdgeInsets.all(10),
-                              enabledBorder: UnderlineInputBorder(
-                                borderSide:
-                                    new BorderSide(color: Color(0xff03258C)),
-                                borderRadius: new BorderRadius.circular(10),
-                              ),
-                              focusedBorder: OutlineInputBorder(
-                                borderSide: new BorderSide(
-                                    color: Color(0xff03258C), width: 3),
-                                borderRadius: new BorderRadius.circular(10),
-                              ),
-                              filled: true,
-                              fillColor: Colors.grey[300],
-                              labelStyle: TextStyle(
-                                  color: Color(0xff03258C),
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 18),
-                              labelText: 'Class',
-                              prefixIcon: Icon(
-                                Icons.class_,
-                                color: Color(0xff03258C),
-                              ),
-                            ),
-                            onSaved: (input) => _class = input),
                       ),
                     ),
                     Padding(
@@ -331,7 +295,7 @@ class _SignUpState extends State<SignUp> {
                       visible: _acceptTerms,
                       child: RaisedButton(
                         padding: EdgeInsets.fromLTRB(70, 10, 70, 10),
-                        onPressed: signUp,
+                        onPressed: AsignUp,
                         child: Text(
                           'SignUp',
                           style: TextStyle(
@@ -353,13 +317,13 @@ class _SignUpState extends State<SignUp> {
                 padding: EdgeInsets.all(10),
                 child: GestureDetector(
                   child: Text(
-                    'Admin? Sign Up here',
+                    'Student? Go Back',
                     style: TextStyle(
                         color: Colors.amber,
                         fontSize: 14,
                         fontWeight: FontWeight.bold),
                   ),
-                  onTap: navigateToASignUp,
+                  onTap: navigateToSignUp,
                 ),
               ),
             ],

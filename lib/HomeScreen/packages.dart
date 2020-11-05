@@ -1,4 +1,7 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
+import 'package:awesome_dialog/awesome_dialog.dart';
 
 class Packages extends StatefulWidget {
   @override
@@ -50,18 +53,6 @@ class _PackagesState extends State<Packages> {
                   ),
                 ),
               ),
-              // Padding(
-              //   padding: EdgeInsets.all(10),
-              //   child: Text(
-              //     'Class 6,7 and 8',
-              //     textAlign: TextAlign.center,
-              //     style: TextStyle(
-              //         fontFamily: 'Merriweather',
-              //         fontSize: 24,
-              //         fontWeight: FontWeight.bold,
-              //         color: Colors.grey[600]),
-              //   ),
-              // ),
               Padding(
                 padding: EdgeInsets.all(20),
                 child: Text(
@@ -90,33 +81,7 @@ class _PackagesState extends State<Packages> {
               SizedBox(
                 height: 80,
               ),
-              Container(
-                width: 200,
-                decoration: new BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey[700],
-                        offset: Offset(4.0, 4.0),
-                        blurRadius: 5.0,
-                        spreadRadius: 2.0)
-                  ],
-                ),
-                child: FlatButton(
-                  padding: EdgeInsets.only(left: 15, right: 15),
-                  onPressed: null,
-                  child: Text(
-                    'More Details',
-                    style: TextStyle(
-                      fontFamily: 'Merriweather',
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xff03258C),
-                    ),
-                  ),
-                ),
-              ),
+              OneYear()
             ],
           )),
           packageColumn(
@@ -175,33 +140,7 @@ class _PackagesState extends State<Packages> {
               SizedBox(
                 height: 80,
               ),
-              Container(
-                width: 200,
-                decoration: new BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey[700],
-                        offset: Offset(4.0, 4.0),
-                        blurRadius: 5.0,
-                        spreadRadius: 2.0)
-                  ],
-                ),
-                child: FlatButton(
-                  padding: EdgeInsets.only(left: 15, right: 15),
-                  onPressed: null,
-                  child: Text(
-                    'More Details',
-                    style: TextStyle(
-                      fontFamily: 'Merriweather',
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xff03258C),
-                    ),
-                  ),
-                ),
-              ),
+              SixMonths()
             ],
           )),
           packageColumn(
@@ -220,18 +159,6 @@ class _PackagesState extends State<Packages> {
                   ),
                 ),
               ),
-              // Padding(
-              //   padding: EdgeInsets.all(10),
-              //   child: Text(
-              //     'Class 6,7 and 8',
-              //     textAlign: TextAlign.center,
-              //     style: TextStyle(
-              //         fontFamily: 'Merriweather',
-              //         fontSize: 24,
-              //         fontWeight: FontWeight.bold,
-              //         color: Colors.grey[600]),
-              //   ),
-              // ),
               Padding(
                 padding: EdgeInsets.all(20),
                 child: Text(
@@ -260,33 +187,7 @@ class _PackagesState extends State<Packages> {
               SizedBox(
                 height: 80,
               ),
-              Container(
-                width: 200,
-                decoration: new BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey[700],
-                        offset: Offset(4.0, 4.0),
-                        blurRadius: 5.0,
-                        spreadRadius: 2.0)
-                  ],
-                ),
-                child: FlatButton(
-                  padding: EdgeInsets.only(left: 15, right: 15),
-                  onPressed: null,
-                  child: Text(
-                    'More Details',
-                    style: TextStyle(
-                      fontFamily: 'Merriweather',
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xff03258C),
-                    ),
-                  ),
-                ),
-              ),
+              ThreeMonths()
             ],
           )),
           packageColumn(
@@ -305,18 +206,6 @@ class _PackagesState extends State<Packages> {
                   ),
                 ),
               ),
-              // Padding(
-              //   padding: EdgeInsets.all(10),
-              //   child: Text(
-              //     'Class 6,7 and 8',
-              //     textAlign: TextAlign.center,
-              //     style: TextStyle(
-              //         fontFamily: 'Merriweather',
-              //         fontSize: 24,
-              //         fontWeight: FontWeight.bold,
-              //         color: Colors.grey[600]),
-              //   ),
-              // ),
               Padding(
                 padding: EdgeInsets.all(20),
                 child: Text(
@@ -344,33 +233,7 @@ class _PackagesState extends State<Packages> {
               SizedBox(
                 height: 80,
               ),
-              Container(
-                width: 200,
-                decoration: new BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey[700],
-                        offset: Offset(4.0, 4.0),
-                        blurRadius: 5.0,
-                        spreadRadius: 2.0)
-                  ],
-                ),
-                child: FlatButton(
-                  padding: EdgeInsets.only(left: 15, right: 15),
-                  onPressed: null,
-                  child: Text(
-                    'More Details',
-                    style: TextStyle(
-                      fontFamily: 'Merriweather',
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xff03258C),
-                    ),
-                  ),
-                ),
-              ),
+              YearlyCombo()
             ],
           )),
           packageColumn(
@@ -389,18 +252,6 @@ class _PackagesState extends State<Packages> {
                   ),
                 ),
               ),
-              // Padding(
-              //   padding: EdgeInsets.all(20),
-              //   child: Text(
-              //     'Class 6,7 and 8',
-              //     textAlign: TextAlign.center,
-              //     style: TextStyle(
-              //         fontFamily: 'Merriweather',
-              //         fontSize: 24,
-              //         fontWeight: FontWeight.bold,
-              //         color: Colors.grey[600]),
-              //   ),
-              // ),
               Padding(
                 padding: EdgeInsets.all(20),
                 child: Text(
@@ -429,33 +280,7 @@ class _PackagesState extends State<Packages> {
               SizedBox(
                 height: 80,
               ),
-              Container(
-                width: 200,
-                decoration: new BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey[700],
-                        offset: Offset(4.0, 4.0),
-                        blurRadius: 5.0,
-                        spreadRadius: 2.0)
-                  ],
-                ),
-                child: FlatButton(
-                  padding: EdgeInsets.only(left: 15, right: 15),
-                  onPressed: null,
-                  child: Text(
-                    'More Details',
-                    style: TextStyle(
-                      fontFamily: 'Merriweather',
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xff03258C),
-                    ),
-                  ),
-                ),
-              ),
+              HalfYearlyCombo(),
             ],
           )),
           packageColumn(
@@ -474,18 +299,6 @@ class _PackagesState extends State<Packages> {
                   ),
                 ),
               ),
-              // Padding(
-              //   padding: EdgeInsets.all(10),
-              //   child: Text(
-              //     'Class 6,7 and 8',
-              //     textAlign: TextAlign.center,
-              //     style: TextStyle(
-              //         fontFamily: 'Merriweather',
-              //         fontSize: 24,
-              //         fontWeight: FontWeight.bold,
-              //         color: Colors.grey[600]),
-              //   ),
-              // ),
               Padding(
                 padding: EdgeInsets.all(20),
                 child: Text(
@@ -514,36 +327,706 @@ class _PackagesState extends State<Packages> {
               SizedBox(
                 height: 80,
               ),
-              Container(
-                width: 200,
-                decoration: new BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey[700],
-                        offset: Offset(4.0, 4.0),
-                        blurRadius: 5.0,
-                        spreadRadius: 2.0)
-                  ],
-                ),
-                child: FlatButton(
-                  padding: EdgeInsets.only(left: 15, right: 15),
-                  onPressed: null,
-                  child: Text(
-                    'More Details',
-                    style: TextStyle(
-                      fontFamily: 'Merriweather',
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xff03258C),
-                    ),
-                  ),
-                ),
-              ),
+              QuaterlyCombo()
             ],
           )),
         ],
+      ),
+    );
+  }
+}
+
+class OneYear extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 200,
+      decoration: new BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+              color: Colors.grey[700],
+              offset: Offset(4.0, 4.0),
+              blurRadius: 5.0,
+              spreadRadius: 2.0)
+        ],
+      ),
+      child: FlatButton(
+        padding: EdgeInsets.only(left: 15, right: 15),
+        onPressed: () {
+          AwesomeDialog(
+            context: context,
+            headerAnimationLoop: false,
+            dialogType: DialogType.NO_HEADER,
+            body: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Image(
+                    image: AssetImage('assets/images/logopng.png'),
+                    width: 300,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 15),
+                    child: Text(
+                      'Details',
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Text(
+                      'Student can choose any one subjects (Maths/Science/Aptitude and Logical Reasoning/Soft Skills) for a period of 1 Year',
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Text(
+                      'To Register for this pack, Please contact our Academic Advisor',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Text(
+                      'Mr. Sourav Tiwari',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 0, 20, 2),
+                    child: Text(
+                      'Contact No. : 7226860512',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 15,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 0, 20, 2),
+                    child: Text(
+                      'Email: sauravtiwari@era-co.in',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 15,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          )..show();
+        },
+        child: Text(
+          'More Details',
+          style: TextStyle(
+            fontFamily: 'Merriweather',
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: Color(0xff03258C),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class SixMonths extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 200,
+      decoration: new BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+              color: Colors.grey[700],
+              offset: Offset(4.0, 4.0),
+              blurRadius: 5.0,
+              spreadRadius: 2.0)
+        ],
+      ),
+      child: FlatButton(
+        padding: EdgeInsets.only(left: 15, right: 15),
+        onPressed: () {
+          AwesomeDialog(
+            context: context,
+            headerAnimationLoop: false,
+            dialogType: DialogType.NO_HEADER,
+            body: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Image(
+                    image: AssetImage('assets/images/logopng.png'),
+                    width: 300,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 15),
+                    child: Text(
+                      'Details',
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Text(
+                      'Student can choose any one subjects (Maths/Science/Aptitude and Logical Reasoning/Soft Skills) for a period of 6 Months',
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Text(
+                      'To Register for this pack, Please contact our Academic Advisor',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Text(
+                      'Mr. Sourav Tiwari',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 0, 20, 2),
+                    child: Text(
+                      'Contact No. : 7226860512',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 15,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 0, 20, 2),
+                    child: Text(
+                      'Email: sauravtiwari@era-co.in',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 15,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          )..show();
+        },
+        child: Text(
+          'More Details',
+          style: TextStyle(
+            fontFamily: 'Merriweather',
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: Color(0xff03258C),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class ThreeMonths extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 200,
+      decoration: new BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+              color: Colors.grey[700],
+              offset: Offset(4.0, 4.0),
+              blurRadius: 5.0,
+              spreadRadius: 2.0)
+        ],
+      ),
+      child: FlatButton(
+        padding: EdgeInsets.only(left: 15, right: 15),
+        onPressed: () {
+          AwesomeDialog(
+            context: context,
+            headerAnimationLoop: false,
+            dialogType: DialogType.NO_HEADER,
+            body: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Image(
+                    image: AssetImage('assets/images/logopng.png'),
+                    width: 300,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 15),
+                    child: Text(
+                      'Details',
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Text(
+                      'Student can choose any one subjects (Maths/Science/Aptitude and Logical Reasoning/Soft Skills) for a period of 3 Months',
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Text(
+                      'To Register for this pack, Please contact our Academic Advisor',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Text(
+                      'Mr. Sourav Tiwari',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 0, 20, 2),
+                    child: Text(
+                      'Contact No. : 7226860512',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 15,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 0, 20, 2),
+                    child: Text(
+                      'Email: sauravtiwari@era-co.in',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 15,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          )..show();
+        },
+        child: Text(
+          'More Details',
+          style: TextStyle(
+            fontFamily: 'Merriweather',
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: Color(0xff03258C),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class YearlyCombo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 200,
+      decoration: new BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+              color: Colors.grey[700],
+              offset: Offset(4.0, 4.0),
+              blurRadius: 5.0,
+              spreadRadius: 2.0)
+        ],
+      ),
+      child: FlatButton(
+        padding: EdgeInsets.only(left: 15, right: 15),
+        onPressed: () {
+          AwesomeDialog(
+            context: context,
+            headerAnimationLoop: false,
+            dialogType: DialogType.NO_HEADER,
+            body: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Image(
+                    image: AssetImage('assets/images/logopng.png'),
+                    width: 300,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 15),
+                    child: Text(
+                      'Details',
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Text(
+                      'Student will get \n Maths + Science + one optional subject(Aptitude and Logical Reasoning / Soft Skills)\nfor a period of 1 Year',
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Text(
+                      'To Register for this pack, Please contact our Academic Advisor',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Text(
+                      'Mr. Sourav Tiwari',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 0, 20, 2),
+                    child: Text(
+                      'Contact No. : 7226860512',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 15,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 0, 20, 2),
+                    child: Text(
+                      'Email: sauravtiwari@era-co.in',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 15,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          )..show();
+        },
+        child: Text(
+          'More Details',
+          style: TextStyle(
+            fontFamily: 'Merriweather',
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: Color(0xff03258C),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class HalfYearlyCombo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 200,
+      decoration: new BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+              color: Colors.grey[700],
+              offset: Offset(4.0, 4.0),
+              blurRadius: 5.0,
+              spreadRadius: 2.0)
+        ],
+      ),
+      child: FlatButton(
+        padding: EdgeInsets.only(left: 15, right: 15),
+        onPressed: () {
+          AwesomeDialog(
+            context: context,
+            headerAnimationLoop: false,
+            dialogType: DialogType.NO_HEADER,
+            body: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Image(
+                    image: AssetImage('assets/images/logopng.png'),
+                    width: 300,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 15),
+                    child: Text(
+                      'Details',
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Text(
+                      'Student will get \n Maths + Science + one optional subject(Aptitude and Logical Reasoning / Soft Skills)\nfor a period of 6 Months',
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Text(
+                      'To Register for this pack, Please contact our Academic Advisor',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Text(
+                      'Mr. Sourav Tiwari',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 0, 20, 2),
+                    child: Text(
+                      'Contact No. : 7226860512',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 15,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 0, 20, 2),
+                    child: Text(
+                      'Email: sauravtiwari@era-co.in',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 15,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          )..show();
+        },
+        child: Text(
+          'More Details',
+          style: TextStyle(
+            fontFamily: 'Merriweather',
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: Color(0xff03258C),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class QuaterlyCombo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 200,
+      decoration: new BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+              color: Colors.grey[700],
+              offset: Offset(4.0, 4.0),
+              blurRadius: 5.0,
+              spreadRadius: 2.0)
+        ],
+      ),
+      child: FlatButton(
+        padding: EdgeInsets.only(left: 15, right: 15),
+        onPressed: () {
+          AwesomeDialog(
+            context: context,
+            headerAnimationLoop: false,
+            dialogType: DialogType.NO_HEADER,
+            body: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Image(
+                    image: AssetImage('assets/images/logopng.png'),
+                    width: 300,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 15),
+                    child: Text(
+                      'Details',
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Text(
+                      'Student will get \n Maths + Science + one optional subject(Aptitude and Logical Reasoning / Soft Skills)\nfor a period of 3 Months',
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Text(
+                      'To Register for this pack, Please contact our Academic Advisor',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Text(
+                      'Mr. Sourav Tiwari',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 0, 20, 2),
+                    child: Text(
+                      'Contact No. : 7226860512',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 15,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 0, 20, 2),
+                    child: Text(
+                      'Email: sauravtiwari@era-co.in',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 15,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          )..show();
+        },
+        child: Text(
+          'More Details',
+          style: TextStyle(
+            fontFamily: 'Merriweather',
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: Color(0xff03258C),
+          ),
+        ),
       ),
     );
   }
