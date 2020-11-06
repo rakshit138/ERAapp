@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ERA/footer.dart';
+import 'package:ERA/courses/studyMaterial/maths10SM.dart';
 
 class Maths extends StatefulWidget {
   @override
@@ -39,6 +40,7 @@ class _MathsState extends State<Maths> {
                         color: Colors.grey[600]),
                   ),
                 ),
+                StudyMaterialMaths(),
                 MathsTrainer(),
                 Footer(),
               ],
@@ -97,6 +99,18 @@ class MathsHeading extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+class StudyMaterialMaths extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return FlatButton(
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => Maths10SM()));
+        },
+        child: Text('Study Material'));
   }
 }
 

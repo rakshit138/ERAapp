@@ -145,12 +145,12 @@ class _FacultyState extends State<Faculty> {
               column: Column(
             children: [
               Image(
-                height: 400,
+                height: 370,
                 width: 400,
                 image: AssetImage('assets/images/aiswarya.png'),
               ),
               Padding(
-                padding: EdgeInsets.fromLTRB(10, 0, 10, 10),
+                padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
                 child: Text(
                   'Ayswarya Alex | A&LR Trainer',
                   textAlign: TextAlign.center,
@@ -163,7 +163,7 @@ class _FacultyState extends State<Faculty> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.fromLTRB(10, 5, 10, 10),
+                padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
                 child: Text(
                   'Kerala, India',
                   textAlign: TextAlign.center,
