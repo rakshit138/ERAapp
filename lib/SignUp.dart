@@ -71,12 +71,12 @@ class _SignUpState extends State<SignUp> {
         //   user.updateProfile(updateuser);
         // }
       } catch (e) {
-        showError(e.errormessage);
+        showError(errormessage: e.toString());
       }
     }
   }
 
-  showError(String errormessage) {
+  showError({String errormessage}) {
     showDialog(
       context: context,
       builder: (BuildContext context) {
@@ -369,7 +369,7 @@ class _SignUpState extends State<SignUp> {
     );
   }
 
-  _createAccount() async {
+  void _createAccount() async {
     final status = await FirebaseAuthHelper()
         .createAccount(email: _email, pass: _password);
     if (status == AuthResultStatus.emailAlreadyExists) {

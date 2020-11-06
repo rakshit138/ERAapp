@@ -19,7 +19,7 @@ class _ASignUpState extends State<ASignUp> {
   FirebaseAuth _auth = FirebaseAuth.instance;
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
-  String _name, _email, _password, _phone, _class;
+  String _name, _email, _password, _phone;
   bool _acceptTerms = false;
 
   checkAuthentication() async {
@@ -41,7 +41,7 @@ class _ASignUpState extends State<ASignUp> {
     this.checkAuthentication();
   }
 
-  AsignUp() async {
+  _adminsignUp() async {
     if (_formKey.currentState.validate()) {
       _formKey.currentState.save();
 
@@ -52,7 +52,6 @@ class _ASignUpState extends State<ASignUp> {
         ))
             .user;
         Users users = Users(
-          class_name: _class,
           email: _email,
           name: _name,
           phone: _phone,
@@ -60,7 +59,7 @@ class _ASignUpState extends State<ASignUp> {
           uid: user.uid,
         );
         await FirebaseFirestore.instance
-            .collection('Students')
+            .collection('Admin')
             .doc(user.uid)
             .set(users.toMap(users));
         //signup sucessfully
@@ -71,12 +70,12 @@ class _ASignUpState extends State<ASignUp> {
         //   user.updateProfile(updateuser);
         // }
       } catch (e) {
-        showError(e.errormessage);
+        showError(errormessage: e.toString());
       }
     }
   }
 
-  showError(String errormessage) {
+  showError({String errormessage}) {
     showDialog(
       context: context,
       builder: (BuildContext context) {
@@ -295,7 +294,7 @@ class _ASignUpState extends State<ASignUp> {
                       visible: _acceptTerms,
                       child: RaisedButton(
                         padding: EdgeInsets.fromLTRB(70, 10, 70, 10),
-                        onPressed: AsignUp,
+                        onPressed: _adminsignUp,
                         child: Text(
                           'SignUp',
                           style: TextStyle(

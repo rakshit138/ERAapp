@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
   bool isloggedin = false;
   bool _loading = false;
   User firebaseUser;
-  DocumentSnapshot _documentSnapshot;
+  DocumentSnapshot _documentSnapshot, _adminSnapshot;
   Users users;
 
   Future<void> checkAuthentification() async {
@@ -63,16 +63,26 @@ class _HomePageState extends State<HomePage> {
         .collection("Students")
         .doc(firebaseUser.uid)
         .get();
-    setState(() {
-      users = Users.fromMap(_documentSnapshot.data());
-    });
+    _adminSnapshot = await FirebaseFirestore.instance
+        .collection('Admin')
+        .doc(firebaseUser.uid)
+        .get();
+    if (_adminSnapshot.data() != null) {
+      setState(() {
+        users = Users.fromMap(_adminSnapshot.data());
+      });
+    } else {
+      setState(() {
+        users = Users.fromMap(_documentSnapshot.data());
+      });
+    }
   }
 
   @override
   void initState() {
     this.checkAuthentification();
     this.getUser();
-    this.getName();
+
     super.initState();
     final fbm = FirebaseMessaging();
     fbm.requestNotificationPermissions();
@@ -144,8 +154,15 @@ class _HomePageState extends State<HomePage> {
                           Spacer(),
                           RaisedButton(
                             padding: EdgeInsets.fromLTRB(70, 10, 70, 10),
-                            onPressed: () {
-                              Navigator.push(
+                            onPressed: () async {
+                              setState(() {
+                                _loading = true;
+                              });
+                              await getName();
+                              setState(() {
+                                _loading = false;
+                              });
+                              Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) => HomeScreen(

@@ -1,6 +1,7 @@
 import 'package:ERA/Features/sst.dart';
 import 'package:ERA/VideoLibrary/MyHomePage.dart';
 import 'package:ERA/models/users.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'intro.dart';
@@ -21,10 +22,36 @@ import 'package:ERA/deleteLater.dart';
 
 // import 'package:video_player/video_player.dart';
 
-class HomeScreen extends StatelessWidget {
-  final FirebaseAuth _auth = FirebaseAuth.instance;
+class HomeScreen extends StatefulWidget {
   final Users users;
+
   HomeScreen({this.users});
+
+  @override
+  _HomeScreenState createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+  Users admin;
+  User firebaseUser;
+  DocumentSnapshot _adminSnapshot;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    firebaseUser = _auth.currentUser;
+    getUser();
+  }
+
+  getUser() async {
+    _adminSnapshot = await FirebaseFirestore.instance
+        .collection('Admin')
+        .doc(firebaseUser.uid)
+        .get();
+    admin = Users.fromMap(_adminSnapshot.data());
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -81,7 +108,7 @@ class HomeScreen extends StatelessWidget {
               // ),
               UserAccountsDrawerHeader(
                 accountName: Text(
-                  '${users.name}',
+                  '${widget.users.name}',
                   style: TextStyle(
                       fontSize: 15,
                       color: Color(0xff03258C),
@@ -89,7 +116,7 @@ class HomeScreen extends StatelessWidget {
                       fontFamily: 'Merriweather'),
                 ),
                 accountEmail: Text(
-                  '${users.email}',
+                  '${widget.users.email}',
                   style: TextStyle(
                       fontSize: 15,
                       color: Color(0xff03258C),
@@ -102,7 +129,7 @@ class HomeScreen extends StatelessWidget {
                           ? Colors.white
                           : Color(0xff03258C),
                   child: Text(
-                    users.name
+                    widget.users.name
                         .substring(0, 2)
                         .toUpperCase(), //User First and second name letter
                     style: TextStyle(fontSize: 40.0),
@@ -226,8 +253,12 @@ class HomeScreen extends StatelessWidget {
                   style: TextStyle(fontSize: 15),
                 ),
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => VideoPage()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => VideoPage(
+                                admin: admin,
+                              )));
                 },
                 dense: true,
               ),

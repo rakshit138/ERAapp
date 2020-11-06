@@ -39,6 +39,24 @@ class _UploadScreenState extends State<UploadScreen> {
     // _videoPlayerController.dispose();
   }
 
+  void showError({String errormessage}) {
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: Text('ERROR'),
+            content: Text(errormessage),
+            actions: <Widget>[
+              FlatButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: Text('OK'))
+            ],
+          );
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
     Future<bool> uploadToStorage(
@@ -75,7 +93,7 @@ class _UploadScreenState extends State<UploadScreen> {
         print(url);
         return true;
       } catch (error) {
-        print(error);
+        showError(errormessage: error.toString());
         return false;
       }
     }

@@ -2,6 +2,7 @@ import 'package:ERA/ForgotPassword.dart';
 import 'package:ERA/HomePage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'SignUp.dart';
 import 'ForgotPassword.dart';
 import 'ExceptionHandling/auth-result-status.dart';
@@ -43,19 +44,18 @@ class _LoginState extends State<Login> {
   login() async {
     if (_formKey.currentState.validate()) {
       _formKey.currentState.save();
-
       try {
-        UserCredential credential = await _auth.signInWithEmailAndPassword(
+        await _auth.signInWithEmailAndPassword(
             email: _email, password: _password);
-
-        User user = credential.user;
+      } on PlatformException catch (e) {
+        showError(errormessage: e.message);
       } catch (e) {
-        showError(e.errormessage);
+        showError(errormessage: e.toString());
       }
     }
   }
 
-  showError(String errormessage) {
+  void showError({String errormessage}) {
     showDialog(
         context: context,
         builder: (BuildContext context) {

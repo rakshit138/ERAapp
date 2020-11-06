@@ -2,10 +2,13 @@ import 'package:ERA/VideoLibrary/UploadVideo/upload.dart';
 import 'package:ERA/VideoLibrary/customTile.dart';
 import 'package:ERA/VideoLibrary/fetchvideomethod.dart';
 import 'package:ERA/VideoLibrary/size_config.dart';
+import 'package:ERA/models/users.dart';
 import 'package:ERA/models/videodetail.dart';
 import 'package:flutter/material.dart';
 
 class VideoPage extends StatefulWidget {
+  final Users admin;
+  VideoPage({this.admin});
   @override
   _VideoPageState createState() => _VideoPageState();
 }
@@ -26,6 +29,8 @@ class _VideoPageState extends State<VideoPage> {
         print(videoList);
       });
     });
+    print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+    print(widget.admin);
   }
 
   @override
@@ -112,98 +117,99 @@ class _VideoPageState extends State<VideoPage> {
     }
 
     SizeConfig().init(context);
-    print(SizeConfig.orientation);
     return Scaffold(
-      backgroundColor: Colors.black12,
-      appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back,
-            color: Colors.amber,
-          ),
-          onPressed: () => Navigator.pop(context),
-        ),
-        backgroundColor: Color(0xff03258C),
-        title: Text(
-          "ERA",
-          style: TextStyle(color: Colors.amber),
-        ),
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Container(
-            height: SizeConfig.orientation == Orientation.landscape
-                ? 60
-                : getProportionateScreenHeight(75),
-            margin: EdgeInsets.all(3),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(5),
+        backgroundColor: Colors.black12,
+        appBar: AppBar(
+          leading: IconButton(
+            icon: Icon(
+              Icons.arrow_back,
+              color: Colors.amber,
             ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "Videos",
-                  style: TextStyle(
-                      fontSize: getProportionateScreenWidth(22),
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Card(
-                  elevation: 10,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)),
-                  child: Container(
-                    height: SizeConfig.orientation == Orientation.landscape
-                        ? 40
-                        : getProportionateScreenHeight(40),
-                    width: MediaQuery.of(context).size.width > 500 ? 450 : 250,
-                    // decoration: BoxDecoration(
-                    //   shape: BoxShape.rectangle,
-                    //   border: Border.all(
-                    //     color: Colors.black,
-                    //     width: 1.0,
-                    //   ),
-                    // ),
-                    child: TextField(
-                      controller: textcontroller,
-                      onChanged: (value) {
-                        query = value;
-                      },
-                      textInputAction: TextInputAction.done,
-                      style: TextStyle(fontSize: 18),
-                      keyboardType: TextInputType.name,
-                      textAlign: TextAlign.left,
-                      decoration: const InputDecoration(
-                        prefixIcon: Icon(Icons.search),
-                        border: InputBorder.none,
+            onPressed: () => Navigator.pop(context),
+          ),
+          backgroundColor: Color(0xff03258C),
+          title: Text(
+            "ERA",
+            style: TextStyle(color: Colors.amber),
+          ),
+        ),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Container(
+              height: SizeConfig.orientation == Orientation.landscape
+                  ? 60
+                  : getProportionateScreenHeight(75),
+              margin: EdgeInsets.all(3),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(5),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Videos",
+                    style: TextStyle(
+                        fontSize: getProportionateScreenWidth(22),
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Card(
+                    elevation: 10,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)),
+                    child: Container(
+                      height: SizeConfig.orientation == Orientation.landscape
+                          ? 40
+                          : getProportionateScreenHeight(40),
+                      width:
+                          MediaQuery.of(context).size.width > 500 ? 450 : 250,
+                      // decoration: BoxDecoration(
+                      //   shape: BoxShape.rectangle,
+                      //   border: Border.all(
+                      //     color: Colors.black,
+                      //     width: 1.0,
+                      //   ),
+                      // ),
+                      child: TextField(
+                        controller: textcontroller,
+                        onChanged: (value) {
+                          query = value;
+                        },
+                        textInputAction: TextInputAction.done,
+                        style: TextStyle(fontSize: 18),
+                        keyboardType: TextInputType.name,
+                        textAlign: TextAlign.left,
+                        decoration: const InputDecoration(
+                          prefixIcon: Icon(Icons.search),
+                          border: InputBorder.none,
+                        ),
                       ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          Flexible(
-            child: query.isEmpty ? allvideo(query) : buildSuggestions(query),
-          ),
-        ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        elevation: 10,
-        onPressed: () {
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => UploadScreen()));
-        },
-        child: Icon(
-          Icons.add,
-          size: 50,
+            Flexible(
+              child: query.isEmpty ? allvideo(query) : buildSuggestions(query),
+            ),
+          ],
         ),
-      ),
-    );
+        floatingActionButton: widget.admin != null
+            ? FloatingActionButton(
+                elevation: 10,
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => UploadScreen()));
+                },
+                child: Icon(
+                  Icons.add,
+                  size: 50,
+                ),
+              )
+            : Container());
   }
 }
