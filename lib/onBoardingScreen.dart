@@ -36,25 +36,26 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
         fontStyle: FontStyle.italic,
         fontWeight: FontWeight.w400);
     const pageDecoration = const PageDecoration(
-        titleTextStyle: TextStyle(
-            fontFamily: 'Merriweather',
-            fontSize: 28.0,
-            fontWeight: FontWeight.w700,
-            color: Color(0xff03258C)),
-        bodyTextStyle: bodyStyle,
-        descriptionPadding: EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 16.0),
-        boxDecoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment(1, 1), // 10% of the width, so there are ten blinds.
-            colors: [
-              const Color(0xFFFFFFFF),
-              const Color(0x1F000000),
-              const Color(0xFFFFFFFF),
-            ],
-            tileMode: TileMode.mirror, // repeats the gradient over the canvas
-          ),
-        ));
+      titleTextStyle: TextStyle(
+          fontFamily: 'Merriweather',
+          fontSize: 28.0,
+          fontWeight: FontWeight.w700,
+          color: Color(0xff03258C)),
+      bodyTextStyle: bodyStyle,
+      descriptionPadding: EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 16.0),
+      // boxDecoration: BoxDecoration(
+      //   gradient: LinearGradient(
+      //     begin: Alignment.topLeft,
+      //     end: Alignment(1, 1), // 10% of the width, so there are ten blinds.
+      //     colors: [
+      //       const Color(0xFFFFFFFF),
+      //       const Color(0x1F000000),
+      //       const Color(0xFFFFFFFF),
+      //     ],
+      //     tileMode: TileMode.mirror, // repeats the gradient over the canvas
+      //   ),
+      // )
+    );
 
     return IntroductionScreen(
       key: introKey,
@@ -125,9 +126,9 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
               color: Color(0xff03258C),
               fontFamily: 'Merriweather')),
       dotsDecorator: const DotsDecorator(
-        size: Size(10.0, 10.0),
+        size: Size(5.0, 5.0),
         color: Color(0xff03258C),
-        activeSize: Size(22.0, 10.0),
+        activeSize: Size(15.0, 10.0),
         activeShape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(25.0)),
         ),
