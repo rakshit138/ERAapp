@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ERA/footer.dart';
 import 'package:ERA/courses/studyMaterial/maths10SM.dart';
-import 'package:url_launcher/url_launcher.dart';
+
+import 'package:ERA/bookNow.dart';
 
 class Maths extends StatefulWidget {
   @override
@@ -33,6 +34,20 @@ class _MathsState extends State<Maths> {
                 Padding(
                   padding: EdgeInsets.all(10),
                   child: Text(
+                    '"Maths is nothing it\'s just a game of numbers. If you know the concept you will easily crack it."',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontFamily: 'Merriweather',
+                        fontSize: 25,
+                        fontStyle: FontStyle.italic,
+                        color: Colors.grey[500]),
+                  ),
+                ),
+                StudyMaterialMaths(),
+                BookNow(),
+                Padding(
+                  padding: EdgeInsets.all(10),
+                  child: Text(
                     'Mathematics Trainers',
                     textAlign: TextAlign.center,
                     style: TextStyle(
@@ -41,7 +56,6 @@ class _MathsState extends State<Maths> {
                         color: Colors.grey[600]),
                   ),
                 ),
-                StudyMaterialMaths(),
                 MathsTrainer(),
                 Footer(),
               ],
@@ -97,23 +111,9 @@ class MathsHeading extends StatelessWidget {
               ),
             ),
           ),
-          RaisedButton(
-            onPressed: _launchURL,
-            child: Text('Request For Demo'),
-          )
         ],
       ),
     );
-  }
-}
-
-_launchURL() async {
-  const url =
-      'https://docs.google.com/forms/d/1demY_SdpUv28DGyjAH9h7sN_c4OyCIQQDDtVLOo6zY4/viewform?edit_requested=true';
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not launch $url';
   }
 }
 
