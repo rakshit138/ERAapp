@@ -29,8 +29,6 @@ class _VideoPageState extends State<VideoPage> {
         print(videoList);
       });
     });
-    print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
-    print(widget.admin);
   }
 
   @override

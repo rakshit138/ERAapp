@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ERA/footer.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AptitudeAndLogic extends StatefulWidget {
   @override
@@ -48,7 +49,7 @@ class AptitudeHeading extends StatelessWidget {
               image: AssetImage("assets/images/Home Page 2.png"),
               fit: BoxFit.fill)),
       child: Column(
-        children: [
+        children: <Widget>[
           Align(
             alignment: Alignment.topLeft,
             child: Padding(
@@ -82,8 +83,22 @@ class AptitudeHeading extends StatelessWidget {
               ),
             ),
           ),
+          RaisedButton(
+            onPressed: _launchURL,
+            child: Text('Request For Demo'),
+          )
         ],
       ),
     );
+  }
+}
+
+_launchURL() async {
+  const url =
+      'https://docs.google.com/forms/d/1demY_SdpUv28DGyjAH9h7sN_c4OyCIQQDDtVLOo6zY4/viewform?edit_requested=true';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
   }
 }

@@ -4,6 +4,8 @@ import 'package:ERA/models/users.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:open_appstore/open_appstore.dart';
+import 'package:rate_my_app/rate_my_app.dart';
 import 'intro.dart';
 import 'features.dart';
 import 'faculty.dart';
@@ -35,13 +37,68 @@ class _HomeScreenState extends State<HomeScreen> {
   Users admin;
   User firebaseUser;
   DocumentSnapshot _adminSnapshot;
+  RateMyApp _rateMyApp = RateMyApp(
+      preferencesPrefix: 'rateMyApp_pro',
+      minDays: 3,
+      minLaunches: 7,
+      remindDays: 2,
+      remindLaunches: 5);
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
     firebaseUser = _auth.currentUser;
+    print('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Class_name>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>');
+    print(widget.users.class_name);
     getUser();
+    _rateMyApp.init().then((_) {
+      if (_rateMyApp.shouldOpenDialog) {
+        //conditions check if user already rated the app
+        _rateMyApp.showStarRateDialog(
+          context,
+          title: 'What do you think about Our App?',
+          message: 'Please leave a rating',
+          actionsBuilder: (_, stars) {
+            return [
+              // Returns a list of actions (that will be shown at the bottom of the dialog).
+              FlatButton(
+                child: Text('OK'),
+                onPressed: () async {
+                  print('Thanks for the ' +
+                      (stars == null ? '0' : stars.round().toString()) +
+                      ' star(s) !');
+                  if (stars != null && (stars == 4 || stars == 5)) {
+                    //if the user stars is equal to 4 or five
+                    // you can redirect the use to playstore or                         appstore to enter their reviews
+                    OpenAppstore.launch(
+                        androidAppId: "com.assitantera.strot&hl=en",
+                        iOSAppId: "");
+                  } else {
+                    // else you can redirect the user to a page in your app to tell you how you can make the app better
+                    Navigator.of(context).pop();
+                  }
+                  // You can handle the result as you want (for instance if the user puts 1 star then open your contact page, if he puts more then open the store page, etc...).
+                  // This allows to mimic the behavior of the default "Rate" button. See "Advanced > Broadcasting events" for more information :
+                  await _rateMyApp
+                      .callEvent(RateMyAppEventType.rateButtonPressed);
+                  Navigator.pop<RateMyAppDialogButton>(
+                      context, RateMyAppDialogButton.rate);
+                },
+              ),
+            ];
+          },
+          dialogStyle: DialogStyle(
+            titleAlign: TextAlign.center,
+            messageAlign: TextAlign.center,
+            messagePadding: EdgeInsets.only(bottom: 20.0),
+          ),
+          starRatingOptions: StarRatingOptions(),
+          onDismissed: () =>
+              _rateMyApp.callEvent(RateMyAppEventType.laterButtonPressed),
+        );
+      }
+    });
   }
 
   getUser() async {

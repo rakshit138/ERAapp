@@ -52,6 +52,7 @@ class _ASignUpState extends State<ASignUp> {
         ))
             .user;
         Users users = Users(
+          class_name: '1',
           email: _email,
           name: _name,
           phone: _phone,
