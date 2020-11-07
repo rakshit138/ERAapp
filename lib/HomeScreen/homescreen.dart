@@ -49,6 +49,8 @@ class _HomeScreenState extends State<HomeScreen> {
     // TODO: implement initState
     super.initState();
     firebaseUser = _auth.currentUser;
+    print('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Class_name>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>');
+    print(widget.users.class_name);
     getUser();
     _rateMyApp.init().then((_) {
       if (_rateMyApp.shouldOpenDialog) {

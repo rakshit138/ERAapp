@@ -159,9 +159,6 @@ class _HomePageState extends State<HomePage> {
                                 _loading = true;
                               });
                               await getName();
-                              setState(() {
-                                _loading = false;
-                              });
                               Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
@@ -170,6 +167,9 @@ class _HomePageState extends State<HomePage> {
                                   ),
                                 ),
                               );
+                               setState(() {
+                                _loading = false;
+                              });
                             },
                             child: Text(
                               'Continue',
