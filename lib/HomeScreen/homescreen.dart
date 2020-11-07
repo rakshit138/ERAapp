@@ -6,6 +6,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:open_appstore/open_appstore.dart';
 import 'package:rate_my_app/rate_my_app.dart';
+import 'package:ERA/bookNow.dart';
 import 'intro.dart';
 import 'features.dart';
 import 'faculty.dart';
@@ -49,6 +50,9 @@ class _HomeScreenState extends State<HomeScreen> {
     // TODO: implement initState
     super.initState();
     firebaseUser = _auth.currentUser;
+    print(
+        '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Class_name>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>');
+    print(widget.users.class_name);
     getUser();
     _rateMyApp.init().then((_) {
       if (_rateMyApp.shouldOpenDialog) {
@@ -379,6 +383,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                     Features(),
+                    BookNow(),
                     Padding(
                       padding: EdgeInsets.all(10),
                       child: Text(
@@ -437,6 +442,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                     HigheClassPackages(),
+
                     // Padding(
                     //   padding: EdgeInsets.all(10),
                     //   child: Text(

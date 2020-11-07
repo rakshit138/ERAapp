@@ -155,7 +155,7 @@ class Science814 extends StatelessWidget {
   }
 }
 
-class Sciencne815 extends StatelessWidget {
+class Science815 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return WebView(
@@ -166,7 +166,7 @@ class Sciencne815 extends StatelessWidget {
   }
 }
 
-class Sciencne816 extends StatelessWidget {
+class Science816 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return WebView(
@@ -177,7 +177,7 @@ class Sciencne816 extends StatelessWidget {
   }
 }
 
-class Sciencne817 extends StatelessWidget {
+class Science817 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return WebView(
@@ -188,7 +188,7 @@ class Sciencne817 extends StatelessWidget {
   }
 }
 
-class Sciencne818 extends StatelessWidget {
+class Science818 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return WebView(
@@ -355,7 +355,7 @@ class ExScience814 extends StatelessWidget {
   }
 }
 
-class ExSciencne815 extends StatelessWidget {
+class ExScience815 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return WebView(
@@ -366,7 +366,7 @@ class ExSciencne815 extends StatelessWidget {
   }
 }
 
-class ExSciencne816 extends StatelessWidget {
+class ExScience816 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return WebView(
@@ -377,7 +377,7 @@ class ExSciencne816 extends StatelessWidget {
   }
 }
 
-class ExSciencne817 extends StatelessWidget {
+class ExScience817 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return WebView(
@@ -388,7 +388,7 @@ class ExSciencne817 extends StatelessWidget {
   }
 }
 
-class ExSciencne818 extends StatelessWidget {
+class ExScience818 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return WebView(

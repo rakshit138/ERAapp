@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ERA/footer.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:ERA/courses/studyMaterial/science9SM.dart';
+import 'package:ERA/bookNow.dart';
 
 class Science extends StatefulWidget {
   @override
@@ -13,7 +14,7 @@ class _ScienceState extends State<Science> {
     return SafeArea(
       child: Scaffold(
         resizeToAvoidBottomPadding: false,
-        backgroundColor: Colors.grey[200],
+        backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Color(0xff03258C),
           title: Text(
@@ -29,6 +30,20 @@ class _ScienceState extends State<Science> {
             child: Column(
               children: [
                 ScienceHeading(),
+                Padding(
+                  padding: EdgeInsets.all(10),
+                  child: Text(
+                    '"Knowledge attained through study or practice."',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontFamily: 'Merriweather',
+                        fontSize: 25,
+                        fontStyle: FontStyle.italic,
+                        color: Colors.grey[500]),
+                  ),
+                ),
+                StudyMaterialScience(),
+                BookNow(),
                 Footer(),
               ],
             ),
@@ -72,7 +87,7 @@ class ScienceHeading extends StatelessWidget {
               child: Container(
                 width: MediaQuery.of(context).size.width / 1.25,
                 child: Text(
-                  'Something about Science',
+                  'In this course, we clear the basic concept of the students and teach them what is science in the real world? science is a way of knowing about the world.At once a process, a product, and an institution, science enables people to both engage in the construction of new knowledge as well as use the informaation to achieve desired ends.',
                   textAlign: TextAlign.start,
                   style: TextStyle(
                       fontFamily: 'Merriweather',
@@ -83,22 +98,20 @@ class ScienceHeading extends StatelessWidget {
               ),
             ),
           ),
-          RaisedButton(
-            onPressed: _launchURL,
-            child: Text('Request For Demo'),
-          )
         ],
       ),
     );
   }
 }
 
-_launchURL() async {
-  const url =
-      'https://docs.google.com/forms/d/1demY_SdpUv28DGyjAH9h7sN_c4OyCIQQDDtVLOo6zY4/viewform?edit_requested=true';
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not launch $url';
+class StudyMaterialScience extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return FlatButton(
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => Science9SM()));
+        },
+        child: Text('Study Material'));
   }
 }
