@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ERA/footer.dart';
+import 'package:ERA/courses/studyMaterial/science9SM.dart';
 
 class Science extends StatefulWidget {
   @override
@@ -28,6 +29,7 @@ class _ScienceState extends State<Science> {
             child: Column(
               children: [
                 ScienceHeading(),
+                StudyMaterialScience(),
                 Footer(),
               ],
             ),
@@ -85,5 +87,17 @@ class ScienceHeading extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+class StudyMaterialScience extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return FlatButton(
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => Science9SM()));
+        },
+        child: Text('Study Material'));
   }
 }
