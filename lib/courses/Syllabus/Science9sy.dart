@@ -49,6 +49,9 @@ class Courses extends StatelessWidget {
                         )
                       ],
                     ),
+                    Divider(
+                      thickness: 2,
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -67,15 +70,28 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Nature Of Matter"),
-                              Text("Particle Nature"),
-                              Text("Basic Unit"),
-                              Text("Structure Of Atoms"),
+                              Text(
+                                "Nature Of Matter",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Particle Nature",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Basic Unit",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Structure Of Atoms",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -94,16 +110,32 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Cell: Basic Unit Of Life Tissue"),
-                              Text("Organs & Organ System"),
-                              Text("Organisms"),
-                              Text("Biological Diversity"),
-                              Text("Health And Diseases"),
+                              Text(
+                                "Cell: Basic Unit Of Life Tissue",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Organs & Organ System",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Organisms",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Biological Diversity",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Health And Diseases",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -122,14 +154,24 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Motion, Force And Newton's Law"),
-                              Text("Gravitation Floatation Work"),
-                              Text("Energy And Power Sound")
+                              Text(
+                                "Motion, Force And Newton's Law",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Gravitation Floatation Work",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Energy And Power Sound",
+                                textAlign: TextAlign.center,
+                              )
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -145,13 +187,20 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Physical Resources"),
-                              Text("Bio-Geo Chemical Cycles In Nature"),
+                              Text(
+                                "Physical Resources",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Bio-Geo Chemical Cycles In Nature",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -167,7 +216,10 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Improvement In Food Resources"),
+                              Text(
+                                "Improvement In Food Resources",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )

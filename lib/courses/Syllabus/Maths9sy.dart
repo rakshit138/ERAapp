@@ -49,6 +49,9 @@ class Courses extends StatelessWidget {
                         )
                       ],
                     ),
+                    Divider(
+                      thickness: 2,
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -64,12 +67,16 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Real Numbers"),
+                              Text(
+                                "Real Numbers",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -85,13 +92,20 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Polynomials"),
-                              Text("Linear Equations in two Variables"),
+                              Text(
+                                "Polynomials",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Linear Equations in two Variables",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -107,12 +121,16 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Coordinate Geometry"),
+                              Text(
+                                "Coordinate Geometry",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -128,19 +146,44 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Introduction to Euclid's Geometry"),
-                              Text("Lines and Angles"),
-                              Text("A Line Segment"),
-                              Text("Triangles"),
-                              Text("Quadrilaterals"),
-                              Text("Area"),
-                              Text("Circles"),
-                              Text("Constructions"),
+                              Text(
+                                "Introduction to Euclid's Geometry",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Lines and Angles",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "A Line Segment",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Triangles",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Quadrilaterals",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Area",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Circles",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Constructions",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -156,14 +199,24 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Heron's Formula"),
-                              Text("Surface Area"),
-                              Text("Volumes"),
+                              Text(
+                                "Heron's Formula",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Surface Area",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Volumes",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -182,7 +235,10 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Statistics & Probability"),
+                              Text(
+                                "Statistics & Probability",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )

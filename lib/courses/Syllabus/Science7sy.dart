@@ -49,6 +49,9 @@ class Courses extends StatelessWidget {
                         )
                       ],
                     ),
+                    Divider(
+                      thickness: 2,
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -64,12 +67,16 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Nutrition in Plants"),
+                              Text(
+                                "Nutrition in Plants",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -85,12 +92,16 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Nutrition in Animals"),
+                              Text(
+                                "Nutrition in Animals",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -106,12 +117,16 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Fibre to Fabric"),
+                              Text(
+                                "Fibre to Fabric",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -127,12 +142,16 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Heat"),
+                              Text(
+                                "Heat",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -150,12 +169,16 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Acids, Bases and Salts"),
+                              Text(
+                                "Acids, Bases and Salts",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -171,12 +194,16 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Physical and Chemical Changes"),
+                              Text(
+                                "Physical and Chemical Changes",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -193,12 +220,15 @@ class Courses extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Text(
-                                  "Weather, Climate and Adaptations of Animals of Climate"),
+                                "Weather, Climate and Adaptations of Animals of Climate",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -214,12 +244,16 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Winds, Storms and Cyclones"),
+                              Text(
+                                "Winds, Storms and Cyclones",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -235,12 +269,16 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Soil"),
+                              Text(
+                                "Soil",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -256,12 +294,16 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Respiration in Organisms"),
+                              Text(
+                                "Respiration in Organisms",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -277,12 +319,16 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Transportation in Animals and Plants"),
+                              Text(
+                                "Transportation in Animals and Plants",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -298,12 +344,16 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Reproduction in Plants"),
+                              Text(
+                                "Reproduction in Plants",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -319,12 +369,16 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Motion and Time"),
+                              Text(
+                                "Motion and Time",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -340,12 +394,16 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Electric Current and It's Effects"),
+                              Text(
+                                "Electric Current and It's Effects",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -361,12 +419,16 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Light"),
+                              Text(
+                                "Light",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -382,12 +444,16 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Water: A Precious Resource"),
+                              Text(
+                                "Water: A Precious Resource",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -403,12 +469,16 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Forests: Our Lifeline"),
+                              Text(
+                                "Forests: Our Lifeline",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -424,7 +494,10 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Waste Water Theory"),
+                              Text(
+                                "Waste Water Theory",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )

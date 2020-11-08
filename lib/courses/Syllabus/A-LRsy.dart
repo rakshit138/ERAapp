@@ -49,6 +49,9 @@ class Courses extends StatelessWidget {
                         )
                       ],
                     ),
+                    Divider(
+                      thickness: 2,
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -67,23 +70,60 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Analogy, Classification, Puzzle test"),
-                              Text("Coding and Decoding"),
-                              Text("Blood Relations"),
-                              Text("Sequential Output Tracing"),
-                              Text("Logical Venn Diagram"),
-                              Text("Alphabet Test, Matheatical Operations"),
-                              Text("Number, Ranking and Time Sequence"),
-                              Text("Arithmetic Reasoning"),
-                              Text("Inserting the Missing Character"),
-                              Text("Data Insufficiency"),
-                              Text("Assertion and Reason"),
-                              Text("Verification of Truth of statement"),
+                              Text(
+                                "Analogy, Classification, Puzzle test",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Coding and Decoding",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Blood Relations",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Sequential Output Tracing",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Logical Venn Diagram",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Alphabet Test, Matheatical Operations",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Number, Ranking and Time Sequence",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Arithmetic Reasoning",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Inserting the Missing Character",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Data Insufficiency",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Assertion and Reason",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Verification of Truth of statement",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -101,15 +141,27 @@ class Courses extends StatelessWidget {
                             children: [
                               Text("Logic"),
                               Text(
-                                  "Statements: Arguments, Assumptions, Courses of Ations & Conclusion"),
-                              Text("Conclusion from Passages"),
-                              Text("Theme Detection"),
-                              Text("Question-Statements"),
+                                "Statements: Arguments, Assumptions, Courses of Ations & Conclusion",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Conclusion from Passages",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Theme Detection",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Question-Statements",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -125,18 +177,40 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Series, Analogy, Classification"),
-                              Text("Figure Matrix, Embedded Figure"),
-                              Text("Analytical Reasoning"),
-                              Text("Mirror Images & Water Images"),
-                              Text("Paper Cutting"),
-                              Text("Cubes and Dice"),
-                              Text("Dot Situation"),
+                              Text(
+                                "Series, Analogy, Classification",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Figure Matrix, Embedded Figure",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Analytical Reasoning",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Mirror Images & Water Images",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Paper Cutting",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Cubes and Dice",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Dot Situation",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -153,31 +227,105 @@ class Courses extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Text(
-                                  "Numbers (Number System, Problems on Numbers)"),
-                              Text("HCF, LCM"),
-                              Text("Decimal Fractions"),
-                              Text("Simplifications"),
-                              Text("Square Roots and Cube Roots"),
-                              Text("Average"),
-                              Text("Age"),
-                              Text("Surds and Indices"),
-                              Text("Percentage"),
-                              Text("Profit and Loss"),
-                              Text("Ratio and Proportion"),
-                              Text("Partnership"),
-                              Text("Chain Rule"),
-                              Text("Time and Work"),
-                              Text("Time and Distance"),
-                              Text("Simple Interest and Comound Interest"),
-                              Text("Area"),
-                              Text("Volume and Surface Area"),
-                              Text("Race"),
-                              Text("calendar"),
-                              Text("Clock"),
-                              Text("Probability"),
-                              Text("True Discount and Bankers Discount"),
-                              Text("Heights and Distances"),
-                              Text("Number Series: Odd Man Out & Missing"),
+                                "Numbers (Number System, Problems on Numbers)",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "HCF, LCM",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Decimal Fractions",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Simplifications",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Square Roots and Cube Roots",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Average",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Age",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Surds and Indices",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Percentage",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Profit and Loss",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Ratio and Proportion",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Partnership",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Chain Rule",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Time and Work",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Time and Distance",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Simple Interest and Comound Interest",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Area",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Volume and Surface Area",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Race",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "calendar",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Clock",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Probability",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "True Discount and Bankers Discount",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Heights and Distances",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Number Series: Odd Man Out & Missing",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )

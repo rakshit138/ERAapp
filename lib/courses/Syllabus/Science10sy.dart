@@ -49,6 +49,9 @@ class Courses extends StatelessWidget {
                         )
                       ],
                     ),
+                    Divider(
+                      thickness: 2,
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -67,16 +70,32 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Chemical Reactions"),
-                              Text("Acids, Bases And Salts"),
-                              Text("Metals And Non-Metals"),
-                              Text("Carbon Compounds"),
-                              Text("Periodic Classification Of Elements")
+                              Text(
+                                "Chemical Reactions",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Acids, Bases And Salts",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Metals And Non-Metals",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Carbon Compounds",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Periodic Classification Of Elements",
+                                textAlign: TextAlign.center,
+                              )
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -92,16 +111,28 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Life Process"),
                               Text(
-                                  "Control And Coordination In Animals And Plants"),
-                              Text("Reproduction"),
-                              Text("Heredity ANd Evolution"),
+                                "Life Process",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Control And Coordination In Animals And Plants",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Reproduction",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Heredity ANd Evolution",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -117,12 +148,16 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Reflection Of Light By Curved Surfaces"),
+                              Text(
+                                "Reflection Of Light By Curved Surfaces",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -138,12 +173,16 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Magnetic Effects Of Current"),
+                              Text(
+                                "Magnetic Effects Of Current",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -159,9 +198,18 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Sources Of Energy"),
-                              Text("Our Environment"),
-                              Text("Management Of Natural Resources")
+                              Text(
+                                "Sources Of Energy",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Our Environment",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Management Of Natural Resources",
+                                textAlign: TextAlign.center,
+                              )
                             ],
                           ),
                         )

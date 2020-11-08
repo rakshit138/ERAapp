@@ -49,6 +49,9 @@ class Courses extends StatelessWidget {
                         )
                       ],
                     ),
+                    Divider(
+                      thickness: 2,
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -64,16 +67,32 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Introduction"),
-                              Text("Comparing Numbers"),
-                              Text("Large Numbers in Practice"),
-                              Text("Using Brackets"),
-                              Text("Roman Numerals"),
+                              Text(
+                                "Introduction",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Comparing Numbers",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Large Numbers in Practice",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Using Brackets",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Roman Numerals",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -89,16 +108,32 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Introduction"),
-                              Text("Whole Numbers"),
-                              Text("The Number Line"),
-                              Text("Properties of Whole Numbers"),
-                              Text("Patterns in Whole Numbers"),
+                              Text(
+                                "Introduction",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Whole Numbers",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "The Number Line",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Properties of Whole Numbers",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Patterns in Whole Numbers",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -114,21 +149,52 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Introduction"),
-                              Text("Factors and Multiples"),
-                              Text("Prime and Composite Numbers"),
-                              Text("Test for Divisibility of Numbers"),
-                              Text("Common Factors and Common Multiples"),
-                              Text("Some More Divishibility Rules"),
-                              Text("Prime Factorization"),
-                              Text("Highest Common Factor"),
-                              Text("Lowest Common Multiple"),
-                              Text("Some Problems on HCF and LCM"),
+                              Text(
+                                "Introduction",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Factors and Multiples",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Prime and Composite Numbers",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Test for Divisibility of Numbers",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Common Factors and Common Multiples",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Some More Divishibility Rules",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Prime Factorization",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Highest Common Factor",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Lowest Common Multiple",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Some Problems on HCF and LCM",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -147,24 +213,64 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Introduction"),
-                              Text("Points"),
-                              Text("A Line Segment"),
-                              Text("A Line"),
-                              Text("Intersecting Lines"),
-                              Text("Parallel Lines"),
-                              Text("Ray"),
-                              Text("Curves"),
-                              Text("Polygons"),
-                              Text("Angles"),
-                              Text("Triangles"),
-                              Text("Quadrilaterals"),
-                              Text("Circles"),
+                              Text(
+                                "Introduction",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Points",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "A Line Segment",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "A Line",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Intersecting Lines",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Parallel Lines",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Ray",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Curves",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Polygons",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Angles",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Triangles",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Quadrilaterals",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Circles",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -183,21 +289,52 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Introduction"),
-                              Text("Measuring Line Segments"),
-                              Text("Angle-'Right' and 'Straight'"),
-                              Text("Angle-'Acute', 'Obtuse' and 'Reflex'"),
-                              Text("Measuring Angles"),
-                              Text("Perpendicular Lines"),
-                              Text("Classification of Triangles"),
-                              Text("Quadrilaterals"),
-                              Text("Polygon"),
-                              Text("3-D Shapes"),
+                              Text(
+                                "Introduction",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Measuring Line Segments",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Angle-'Right' and 'Straight'",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Angle-'Acute', 'Obtuse' and 'Reflex'",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Measuring Angles",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Perpendicular Lines",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Classification of Triangles",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Quadrilaterals",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Polygon",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "3-D Shapes",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -213,16 +350,28 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Introduction"),
-                              Text("Integers"),
-                              Text("Addition of Integers"),
                               Text(
-                                  "Subtraction Of Integers with the help of a Number Line"),
+                                "Introduction",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Integers",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Addition of Integers",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Subtraction Of Integers with the help of a Number Line",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -238,21 +387,52 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Introduction"),
-                              Text("A Fraction"),
-                              Text("Fraction on the Number Line"),
-                              Text("Proper Fractions"),
-                              Text("Improper and Mixed fractions"),
-                              Text("Equivalent Fractions"),
-                              Text("Simplest Form of Fractions"),
-                              Text("Like Fractions"),
-                              Text("Comparing Fractions"),
-                              Text("Addition and Subtraction of Fractions"),
+                              Text(
+                                "Introduction",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "A Fraction",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Fraction on the Number Line",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Proper Fractions",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Improper and Mixed fractions",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Equivalent Fractions",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Simplest Form of Fractions",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Like Fractions",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Comparing Fractions",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Addition and Subtraction of Fractions",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -268,18 +448,40 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Introduction"),
-                              Text("Tenths"),
-                              Text("Hundreths"),
-                              Text("Comparing Decimals"),
-                              Text("Using Decimals"),
-                              Text("Addition of Numbers with Decimals"),
-                              Text("Subtraction of Decimals"),
+                              Text(
+                                "Introduction",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Tenths",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Hundreths",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Comparing Decimals",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Using Decimals",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Addition of Numbers with Decimals",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Subtraction of Decimals",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -295,18 +497,40 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Introduction"),
-                              Text("Recording Data"),
-                              Text("Organisation of Data"),
-                              Text("Pictograph"),
-                              Text("Interpretation of a Pictograph"),
-                              Text("Drawing a Pictograph"),
-                              Text("A Bar Graph"),
+                              Text(
+                                "Introduction",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Recording Data",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Organisation of Data",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Pictograph",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Interpretation of a Pictograph",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Drawing a Pictograph",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "A Bar Graph",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -322,14 +546,24 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Introduction"),
-                              Text("Perimeter"),
-                              Text("Area"),
+                              Text(
+                                "Introduction",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Perimeter",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Area",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -345,21 +579,52 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Introduction"),
-                              Text("Matchstick Patterns"),
-                              Text("The Idea of Variables"),
-                              Text("More Matchstick Patterns"),
-                              Text("More Examples of Variables"),
-                              Text("Uses of Variables in Common Rules"),
-                              Text("Expresions with Variables"),
-                              Text("Using Expressions Pratically"),
-                              Text("What is an Equation?"),
-                              Text("Solutions of an Equation"),
+                              Text(
+                                "Introduction",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Matchstick Patterns",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "The Idea of Variables",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "More Matchstick Patterns",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "More Examples of Variables",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Uses of Variables in Common Rules",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Expresions with Variables",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Using Expressions Pratically",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "What is an Equation?",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Solutions of an Equation",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -378,15 +643,28 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Introduction"),
-                              Text("Ratio"),
-                              Text("Proportion"),
-                              Text("Unitary Method"),
+                              Text(
+                                "Introduction",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Ratio",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Proportion",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Unitary Method",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -402,17 +680,36 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Introduction"),
-                              Text("Making Symmetric Figure: Ink-blot Devils"),
-                              Text("Figures with Two Lines of Symmetry"),
-                              Text("Figures with Multiple Lines of Symmetry"),
-                              Text("More Examples of Variables"),
-                              Text("Reflection and Symmetry"),
+                              Text(
+                                "Introduction",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Making Symmetric Figure: Ink-blot Devils",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Figures with Two Lines of Symmetry",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Figures with Multiple Lines of Symmetry",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "More Examples of Variables",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Reflection and Symmetry",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -428,11 +725,26 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Introduction"),
-                              Text("The Circle"),
-                              Text("A Line Segment"),
-                              Text("Perpendiculars"),
-                              Text("Angles"),
+                              Text(
+                                "Introduction",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "The Circle",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "A Line Segment",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Perpendiculars",
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Angles",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
