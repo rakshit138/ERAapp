@@ -1,7 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 
-class Courses extends StatelessWidget {
+class SoftSkillSY extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double size = MediaQuery.of(context).size.width / 2 - 20;
@@ -49,6 +49,9 @@ class Courses extends StatelessWidget {
                         )
                       ],
                     ),
+                    Divider(
+                      thickness: 2,
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -64,12 +67,16 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Introduction of SoftSkills"),
+                              Text(
+                                "Introduction of SoftSkills",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -85,12 +92,16 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Communication (Verbal And Non-Verbal)"),
+                              Text(
+                                "Communication (Verbal And Non-Verbal)",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -106,12 +117,16 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Intonation"),
+                              Text(
+                                "Intonation",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -127,11 +142,15 @@ class Courses extends StatelessWidget {
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                Text("Self Discovery (Introduction)"),
+                                Text(
+                                  "Self Discovery (Introduction)",
+                                  textAlign: TextAlign.center,
+                                ),
                               ]),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -147,12 +166,16 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Barriers to Communication"),
+                              Text(
+                                "Barriers to Communication",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -168,12 +191,16 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Aticles, Social Etiquettes"),
+                              Text(
+                                "Aticles, Social Etiquettes",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -189,12 +216,16 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Prepositions"),
+                              Text(
+                                "Prepositions",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -210,11 +241,15 @@ class Courses extends StatelessWidget {
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                Text("Sentence Formation: 'Wh' Word"),
+                                Text(
+                                  "Sentence Formation: 'Wh' Word",
+                                  textAlign: TextAlign.center,
+                                ),
                               ]),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -230,12 +265,16 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Telling Time, Power of Words"),
+                              Text(
+                                "Telling Time, Power of Words",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -251,11 +290,15 @@ class Courses extends StatelessWidget {
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                Text("Email Writing"),
+                                Text(
+                                  "Email Writing",
+                                  textAlign: TextAlign.center,
+                                ),
                               ]),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -271,11 +314,15 @@ class Courses extends StatelessWidget {
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                Text("Netiquetes, Notice Writing"),
+                                Text(
+                                  "Netiquetes, Notice Writing",
+                                  textAlign: TextAlign.center,
+                                ),
                               ]),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -291,12 +338,16 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Letter Writing"),
+                              Text(
+                                "Letter Writing",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -312,12 +363,16 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Making Interferences"),
+                              Text(
+                                "Making Interferences",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -333,12 +388,16 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Tenses"),
+                              Text(
+                                "Tenses",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -354,12 +413,16 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Self Control, Constructive Arguments"),
+                              Text(
+                                "Self Control, Constructive Arguments",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -375,12 +438,16 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Group Discussions"),
+                              Text(
+                                "Group Discussions",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -396,12 +463,16 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Power of Habit"),
+                              Text(
+                                "Power of Habit",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -417,12 +488,16 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Conditionals"),
+                              Text(
+                                "Conditionals",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -438,12 +513,16 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Analogy, Dialogue"),
+                              Text(
+                                "Analogy, Dialogue",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -459,12 +538,16 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Presentation"),
+                              Text(
+                                "Presentation",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )
                       ],
                     ),
+                    Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -480,7 +563,10 @@ class Courses extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("Informed Choice"),
+                              Text(
+                                "Informed Choice",
+                                textAlign: TextAlign.center,
+                              ),
                             ],
                           ),
                         )

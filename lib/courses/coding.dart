@@ -15,6 +15,13 @@ class _CodingState extends State<Coding> {
         resizeToAvoidBottomPadding: false,
         backgroundColor: Colors.white,
         appBar: AppBar(
+          leading: IconButton(
+            icon: Icon(
+              Icons.arrow_back,
+              color: Colors.amber,
+            ),
+            onPressed: () => Navigator.pop(context),
+          ),
           backgroundColor: Color(0xff03258C),
           title: Text(
             'ERA',

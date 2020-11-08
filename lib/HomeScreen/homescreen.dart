@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:open_appstore/open_appstore.dart';
 import 'package:rate_my_app/rate_my_app.dart';
 import 'package:ERA/bookNow.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'intro.dart';
 import 'features.dart';
 import 'faculty.dart';
@@ -111,6 +112,15 @@ class _HomeScreenState extends State<HomeScreen> {
     admin = Users.fromMap(_adminSnapshot.data());
   }
 
+  _launchURLWebsite() async {
+    const url = 'https://era-co.in/';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -118,6 +128,7 @@ class _HomeScreenState extends State<HomeScreen> {
         resizeToAvoidBottomPadding: false,
         backgroundColor: Colors.white,
         appBar: AppBar(
+          iconTheme: new IconThemeData(color: Colors.amberAccent),
           backgroundColor: Color(0xff03258C),
           title: Text(
             'ERA',
@@ -131,39 +142,6 @@ class _HomeScreenState extends State<HomeScreen> {
           child: ListView(
             padding: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 0.0),
             children: <Widget>[
-              // DrawerHeader(
-              //   child: Column(
-              //     children: <Widget>[
-              //       Image(
-              //         image: AssetImage('assets/images/logo png 3.png'),
-              //         height: 50,
-              //         width: 50,
-              //       ),
-              //       Padding(
-              //         padding: EdgeInsets.all(5),
-              //         child: Text('ERA',
-              //             style: TextStyle(
-              //                 color: Colors.white,
-              //                 fontSize: 24,
-              //                 fontFamily: 'Merriweather')),
-              //       ),
-              //       Text('Assistant to Redefine Education',
-              //           style: TextStyle(
-              //               color: Colors.white,
-              //               fontSize: 20,
-              //               fontFamily: 'Dancing Script')),
-              //     ],
-              //   ),
-              //   decoration: BoxDecoration(
-              //       color: Colors.blueGrey,
-              //       image: DecorationImage(
-              //           colorFilter: new ColorFilter.mode(
-              //             Colors.grey.withOpacity(0.2),
-              //             BlendMode.dstATop,
-              //           ),
-              //           image: AssetImage('assets/images/headerBackground.jpg'),
-              //           fit: BoxFit.cover)),
-              // ),
               UserAccountsDrawerHeader(
                 accountName: Text(
                   '${widget.users.name}',
@@ -211,9 +189,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   'Website',
                   style: TextStyle(fontSize: 15),
                 ),
-                onTap: () {
-                  Navigator.pop(context);
-                },
+                onTap: _launchURLWebsite,
                 dense: true,
               ),
               Divider(
@@ -239,7 +215,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     dense: true,
                   ),
                   ListTile(
-                    leading: Icon(Icons.book),
+                    leading: Icon(Icons.science_outlined),
                     title: Text(
                       'Science',
                       style: TextStyle(fontSize: 15),
@@ -332,15 +308,15 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
                 dense: true,
               ),
-              ListTile(
-                leading: Icon(Icons.live_tv),
-                title: Text(
-                  'Live Classroom',
-                  style: TextStyle(fontSize: 15),
-                ),
-                onTap: () {},
-                dense: true,
-              ),
+              // ListTile(
+              //   leading: Icon(Icons.live_tv),
+              //   title: Text(
+              //     'Live Classroom',
+              //     style: TextStyle(fontSize: 15),
+              //   ),
+              //   onTap: () {},
+              //   dense: true,
+              // ),
               ListTile(
                 leading: Icon(Icons.keyboard_backspace),
                 title: Text(
@@ -487,18 +463,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                     ),
-                    // Padding(
-                    //   padding: EdgeInsets.all(10.0),
-                    //   child: Text(
-                    //     'Our Academic Advisors',
-                    //     style: TextStyle(
-                    //         fontFamily: 'Merriweather',
-                    //         color: Colors.grey[800],
-                    //         fontSize: 20.0,
-                    //         fontWeight: FontWeight.normal),
-                    //     textAlign: TextAlign.center,
-                    //   ),
-                    // ),
+
                     Advisors(),
                     Footer()
                   ],

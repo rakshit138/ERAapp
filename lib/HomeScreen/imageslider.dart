@@ -29,7 +29,7 @@ class _ImageSliderState extends State<ImageSlider> {
           builder: (BuildContext context) {
             return Container(
                 width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(color: Colors.grey[100]),
+                decoration: BoxDecoration(color: Colors.white),
                 child: Image(image: AssetImage('assets/images/IMG$i.jpg')));
           },
         );

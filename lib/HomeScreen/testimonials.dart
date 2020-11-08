@@ -13,7 +13,7 @@ class _TestimonialsState extends State<Testimonials> {
       height: 440.0,
       width: (MediaQuery.of(context).size.width),
       decoration: new BoxDecoration(
-        color: Colors.grey[100],
+        color: Colors.white,
       ),
     );
   }

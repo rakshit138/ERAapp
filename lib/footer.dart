@@ -10,7 +10,7 @@ class Footer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: (MediaQuery.of(context).size.width),
-      height: 420,
+      height: 440,
       decoration: new BoxDecoration(color: Colors.grey[600]),
       child: SingleChildScrollView(
         child: Column(

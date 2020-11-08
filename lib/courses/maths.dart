@@ -17,6 +17,13 @@ class _MathsState extends State<Maths> {
         resizeToAvoidBottomPadding: false,
         backgroundColor: Colors.white,
         appBar: AppBar(
+          leading: IconButton(
+            icon: Icon(
+              Icons.arrow_back,
+              color: Colors.amber,
+            ),
+            onPressed: () => Navigator.pop(context),
+          ),
           backgroundColor: Color(0xff03258C),
           title: Text(
             'ERA',
@@ -48,7 +55,7 @@ class _MathsState extends State<Maths> {
                 Padding(
                   padding: EdgeInsets.all(10),
                   child: Text(
-                    'Mathematics Trainers',
+                    'Our Trainers',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontFamily: 'Merriweather',
