@@ -40,7 +40,7 @@ class _SoftSkillsState extends State<SoftSkills> {
                 Padding(
                   padding: EdgeInsets.all(10),
                   child: Text(
-                    '"Soft Skills are primarily focus on personal attributes that create situational awareness and enhance an individual\'s ability."',
+                    '"Soft Skills are primarily focused on personal attributes that create situational awareness and enhance an individual\'s ability."',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontFamily: 'Merriweather',
