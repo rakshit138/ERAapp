@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ERA/footer.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:ERA/bookNow.dart';
 
 class Coding extends StatefulWidget {
   @override
@@ -13,7 +13,7 @@ class _CodingState extends State<Coding> {
     return SafeArea(
       child: Scaffold(
         resizeToAvoidBottomPadding: false,
-        backgroundColor: Colors.grey[200],
+        backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Color(0xff03258C),
           title: Text(
@@ -29,6 +29,19 @@ class _CodingState extends State<Coding> {
             child: Column(
               children: [
                 CodingHeading(),
+                Padding(
+                  padding: EdgeInsets.all(10),
+                  child: Text(
+                    '"Everybody should learn to program a computer, because it teaches you how to think."',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontFamily: 'Merriweather',
+                        fontSize: 25,
+                        fontStyle: FontStyle.italic,
+                        color: Colors.grey[500]),
+                  ),
+                ),
+                BookNow(),
                 Footer(),
               ],
             ),
@@ -72,7 +85,7 @@ class CodingHeading extends StatelessWidget {
               child: Container(
                 width: MediaQuery.of(context).size.width / 1.25,
                 child: Text(
-                  'Something about Coding',
+                  'Coding is not a subject but it is a language of computers, by which we can communicate with our tech buddy for better functioning in this Digital World',
                   textAlign: TextAlign.start,
                   style: TextStyle(
                       fontFamily: 'Merriweather',
@@ -83,22 +96,8 @@ class CodingHeading extends StatelessWidget {
               ),
             ),
           ),
-          RaisedButton(
-            onPressed: _launchURL,
-            child: Text('Request For Demo'),
-          )
         ],
       ),
     );
-  }
-}
-
-_launchURL() async {
-  const url =
-      'https://docs.google.com/forms/d/1demY_SdpUv28DGyjAH9h7sN_c4OyCIQQDDtVLOo6zY4/viewform?edit_requested=true';
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not launch $url';
   }
 }

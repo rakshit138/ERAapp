@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ERA/footer.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:ERA/bookNow.dart';
 
 class SoftSkills extends StatefulWidget {
   @override
@@ -13,7 +13,7 @@ class _SoftSkillsState extends State<SoftSkills> {
     return SafeArea(
       child: Scaffold(
         resizeToAvoidBottomPadding: false,
-        backgroundColor: Colors.grey[200],
+        backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Color(0xff03258C),
           title: Text(
@@ -29,6 +29,31 @@ class _SoftSkillsState extends State<SoftSkills> {
             child: Column(
               children: [
                 SoftSkillHeading(),
+                Padding(
+                  padding: EdgeInsets.all(10),
+                  child: Text(
+                    '"Soft Skills are primarily focus on personal attributes that create situational awareness and enhance an individual\'s ability."',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontFamily: 'Merriweather',
+                        fontSize: 25,
+                        fontStyle: FontStyle.italic,
+                        color: Colors.grey[500]),
+                  ),
+                ),
+                BookNow(),
+                Padding(
+                  padding: EdgeInsets.all(10),
+                  child: Text(
+                    ' Our Trainers',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontFamily: 'Merriweather',
+                        fontSize: 35,
+                        color: Colors.grey[600]),
+                  ),
+                ),
+                SoftSkillsTrainer(),
                 Footer(),
               ],
             ),
@@ -72,7 +97,7 @@ class SoftSkillHeading extends StatelessWidget {
               child: Container(
                 width: MediaQuery.of(context).size.width / 1.25,
                 child: Text(
-                  'Something about SoftSkills',
+                  'Soft Skills will start from basic interview turning to the perfect one. we will look into interaction, expressions, critical thinking, conflict resolution and attitude towards tackling the situation, that enhance one\'s personality.',
                   textAlign: TextAlign.start,
                   style: TextStyle(
                       fontFamily: 'Merriweather',
@@ -83,22 +108,80 @@ class SoftSkillHeading extends StatelessWidget {
               ),
             ),
           ),
-          RaisedButton(
-            onPressed: _launchURL,
-            child: Text('Request For Demo'),
-          )
         ],
       ),
     );
   }
 }
 
-_launchURL() async {
-  const url =
-      'https://docs.google.com/forms/d/1demY_SdpUv28DGyjAH9h7sN_c4OyCIQQDDtVLOo6zY4/viewform?edit_requested=true';
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not launch $url';
+class SoftSkillsTrainer extends StatefulWidget {
+  @override
+  _SoftSkillsTrainerState createState() => _SoftSkillsTrainerState();
+}
+
+class _SoftSkillsTrainerState extends State<SoftSkillsTrainer> {
+  Container buildKey({Column column}) {
+    return Container(
+      child: column,
+      margin: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+      height: 400.0,
+      width: (MediaQuery.of(context).size.width) / 1.15,
+      decoration: new BoxDecoration(
+        color: Colors.grey[200],
+        borderRadius: BorderRadius.circular(20),
+        boxShadow: [
+          BoxShadow(
+              color: Colors.grey,
+              offset: Offset(4.0, 4.0),
+              blurRadius: 5.0,
+              spreadRadius: 2.0)
+        ],
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.symmetric(
+        vertical: 20.0,
+      ),
+      height: 500.0,
+      child: buildKey(
+          column: Column(
+        children: [
+          Image(
+            height: 400,
+            width: 400,
+            image: AssetImage('assets/images/varsha.png'),
+          ),
+          Padding(
+            padding: EdgeInsets.fromLTRB(10, 0, 10, 10),
+            child: Text(
+              'Varsha | Soft Skill Trainer',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Color(0xff03258C),
+                fontFamily: 'Merriweather',
+                fontSize: 20,
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.fromLTRB(10, 5, 10, 10),
+            child: Text(
+              'DU, Delhi',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.grey[600],
+                fontFamily: 'Merriweather',
+                fontSize: 20,
+              ),
+            ),
+          ),
+        ],
+      )),
+    );
   }
 }
