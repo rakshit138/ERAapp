@@ -164,7 +164,8 @@ class _SignUpState extends State<SignUp> {
                         child: TextFormField(
                             // ignore: missing_return
                             validator: (input) {
-                              if (input.isEmpty) return 'Enter Class';
+                              if (input.isEmpty)
+                                return 'Enter Class (6, 7, 8, 9, 10)';
                             },
                             decoration: InputDecoration(
                               contentPadding: const EdgeInsets.all(10),
@@ -184,7 +185,7 @@ class _SignUpState extends State<SignUp> {
                                   color: Color(0xff03258C),
                                   fontWeight: FontWeight.bold,
                                   fontSize: 18),
-                              labelText: 'Class',
+                              labelText: 'Class (Between 6-10)',
                               prefixIcon: Icon(
                                 Icons.class_,
                                 color: Color(0xff03258C),
