@@ -133,15 +133,6 @@ class _StartState extends State<Start> {
                         ),
                         color: Colors.amber),
                   ),
-                  SizedBox(height: 20),
-                  Container(
-                    width: 200,
-                    child: SignInButton(
-                      Buttons.Google,
-                      text: "Sign up with Google",
-                      onPressed: () {},
-                    ),
-                  ),
                 ],
               ),
             ]),
