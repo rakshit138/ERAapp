@@ -1,7 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 
-class Courses extends StatelessWidget {
+class ALRsy extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double size = MediaQuery.of(context).size.width / 2 - 20;
@@ -74,46 +74,57 @@ class Courses extends StatelessWidget {
                                 "Analogy, Classification, Puzzle test",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Coding and Decoding",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Blood Relations",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Sequential Output Tracing",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Logical Venn Diagram",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
-                                "Alphabet Test, Matheatical Operations",
+                                "Alphabet Test, Mathematical Operations",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Number, Ranking and Time Sequence",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Arithmetic Reasoning",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Inserting the Missing Character",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Data Insufficiency",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Assertion and Reason",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Verification of Truth of statement",
                                 textAlign: TextAlign.center,
@@ -140,18 +151,22 @@ class Courses extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Text("Logic"),
+                              Divider(),
                               Text(
-                                "Statements: Arguments, Assumptions, Courses of Ations & Conclusion",
+                                "Statements: Arguments, Assumptions, Courses of Actions & Conclusion",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Conclusion from Passages",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Theme Detection",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Question-Statements",
                                 textAlign: TextAlign.center,
@@ -181,26 +196,32 @@ class Courses extends StatelessWidget {
                                 "Series, Analogy, Classification",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Figure Matrix, Embedded Figure",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Analytical Reasoning",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Mirror Images & Water Images",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Paper Cutting",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Cubes and Dice",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Dot Situation",
                                 textAlign: TextAlign.center,
@@ -230,98 +251,122 @@ class Courses extends StatelessWidget {
                                 "Numbers (Number System, Problems on Numbers)",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "HCF, LCM",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Decimal Fractions",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Simplifications",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Square Roots and Cube Roots",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Average",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Age",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Surds and Indices",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Percentage",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Profit and Loss",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Ratio and Proportion",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Partnership",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Chain Rule",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Time and Work",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Time and Distance",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Simple Interest and Comound Interest",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Area",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Volume and Surface Area",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Race",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "calendar",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Clock",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Probability",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "True Discount and Bankers Discount",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Heights and Distances",
                                 textAlign: TextAlign.center,
                               ),
+                              Divider(),
                               Text(
                                 "Number Series: Odd Man Out & Missing",
                                 textAlign: TextAlign.center,

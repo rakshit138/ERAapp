@@ -1,6 +1,11 @@
+import 'package:ERA/courses/studyMaterial/maths6SM.dart';
+import 'package:ERA/courses/studyMaterial/maths7SM.dart';
+import 'package:ERA/courses/studyMaterial/maths8SM.dart';
+import 'package:ERA/courses/studyMaterial/maths9SM.dart';
 import 'package:flutter/material.dart';
 import 'package:ERA/footer.dart';
 import 'package:ERA/courses/studyMaterial/maths10SM.dart';
+import 'package:ERA/models/users.dart';
 
 import 'package:ERA/bookNow.dart';
 
@@ -50,7 +55,8 @@ class _MathsState extends State<Maths> {
                         color: Colors.grey[500]),
                   ),
                 ),
-                StudyMaterialMaths(),
+                // StudyMaterialMaths(),
+                MathSMButton(),
                 BookNow(),
                 Padding(
                   padding: EdgeInsets.all(10),
@@ -124,17 +130,17 @@ class MathsHeading extends StatelessWidget {
   }
 }
 
-class StudyMaterialMaths extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return FlatButton(
-        onPressed: () {
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => Maths10SM()));
-        },
-        child: Text('Study Material'));
-  }
-}
+// class StudyMaterialMaths extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return FlatButton(
+//         onPressed: () {
+//           Navigator.push(
+//               context, MaterialPageRoute(builder: (context) => Maths10SM()));
+//         },
+//         child: Text('Study Material'));
+//   }
+// }
 
 class MathsTrainer extends StatefulWidget {
   @override
@@ -280,5 +286,40 @@ class _MathsTrainerState extends State<MathsTrainer> {
         ],
       ),
     );
+  }
+}
+
+class MathSMButton extends StatefulWidget {
+  final Users users;
+
+  MathSMButton({this.users});
+
+  @override
+  _MathSMButtonState createState() => _MathSMButtonState();
+}
+
+class _MathSMButtonState extends State<MathSMButton> {
+  _navigateSM() {
+    if (widget.users.class_name == '6') {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => Maths6SM()));
+    } else if (widget.users.class_name == '7') {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => Maths7SM()));
+    } else if (widget.users.class_name == '8') {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => Maths8SM()));
+    } else if (widget.users.class_name == '9') {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => Maths9SM()));
+    } else {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => Maths10SM()));
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return FlatButton(onPressed: _navigateSM, child: Text('Study Material'));
   }
 }
