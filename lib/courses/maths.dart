@@ -6,8 +6,12 @@ import 'package:flutter/material.dart';
 import 'package:ERA/footer.dart';
 import 'package:ERA/courses/studyMaterial/maths10SM.dart';
 import 'package:ERA/models/users.dart';
-
 import 'package:ERA/bookNow.dart';
+import 'Syllabus/Maths6sy.dart';
+import 'Syllabus/Maths7sy.dart';
+import 'Syllabus/Maths8sy.dart';
+import 'Syllabus/Maths9sy.dart';
+import 'Syllabus/Maths10sy.dart';
 
 class Maths extends StatefulWidget {
   final Users users;
@@ -57,9 +61,17 @@ class _MathsState extends State<Maths> {
                         color: Colors.grey[500]),
                   ),
                 ),
-                // StudyMaterialMaths(),
-                MathSMButton(
-                  users: widget.users,
+                Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    MathSMButton(
+                      users: widget.users,
+                    ),
+                    MathSYButton(
+                      users: widget.users,
+                    ),
+                  ],
                 ),
                 BookNow(),
                 Padding(
@@ -295,7 +307,6 @@ class _MathsTrainerState extends State<MathsTrainer> {
 
 class MathSMButton extends StatefulWidget {
   final Users users;
-
   MathSMButton({this.users});
 
   @override
@@ -303,7 +314,7 @@ class MathSMButton extends StatefulWidget {
 }
 
 class _MathSMButtonState extends State<MathSMButton> {
-  _navigateSM() {
+  _navigateMathSM() {
     print(widget.users.class_name);
     if (widget.users.class_name == '6') {
       Navigator.push(
@@ -325,6 +336,79 @@ class _MathSMButtonState extends State<MathSMButton> {
 
   @override
   Widget build(BuildContext context) {
-    return FlatButton(onPressed: _navigateSM, child: Text('Study Material'));
+    return Container(
+      width: (MediaQuery.of(context).size.width / 2.3),
+      child: Padding(
+        padding: EdgeInsets.all(5),
+        child: RaisedButton(
+          color: Colors.amberAccent,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15.0),
+          ),
+          onPressed: _navigateMathSM,
+          child: Text(
+            'Study Material',
+            style: TextStyle(
+                fontFamily: 'Merriweather',
+                color: Color(0xff03258C),
+                fontWeight: FontWeight.w400),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class MathSYButton extends StatefulWidget {
+  final Users users;
+  MathSYButton({this.users});
+
+  @override
+  _MathSYButtonState createState() => _MathSYButtonState();
+}
+
+class _MathSYButtonState extends State<MathSYButton> {
+  _navigateMathSY() {
+    print(widget.users.class_name);
+    if (widget.users.class_name == '6') {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => Maths6SY()));
+    } else if (widget.users.class_name == '7') {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => Maths7SY()));
+    } else if (widget.users.class_name == '8') {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => Maths8SY()));
+    } else if (widget.users.class_name == '9') {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => Maths9SY()));
+    } else {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => Maths10SY()));
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: (MediaQuery.of(context).size.width / 2.3),
+      child: Padding(
+        padding: EdgeInsets.all(5),
+        child: RaisedButton(
+          color: Colors.amberAccent,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15.0),
+          ),
+          onPressed: _navigateMathSY,
+          child: Text(
+            'Syllabus',
+            style: TextStyle(
+                fontFamily: 'Merriweather',
+                color: Color(0xff03258C),
+                fontWeight: FontWeight.w400),
+          ),
+        ),
+      ),
+    );
   }
 }

@@ -5,9 +5,11 @@ class Users {
   String name;
   String email;
   Timestamp timestamp;
+  // ignore: non_constant_identifier_names
   String class_name;
   String phone;
   Users({
+    // ignore: non_constant_identifier_names
     this.class_name,
     this.email,
     this.name,

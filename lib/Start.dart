@@ -12,10 +12,13 @@ class Start extends StatefulWidget {
 }
 
 class _StartState extends State<Start> {
+  // ignore: unused_field
   final FirebaseAuth _auth = FirebaseAuth.instance;
+  // ignore: unused_field
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   @override
+  // ignore: override_on_non_overriding_member
   navigateToLogin() async {
     // Navigator.push(context, MaterialPageRoute(builder: (context) => Login()));
     Navigator.of(context).push(_routeLogin());

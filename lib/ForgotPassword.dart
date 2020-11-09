@@ -44,6 +44,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                   ),
                   Container(
                     child: TextFormField(
+                      // ignore: missing_return
                       validator: (input) {
                         if (input.isEmpty) {
                           return 'Enter your email ...';

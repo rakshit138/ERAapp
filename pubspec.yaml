@@ -72,38 +72,38 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/login.jpg
-    - assets/images/start.jpg
-    - assets/images/welcome.jpg
-    - assets/images/Abhaypng.png
-    - assets/images/Abhaypng.png
-    - assets/images/Anjalipng.png
-    - assets/images/varsha.png
-    - assets/images/Nisha_png.png
-    - assets/images/Abhijit_png.png
-    - assets/images/Raushanpng.png
-    - assets/images/Poornimapng.png
-    - assets/images/aiswarya.png
-    - assets/images/aiswarya.png
-    - assets/images/khushboo.png
-    - assets/images/mehak.png
-    - assets/images/header.jpeg
-    - assets/images/headerBackground.jpg
-    - assets/images/logo png 3.png
-    - assets/images/IMG1.jpg
-    - assets/images/IMG2.jpg
-    - assets/images/IMG3.jpg
-    - assets/images/IMG4.jpg
-    - assets/images/sourav.png
-    - assets/images/logopng.png
-    - assets/images/BAckground.png
-    - assets/images/HomeLogo.jpeg
-    - assets/images/splash.png
-    - assets/images/Frame 1.png
-    - assets/images/Home Page 2.png
-    - assets/images/LoginBG.png
-    - assets/images/Log-In.png
-    - assets/videos/Intro.mp4
+    # - assets/images/login.jpg
+    # - assets/images/start.jpg
+    # - assets/images/welcome.jpg
+    # - assets/images/Abhaypng.png
+    # - assets/images/Abhaypng.png
+    # - assets/images/Anjalipng.png
+    # - assets/images/varsha.png
+    # - assets/images/Nisha_png.png
+    # - assets/images/Abhijit_png.png
+    # - assets/images/Raushanpng.png
+    # - assets/images/Poornimapng.png
+    # - assets/images/aiswarya.png
+    # - assets/images/aiswarya.png
+    # - assets/images/khushboo.png
+    # - assets/images/mehak.png
+    # - assets/images/header.jpeg
+    # - assets/images/headerBackground.jpg
+    # - assets/images/logo png 3.png
+    # - assets/images/IMG1.jpg
+    # - assets/images/IMG2.jpg
+    # - assets/images/IMG3.jpg
+    # - assets/images/IMG4.jpg
+    # - assets/images/sourav.png
+    # - assets/images/logopng.png
+    # - assets/images/BAckground.png
+    # - assets/images/HomeLogo.jpeg
+    # - assets/images/splash.png
+    # - assets/images/Frame 1.png
+    # - assets/images/Home Page 2.png
+    # - assets/images/LoginBG.png
+    # - assets/images/Log-In.png
+    # - assets/videos/Intro.mp4
     - assets/images/
     - assets/text/
 

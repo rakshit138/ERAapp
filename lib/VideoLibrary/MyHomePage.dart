@@ -20,6 +20,7 @@ class _VideoPageState extends State<VideoPage> {
   GetVideo getVideo = GetVideo();
   @override
   void initState() {
+    // ignore: todo
     // TODO: implement initState
     super.initState();
     textcontroller = TextEditingController(text: '');
@@ -33,6 +34,7 @@ class _VideoPageState extends State<VideoPage> {
 
   @override
   void dispose() {
+    // ignore: todo
     // TODO: implement dispose
     super.dispose();
   }

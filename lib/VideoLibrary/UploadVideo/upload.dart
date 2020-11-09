@@ -23,6 +23,7 @@ class _UploadScreenState extends State<UploadScreen> {
   File _video;
   VideoPlayerController _videoPlayerController;
   _pickVideo() async {
+    // ignore: deprecated_member_use
     File video = await ImagePicker.pickVideo(source: ImageSource.gallery);
     _video = video;
     _videoPlayerController = VideoPlayerController.file(_video)
@@ -34,6 +35,7 @@ class _UploadScreenState extends State<UploadScreen> {
 
   @override
   void dispose() {
+    // ignore: todo
     // TODO: implement dispose
     super.dispose();
     // _videoPlayerController.dispose();
@@ -172,6 +174,7 @@ class _UploadScreenState extends State<UploadScreen> {
                               ),
                         Container(
                           child: TextFormField(
+                              // ignore: missing_return
                               validator: (input) {
                                 if (input.isEmpty) return 'Enter Topic';
                               },
@@ -185,6 +188,7 @@ class _UploadScreenState extends State<UploadScreen> {
                         ),
                         Container(
                             child: TextFormField(
+                                // ignore: missing_return
                                 validator: (input) {
                                   if (input.isEmpty)
                                     return 'Enter Teacher Name';

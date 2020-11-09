@@ -1,9 +1,21 @@
+import 'package:ERA/courses/Syllabus/Science10sy.dart';
+import 'package:ERA/courses/Syllabus/Science6sy.dart';
+import 'package:ERA/courses/Syllabus/Science7sy.dart';
+import 'package:ERA/courses/Syllabus/Science8sy.dart';
+import 'package:ERA/courses/Syllabus/Science9sy.dart';
+import 'package:ERA/courses/studyMaterial/science10SM.dart';
+import 'package:ERA/courses/studyMaterial/science6SM.dart';
+import 'package:ERA/courses/studyMaterial/science7SM.dart';
+import 'package:ERA/courses/studyMaterial/science8SM.dart';
 import 'package:flutter/material.dart';
+import 'package:ERA/models/users.dart';
 import 'package:ERA/footer.dart';
 import 'package:ERA/courses/studyMaterial/science9SM.dart';
 import 'package:ERA/bookNow.dart';
 
 class Science extends StatefulWidget {
+  final Users users;
+  Science({this.users});
   @override
   _ScienceState createState() => _ScienceState();
 }
@@ -49,7 +61,18 @@ class _ScienceState extends State<Science> {
                         color: Colors.grey[500]),
                   ),
                 ),
-                StudyMaterialScience(),
+                Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    ScienceSMButton(
+                      users: widget.users,
+                    ),
+                    ScienceSYButton(
+                      users: widget.users,
+                    ),
+                  ],
+                ),
                 BookNow(),
                 Padding(
                   padding: EdgeInsets.all(10),
@@ -123,17 +146,17 @@ class ScienceHeading extends StatelessWidget {
   }
 }
 
-class StudyMaterialScience extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return FlatButton(
-        onPressed: () {
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => Science9SM()));
-        },
-        child: Text('Study Material'));
-  }
-}
+// class StudyMaterialScience extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return FlatButton(
+//         onPressed: () {
+//           Navigator.push(
+//               context, MaterialPageRoute(builder: (context) => Science9SM()));
+//         },
+//         child: Text('Study Material'));
+//   }
+// }
 
 class ScienceTrainers extends StatefulWidget {
   @override
@@ -312,6 +335,114 @@ class _ScienceTrainersState extends State<ScienceTrainers> {
             ],
           )),
         ],
+      ),
+    );
+  }
+}
+
+class ScienceSMButton extends StatefulWidget {
+  final Users users;
+  ScienceSMButton({this.users});
+
+  @override
+  _ScienceSMButtonState createState() => _ScienceSMButtonState();
+}
+
+class _ScienceSMButtonState extends State<ScienceSMButton> {
+  _navigateScienceSM() {
+    print(widget.users.class_name);
+    if (widget.users.class_name == '6') {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => Science6SM()));
+    } else if (widget.users.class_name == '7') {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => Science7SM()));
+    } else if (widget.users.class_name == '8') {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => Science8SM()));
+    } else if (widget.users.class_name == '9') {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => Science9SM()));
+    } else {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => Science10SM()));
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: (MediaQuery.of(context).size.width / 2.3),
+      child: Padding(
+        padding: EdgeInsets.all(5),
+        child: RaisedButton(
+          color: Colors.amberAccent,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15.0),
+          ),
+          onPressed: _navigateScienceSM,
+          child: Text(
+            'Study Material',
+            style: TextStyle(
+                fontFamily: 'Merriweather',
+                color: Color(0xff03258C),
+                fontWeight: FontWeight.w400),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class ScienceSYButton extends StatefulWidget {
+  final Users users;
+  ScienceSYButton({this.users});
+
+  @override
+  _ScienceSYButtonState createState() => _ScienceSYButtonState();
+}
+
+class _ScienceSYButtonState extends State<ScienceSYButton> {
+  _navigateScienceSY() {
+    print(widget.users.class_name);
+    if (widget.users.class_name == '6') {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => Science6SY()));
+    } else if (widget.users.class_name == '7') {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => Science7SY()));
+    } else if (widget.users.class_name == '8') {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => Science8SY()));
+    } else if (widget.users.class_name == '9') {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => Science9SY()));
+    } else {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => Science10SY()));
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: (MediaQuery.of(context).size.width / 2.3),
+      child: Padding(
+        padding: EdgeInsets.all(5),
+        child: RaisedButton(
+          color: Colors.amberAccent,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15.0),
+          ),
+          onPressed: _navigateScienceSY,
+          child: Text(
+            'Syllabus',
+            style: TextStyle(
+                fontFamily: 'Merriweather',
+                color: Color(0xff03258C),
+                fontWeight: FontWeight.w400),
+          ),
+        ),
       ),
     );
   }

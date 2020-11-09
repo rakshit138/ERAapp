@@ -233,6 +233,7 @@ class _ASignUpState extends State<ASignUp> {
                       child: Container(
                         padding: EdgeInsets.fromLTRB(5, 10, 0, 0),
                         child: TextFormField(
+                            // ignore: missing_return
                             validator: (input) {
                               if (input.length < 6)
                                 return 'Provide Minimum 6 Character';
@@ -333,6 +334,7 @@ class _ASignUpState extends State<ASignUp> {
     );
   }
 
+  // ignore: unused_element
   _createAccount() async {
     final status = await FirebaseAuthHelper()
         .createAccount(email: _email, pass: _password);

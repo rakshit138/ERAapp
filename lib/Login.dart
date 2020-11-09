@@ -161,6 +161,7 @@ class _LoginState extends State<Login> {
                           padding: EdgeInsets.all(15),
                           child: Container(
                             child: TextFormField(
+                                // ignore: missing_return
                                 validator: (input) {
                                   if (input.length < 6)
                                     return 'Provide Minimum 6 Character';
@@ -247,6 +248,7 @@ class _LoginState extends State<Login> {
     );
   }
 
+  // ignore: unused_element
   _login() async {
     {
       final status =

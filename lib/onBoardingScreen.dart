@@ -21,7 +21,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
       child: Image.asset(
         'assets/images/$assetName.png',
         width: 350.0,
-        height: 300,
+        height: 250,
       ),
       alignment: Alignment.bottomCenter,
     );
@@ -30,7 +30,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
   @override
   Widget build(BuildContext context) {
     const bodyStyle = TextStyle(
-        fontSize: 19.0,
+        fontSize: 15.0,
         color: Color(0xff03258C),
         fontFamily: 'Merriweather',
         fontStyle: FontStyle.italic,
@@ -38,7 +38,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
     const pageDecoration = const PageDecoration(
       titleTextStyle: TextStyle(
           fontFamily: 'Merriweather',
-          fontSize: 28.0,
+          fontSize: 23.0,
           fontWeight: FontWeight.w700,
           color: Color(0xff03258C)),
       bodyTextStyle: bodyStyle,

@@ -48,6 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   void initState() {
+    // ignore: todo
     // TODO: implement initState
     super.initState();
     firebaseUser = _auth.currentUser;
@@ -225,8 +226,12 @@ class _HomeScreenState extends State<HomeScreen> {
                       style: TextStyle(fontSize: 15),
                     ),
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Science()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Science(
+                                    users: widget.users,
+                                  )));
                     },
                     dense: true,
                   ),
