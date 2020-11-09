@@ -209,8 +209,12 @@ class _HomeScreenState extends State<HomeScreen> {
                       style: TextStyle(fontSize: 15),
                     ),
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Maths()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Maths(
+                                    users: widget.users,
+                                  )));
                     },
                     dense: true,
                   ),

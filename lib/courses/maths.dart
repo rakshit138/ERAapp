@@ -10,6 +10,8 @@ import 'package:ERA/models/users.dart';
 import 'package:ERA/bookNow.dart';
 
 class Maths extends StatefulWidget {
+  final Users users;
+  Maths({this.users});
   @override
   _MathsState createState() => _MathsState();
 }
@@ -56,7 +58,9 @@ class _MathsState extends State<Maths> {
                   ),
                 ),
                 // StudyMaterialMaths(),
-                MathSMButton(),
+                MathSMButton(
+                  users: widget.users,
+                ),
                 BookNow(),
                 Padding(
                   padding: EdgeInsets.all(10),
@@ -300,6 +304,7 @@ class MathSMButton extends StatefulWidget {
 
 class _MathSMButtonState extends State<MathSMButton> {
   _navigateSM() {
+    print(widget.users.class_name);
     if (widget.users.class_name == '6') {
       Navigator.push(
           context, MaterialPageRoute(builder: (context) => Maths6SM()));
