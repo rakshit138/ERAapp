@@ -164,8 +164,50 @@ class _SignUpState extends State<SignUp> {
                         child: TextFormField(
                             // ignore: missing_return
                             validator: (input) {
-                              if (input.isEmpty)
-                                return 'Enter Class (6, 7, 8, 9, 10)';
+                              // if (input.isEmpty)
+                              //   return 'Enter Class (6, 7, 8, 9, 10)';
+                              // else if ((input == '1') ||
+                              //     (input == '2') ||
+                              //     (input == '3') ||
+                              //     (input == '4') ||
+                              //     (input != '7') ||
+                              //     (input != '8') ||
+                              //     (input != '9') ||
+                              //     (input != '10'))
+                              //   return 'Enter Class (6, 7, 8, 9, 10)';
+                              switch (input) {
+                                case '6':
+                                  {
+                                    input;
+                                  }
+                                  break;
+
+                                case '7':
+                                  {
+                                    input;
+                                  }
+                                  break;
+                                case '8':
+                                  {
+                                    input;
+                                  }
+                                  break;
+                                case '9':
+                                  {
+                                    input;
+                                  }
+                                  break;
+                                case '10':
+                                  {
+                                    input;
+                                  }
+                                  break;
+                                default:
+                                  {
+                                    return 'Enter Class (6, 7, 8, 9, 10)';
+                                  }
+                                  break;
+                              }
                             },
                             decoration: InputDecoration(
                               contentPadding: const EdgeInsets.all(10),

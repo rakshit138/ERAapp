@@ -200,7 +200,10 @@ class _ASignUpState extends State<ASignUp> {
                         child: TextFormField(
                             // ignore: missing_return
                             validator: (input) {
-                              if (input.isEmpty) return 'Enter Email';
+                              if (input.isEmpty)
+                                return 'Enter Email';
+                              else if (input.endsWith('@era.co.in') == false)
+                                return 'Enter Correct Email Format';
                             },
                             decoration: InputDecoration(
                                 contentPadding: const EdgeInsets.all(10),
