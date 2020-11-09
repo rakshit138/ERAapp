@@ -1,3 +1,4 @@
+import 'package:ERA/courses/Syllabus/AdminSY.dart';
 import 'package:ERA/courses/Syllabus/Science10sy.dart';
 import 'package:ERA/courses/Syllabus/Science6sy.dart';
 import 'package:ERA/courses/Syllabus/Science7sy.dart';
@@ -12,6 +13,7 @@ import 'package:ERA/models/users.dart';
 import 'package:ERA/footer.dart';
 import 'package:ERA/courses/studyMaterial/science9SM.dart';
 import 'package:ERA/bookNow.dart';
+import 'studyMaterial/AdminSM.dart';
 
 class Science extends StatefulWidget {
   final Users users;
@@ -363,9 +365,12 @@ class _ScienceSMButtonState extends State<ScienceSMButton> {
     } else if (widget.users.class_name == '9') {
       Navigator.push(
           context, MaterialPageRoute(builder: (context) => Science9SM()));
-    } else {
+    } else if (widget.users.class_name == '10') {
       Navigator.push(
           context, MaterialPageRoute(builder: (context) => Science10SM()));
+    } else {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => AdminScienceSM()));
     }
   }
 
@@ -417,9 +422,12 @@ class _ScienceSYButtonState extends State<ScienceSYButton> {
     } else if (widget.users.class_name == '9') {
       Navigator.push(
           context, MaterialPageRoute(builder: (context) => Science9SY()));
-    } else {
+    } else if (widget.users.class_name == '10') {
       Navigator.push(
           context, MaterialPageRoute(builder: (context) => Science10SY()));
+    } else {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => AdminScienceSY()));
     }
   }
 

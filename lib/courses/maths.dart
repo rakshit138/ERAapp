@@ -1,3 +1,4 @@
+import 'package:ERA/courses/Syllabus/AdminSY.dart';
 import 'package:ERA/courses/studyMaterial/maths6SM.dart';
 import 'package:ERA/courses/studyMaterial/maths7SM.dart';
 import 'package:ERA/courses/studyMaterial/maths8SM.dart';
@@ -12,6 +13,7 @@ import 'Syllabus/Maths7sy.dart';
 import 'Syllabus/Maths8sy.dart';
 import 'Syllabus/Maths9sy.dart';
 import 'Syllabus/Maths10sy.dart';
+import 'package:ERA/courses/studyMaterial/AdminSM.dart';
 
 class Maths extends StatefulWidget {
   final Users users;
@@ -328,9 +330,12 @@ class _MathSMButtonState extends State<MathSMButton> {
     } else if (widget.users.class_name == '9') {
       Navigator.push(
           context, MaterialPageRoute(builder: (context) => Maths9SM()));
-    } else {
+    } else if (widget.users.class_name == '10') {
       Navigator.push(
           context, MaterialPageRoute(builder: (context) => Maths10SM()));
+    } else {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => AdminMathSM()));
     }
   }
 
@@ -382,9 +387,12 @@ class _MathSYButtonState extends State<MathSYButton> {
     } else if (widget.users.class_name == '9') {
       Navigator.push(
           context, MaterialPageRoute(builder: (context) => Maths9SY()));
-    } else {
+    } else if (widget.users.class_name == '10') {
       Navigator.push(
           context, MaterialPageRoute(builder: (context) => Maths10SY()));
+    } else {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => AdminMathSY()));
     }
   }
 
