@@ -74,7 +74,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ' star(s) !');
                   if (stars != null && (stars == 4 || stars == 5)) {
                     //if the user stars is equal to 4 or five
-                    // you can redirect the use to playstore or                         appstore to enter their reviews
+                    // you can redirect the use to playstore or appstore to enter their reviews
                     OpenAppstore.launch(
                         androidAppId: "com.assitantera.strot&hl=en",
                         iOSAppId: "");
@@ -129,13 +129,13 @@ class _HomeScreenState extends State<HomeScreen> {
         resizeToAvoidBottomPadding: false,
         backgroundColor: Colors.white,
         appBar: AppBar(
-          iconTheme: new IconThemeData(color: Colors.amberAccent),
-          backgroundColor: Color(0xff03258C),
+          iconTheme: new IconThemeData(color: Color(0xff03258C)),
+          backgroundColor: Colors.amberAccent,
           title: Text(
             'ERA',
             style: TextStyle(
                 fontFamily: 'Merriweather',
-                color: Colors.amber,
+                color: Color(0xff03258C),
                 fontWeight: FontWeight.bold),
           ),
         ),
@@ -317,15 +317,15 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
                 dense: true,
               ),
-              // ListTile(
-              //   leading: Icon(Icons.live_tv),
-              //   title: Text(
-              //     'Live Classroom',
-              //     style: TextStyle(fontSize: 15),
-              //   ),
-              //   onTap: () {},
-              //   dense: true,
-              // ),
+              ListTile(
+                leading: Icon(Icons.live_tv),
+                title: Text(
+                  'Live Classroom',
+                  style: TextStyle(fontSize: 15),
+                ),
+                onTap: () {},
+                dense: true,
+              ),
               ListTile(
                 leading: Icon(Icons.keyboard_backspace),
                 title: Text(

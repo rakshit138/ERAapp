@@ -202,7 +202,7 @@ class _ASignUpState extends State<ASignUp> {
                             validator: (input) {
                               if (input.isEmpty)
                                 return 'Enter Email';
-                              else if (input.endsWith('@era.co.in') == false)
+                              else if (input.endsWith('@era-co.in') == false)
                                 return 'Enter Correct Email Format';
                             },
                             decoration: InputDecoration(

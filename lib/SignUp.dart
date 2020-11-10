@@ -178,27 +178,32 @@ class _SignUpState extends State<SignUp> {
                               switch (input) {
                                 case '6':
                                   {
+                                    // ignore: unnecessary_statements
                                     input;
                                   }
                                   break;
 
                                 case '7':
                                   {
+                                    // ignore: unnecessary_statements
                                     input;
                                   }
                                   break;
                                 case '8':
                                   {
+                                    // ignore: unnecessary_statements
                                     input;
                                   }
                                   break;
                                 case '9':
                                   {
+                                    // ignore: unnecessary_statements
                                     input;
                                   }
                                   break;
                                 case '10':
                                   {
+                                    // ignore: unnecessary_statements
                                     input;
                                   }
                                   break;
