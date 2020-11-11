@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ERA/footer.dart';
 import 'package:ERA/bookNow.dart';
+import 'Syllabus/CodingSY.dart';
 
 class Coding extends StatefulWidget {
   @override
@@ -46,6 +47,31 @@ class _CodingState extends State<Coding> {
                         fontSize: 25,
                         fontStyle: FontStyle.italic,
                         color: Colors.grey[500]),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(10),
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: RaisedButton(
+                      color: Colors.amberAccent,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => CodingSY()));
+                      },
+                      child: Text(
+                        'Syllabus',
+                        style: TextStyle(
+                            fontFamily: 'Merriweather',
+                            color: Color(0xff03258C),
+                            fontWeight: FontWeight.w400),
+                      ),
+                    ),
                   ),
                 ),
                 BookNow(),

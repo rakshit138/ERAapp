@@ -106,6 +106,13 @@ class _AdminMathSYState extends State<AdminMathSY> {
                   MaterialPageRoute(builder: (context) => Maths10SY()));
             },
           ),
+          Padding(
+            padding: EdgeInsets.fromLTRB(10, 30, 10, 10),
+            child: Image(
+              image: AssetImage('assets/images/LoginBG.png'),
+              height: 150,
+            ),
+          )
         ],
       )),
     ));
@@ -208,6 +215,13 @@ class _AdminScienceSYState extends State<AdminScienceSY> {
                   MaterialPageRoute(builder: (context) => Science10SY()));
             },
           ),
+          Padding(
+            padding: EdgeInsets.fromLTRB(10, 30, 10, 10),
+            child: Image(
+              image: AssetImage('assets/images/LoginBG.png'),
+              height: 150,
+            ),
+          )
         ],
       )),
     ));

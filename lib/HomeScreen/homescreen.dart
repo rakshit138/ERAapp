@@ -122,6 +122,15 @@ class _HomeScreenState extends State<HomeScreen> {
     }
   }
 
+  _launchURLLiveSession() async {
+    const url = 'https://era-co.in/student/eraLive';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -129,13 +138,13 @@ class _HomeScreenState extends State<HomeScreen> {
         resizeToAvoidBottomPadding: false,
         backgroundColor: Colors.white,
         appBar: AppBar(
-          iconTheme: new IconThemeData(color: Color(0xff03258C)),
-          backgroundColor: Colors.amberAccent,
+          iconTheme: new IconThemeData(color: Colors.amberAccent),
+          backgroundColor: Color(0xff03258C),
           title: Text(
             'ERA',
             style: TextStyle(
                 fontFamily: 'Merriweather',
-                color: Color(0xff03258C),
+                color: Colors.amberAccent,
                 fontWeight: FontWeight.bold),
           ),
         ),
@@ -323,7 +332,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   'Live Classroom',
                   style: TextStyle(fontSize: 15),
                 ),
-                onTap: () {},
+                onTap: _launchURLLiveSession,
                 dense: true,
               ),
               ListTile(

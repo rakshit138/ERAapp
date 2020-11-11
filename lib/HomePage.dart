@@ -108,86 +108,87 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.white,
         body: _loading
             ? Loading()
-            : Container(
-                child: !isloggedin
-                    ? Center(child: CircularProgressIndicator())
-                    : Column(
-                        children: <Widget>[
-                          SizedBox(height: 40.0),
-                          Container(
-                            height: 300,
-                            child: Image(
-                              image: AssetImage("assets/images/logopng.png"),
-                              fit: BoxFit.contain,
+            : SingleChildScrollView(
+                child: Container(
+                  child: !isloggedin
+                      ? Center(child: CircularProgressIndicator())
+                      : Column(
+                          children: <Widget>[
+                            Container(
+                              padding: EdgeInsets.only(top: 40),
+                              height: 200,
+                              child: Image(
+                                image: AssetImage("assets/images/logopng.png"),
+                                fit: BoxFit.contain,
+                              ),
                             ),
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
-                                  child: Column(
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsets.all(20),
-                                    child: Text(
-                                      'Welcome To ERA',
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                          color: Color(0xff03258C),
-                                          fontFamily: 'Merriweather',
-                                          fontSize: 24),
-                                    ),
-                                  ),
-                                  Text(
-                                    " you are Logged in as \n${user.email}",
+                            Container(
+                                child: Column(
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.all(20),
+                                  child: Text(
+                                    'Welcome To ERA',
+                                    textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      color: Colors.amber,
-                                      fontSize: 20.0,
-                                      fontWeight: FontWeight.w500,
-                                      fontFamily: 'Merriweather',
-                                    ),
-                                  )
-                                ],
-                              )),
-                            ],
-                          ),
-                          Spacer(),
-                          RaisedButton(
-                            padding: EdgeInsets.fromLTRB(70, 10, 70, 10),
-                            onPressed: () async {
-                              setState(() {
-                                _loading = true;
-                              });
-                              await getName();
-                              Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => HomeScreen(
-                                    users: users,
+                                        color: Color(0xff03258C),
+                                        fontFamily: 'Merriweather',
+                                        fontSize: 24),
                                   ),
                                 ),
-                              );
-                               setState(() {
-                                _loading = false;
-                              });
-                            },
-                            child: Text(
-                              'Continue',
-                              style: TextStyle(
-                                  color: Color(0xff03258C),
-                                  fontSize: 20.0,
-                                  fontWeight: FontWeight.bold),
+                                Text(
+                                  " you are Logged in as \n${user.email}",
+                                  style: TextStyle(
+                                    color: Colors.amber,
+                                    fontSize: 20.0,
+                                    fontWeight: FontWeight.w500,
+                                    fontFamily: 'Merriweather',
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(10, 20, 10, 20),
+                                  child: Image(
+                                    image:
+                                        AssetImage('assets/images/LoginBG.png'),
+                                    height: 130,
+                                  ),
+                                )
+                              ],
+                            )),
+                            RaisedButton(
+                              padding: EdgeInsets.fromLTRB(70, 10, 70, 10),
+                              onPressed: () async {
+                                setState(() {
+                                  _loading = true;
+                                });
+                                await getName();
+                                Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => HomeScreen(
+                                      users: users,
+                                    ),
+                                  ),
+                                );
+                                setState(() {
+                                  _loading = false;
+                                });
+                              },
+                              child: Text(
+                                'Continue',
+                                style: TextStyle(
+                                    color: Color(0xff03258C),
+                                    fontSize: 20.0,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              color: Colors.amber,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20.0),
+                              ),
                             ),
-                            color: Colors.amber,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20.0),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 20,
-                          ),
-                        ],
-                      ),
+                          ],
+                        ),
+                ),
               ),
       ),
     );

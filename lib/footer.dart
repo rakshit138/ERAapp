@@ -10,7 +10,7 @@ class Footer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: (MediaQuery.of(context).size.width),
-      height: 440,
+      height: 450,
       decoration: new BoxDecoration(color: Colors.grey[600]),
       child: SingleChildScrollView(
         child: Column(
@@ -52,7 +52,7 @@ class Footer extends StatelessWidget {
               padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
               child: Text(
                 'Strot Associate presents ERA to redefine Education for the overall development of a student. ERA is an online platform for online tutorial sessions, where students can meet up with their needs by using a real-time virtual learning/lessons and can master the basic concepts for clearer vision',
-                textAlign: TextAlign.center,
+                textAlign: TextAlign.justify,
                 style: TextStyle(
                   fontFamily: 'Merriweather',
                   color: Colors.white,
@@ -122,12 +122,12 @@ class Footer extends StatelessWidget {
             Align(
               alignment: Alignment.bottomCenter,
               child: Text(
-                'ERA \u00a9 2020 | Made in India',
+                'ERA-Assistant to Redefine Education\n \u00a9 2020 | Made in India',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     fontFamily: 'Merriweather',
                     color: Colors.white,
-                    fontSize: 18),
+                    fontSize: 14),
               ),
             )
           ],

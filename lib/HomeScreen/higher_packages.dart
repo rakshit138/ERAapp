@@ -11,7 +11,7 @@ class _HigheClassPackagesState extends State<HigheClassPackages> {
     return Container(
       child: column,
       margin: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
-      height: 400.0,
+      height: 300.0,
       width: (MediaQuery.of(context).size.width) / 1.15,
       decoration: new BoxDecoration(
         color: Colors.grey[200],
@@ -31,7 +31,7 @@ class _HigheClassPackagesState extends State<HigheClassPackages> {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 20.0),
-      height: 400.0,
+      height: 300.0,
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: [
@@ -39,7 +39,7 @@ class _HigheClassPackagesState extends State<HigheClassPackages> {
               column: Column(
             children: [
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
                 child: Text(
                   'One Subject/Year',
                   textAlign: TextAlign.center,
@@ -64,7 +64,7 @@ class _HigheClassPackagesState extends State<HigheClassPackages> {
               //   ),
               // ),
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
                 child: Text(
                   '154 Lectures',
                   textAlign: TextAlign.center,
@@ -89,7 +89,7 @@ class _HigheClassPackagesState extends State<HigheClassPackages> {
                 ),
               ),
               SizedBox(
-                height: 80,
+                height: 20,
               ),
               OneYear()
             ],
@@ -98,7 +98,7 @@ class _HigheClassPackagesState extends State<HigheClassPackages> {
               column: Column(
             children: [
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
                 child: Text(
                   'One Subject/6 Months',
                   textAlign: TextAlign.center,
@@ -123,7 +123,7 @@ class _HigheClassPackagesState extends State<HigheClassPackages> {
               //   ),
               // ),
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
                 child: Text(
                   '78 Lectures',
                   textAlign: TextAlign.center,
@@ -135,7 +135,7 @@ class _HigheClassPackagesState extends State<HigheClassPackages> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
                 child: Text(
                   '\u20B9 6499 /- only',
                   textAlign: TextAlign.center,
@@ -148,7 +148,7 @@ class _HigheClassPackagesState extends State<HigheClassPackages> {
                 ),
               ),
               SizedBox(
-                height: 30,
+                height: 20,
               ),
               SixMonths()
             ],
@@ -157,7 +157,7 @@ class _HigheClassPackagesState extends State<HigheClassPackages> {
               column: Column(
             children: [
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
                 child: Text(
                   'One Subject/3 Months',
                   textAlign: TextAlign.center,
@@ -182,7 +182,7 @@ class _HigheClassPackagesState extends State<HigheClassPackages> {
               //   ),
               // ),
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
                 child: Text(
                   '40 Lectures',
                   textAlign: TextAlign.center,
@@ -194,7 +194,7 @@ class _HigheClassPackagesState extends State<HigheClassPackages> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
                 child: Text(
                   '\u20B9 4599 /- only',
                   textAlign: TextAlign.center,
@@ -207,7 +207,7 @@ class _HigheClassPackagesState extends State<HigheClassPackages> {
                 ),
               ),
               SizedBox(
-                height: 80,
+                height: 20,
               ),
               ThreeMonths()
             ],
@@ -216,7 +216,7 @@ class _HigheClassPackagesState extends State<HigheClassPackages> {
               column: Column(
             children: [
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
                 child: Text(
                   'Yearly Combo Offer',
                   textAlign: TextAlign.center,
@@ -241,7 +241,7 @@ class _HigheClassPackagesState extends State<HigheClassPackages> {
               //   ),
               // ),
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
                 child: Text(
                   '310 Lectures',
                   textAlign: TextAlign.center,
@@ -253,7 +253,7 @@ class _HigheClassPackagesState extends State<HigheClassPackages> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
                 child: Text(
                   '\u20B9 22,999 /- only',
                   textAlign: TextAlign.center,
@@ -265,7 +265,7 @@ class _HigheClassPackagesState extends State<HigheClassPackages> {
                 ),
               ),
               SizedBox(
-                height: 80,
+                height: 20,
               ),
               YearlyCombo()
             ],
@@ -274,7 +274,7 @@ class _HigheClassPackagesState extends State<HigheClassPackages> {
               column: Column(
             children: [
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
                 child: Text(
                   'Half Yearly Combo Offer',
                   textAlign: TextAlign.center,
@@ -299,7 +299,7 @@ class _HigheClassPackagesState extends State<HigheClassPackages> {
               //   ),
               // ),
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
                 child: Text(
                   '156 Lectures',
                   textAlign: TextAlign.center,
@@ -311,7 +311,7 @@ class _HigheClassPackagesState extends State<HigheClassPackages> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
                 child: Text(
                   '\u20B9 12,999 /- only',
                   textAlign: TextAlign.center,
@@ -324,7 +324,7 @@ class _HigheClassPackagesState extends State<HigheClassPackages> {
                 ),
               ),
               SizedBox(
-                height: 30,
+                height: 20,
               ),
               HalfYearlyCombo()
             ],
@@ -333,7 +333,7 @@ class _HigheClassPackagesState extends State<HigheClassPackages> {
               column: Column(
             children: [
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
                 child: Text(
                   'Quaterly Combo Offer',
                   textAlign: TextAlign.center,
@@ -358,7 +358,7 @@ class _HigheClassPackagesState extends State<HigheClassPackages> {
               //   ),
               // ),
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
                 child: Text(
                   '80 Lectures',
                   textAlign: TextAlign.center,
@@ -370,7 +370,7 @@ class _HigheClassPackagesState extends State<HigheClassPackages> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
                 child: Text(
                   '\u20B9 7999 /- only',
                   textAlign: TextAlign.center,
@@ -382,7 +382,7 @@ class _HigheClassPackagesState extends State<HigheClassPackages> {
                 ),
               ),
               SizedBox(
-                height: 80,
+                height: 20,
               ),
               QuaterlyCombo()
             ],

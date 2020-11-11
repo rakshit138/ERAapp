@@ -13,7 +13,7 @@ class _PackagesState extends State<Packages> {
     return Container(
       child: column,
       margin: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
-      height: 400.0,
+      height: 300.0,
       width: (MediaQuery.of(context).size.width) / 1.15,
       decoration: new BoxDecoration(
         color: Colors.grey[200],
@@ -33,7 +33,7 @@ class _PackagesState extends State<Packages> {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 20.0),
-      height: 400.0,
+      height: 300.0,
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: [
@@ -41,7 +41,7 @@ class _PackagesState extends State<Packages> {
               column: Column(
             children: [
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
                 child: Text(
                   'One Subject/Year',
                   textAlign: TextAlign.center,
@@ -54,7 +54,7 @@ class _PackagesState extends State<Packages> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
                 child: Text(
                   '154 Lectures',
                   textAlign: TextAlign.center,
@@ -66,7 +66,7 @@ class _PackagesState extends State<Packages> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
                 child: Text(
                   '\u20B9 9999 /- only',
                   textAlign: TextAlign.center,
@@ -79,7 +79,7 @@ class _PackagesState extends State<Packages> {
                 ),
               ),
               SizedBox(
-                height: 80,
+                height: 20,
               ),
               OneYear()
             ],
@@ -88,7 +88,7 @@ class _PackagesState extends State<Packages> {
               column: Column(
             children: [
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
                 child: Text(
                   'One Subject/6 Months',
                   textAlign: TextAlign.center,
@@ -113,7 +113,7 @@ class _PackagesState extends State<Packages> {
               //   ),
               // ),
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
                 child: Text(
                   '78 Lectures',
                   textAlign: TextAlign.center,
@@ -125,7 +125,7 @@ class _PackagesState extends State<Packages> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
                 child: Text(
                   '\u20B9 5499 /- only',
                   textAlign: TextAlign.center,
@@ -138,7 +138,7 @@ class _PackagesState extends State<Packages> {
                 ),
               ),
               SizedBox(
-                height: 80,
+                height: 20,
               ),
               SixMonths()
             ],
@@ -147,7 +147,7 @@ class _PackagesState extends State<Packages> {
               column: Column(
             children: [
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
                 child: Text(
                   'One Subject/3 Months',
                   textAlign: TextAlign.center,
@@ -160,7 +160,7 @@ class _PackagesState extends State<Packages> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
                 child: Text(
                   '40 Lectures',
                   textAlign: TextAlign.center,
@@ -185,7 +185,7 @@ class _PackagesState extends State<Packages> {
                 ),
               ),
               SizedBox(
-                height: 80,
+                height: 20,
               ),
               ThreeMonths()
             ],
@@ -194,7 +194,7 @@ class _PackagesState extends State<Packages> {
               column: Column(
             children: [
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
                 child: Text(
                   'Yearly Combo Offer',
                   textAlign: TextAlign.center,
@@ -207,7 +207,7 @@ class _PackagesState extends State<Packages> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
                 child: Text(
                   '310 Lectures',
                   textAlign: TextAlign.center,
@@ -219,7 +219,7 @@ class _PackagesState extends State<Packages> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
                 child: Text(
                   '\u20B9 18,999 /- only',
                   textAlign: TextAlign.center,
@@ -231,7 +231,7 @@ class _PackagesState extends State<Packages> {
                 ),
               ),
               SizedBox(
-                height: 80,
+                height: 20,
               ),
               YearlyCombo()
             ],
@@ -240,7 +240,7 @@ class _PackagesState extends State<Packages> {
               column: Column(
             children: [
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
                 child: Text(
                   'Half Yearly Combo Offer',
                   textAlign: TextAlign.center,
@@ -253,7 +253,7 @@ class _PackagesState extends State<Packages> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
                 child: Text(
                   '156 Lectures',
                   textAlign: TextAlign.center,
@@ -265,7 +265,7 @@ class _PackagesState extends State<Packages> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
                 child: Text(
                   '\u20B9 11,999 /- only',
                   textAlign: TextAlign.center,
@@ -278,7 +278,7 @@ class _PackagesState extends State<Packages> {
                 ),
               ),
               SizedBox(
-                height: 80,
+                height: 20,
               ),
               HalfYearlyCombo(),
             ],
@@ -287,7 +287,7 @@ class _PackagesState extends State<Packages> {
               column: Column(
             children: [
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
                 child: Text(
                   'Quaterly Combo Offer',
                   textAlign: TextAlign.center,
@@ -300,7 +300,7 @@ class _PackagesState extends State<Packages> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
                 child: Text(
                   '80 Lectures',
                   textAlign: TextAlign.center,
@@ -312,7 +312,7 @@ class _PackagesState extends State<Packages> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
                 child: Text(
                   '\u20B9 6999 /- only',
                   textAlign: TextAlign.center,
@@ -325,7 +325,7 @@ class _PackagesState extends State<Packages> {
                 ),
               ),
               SizedBox(
-                height: 80,
+                height: 20,
               ),
               QuaterlyCombo()
             ],
