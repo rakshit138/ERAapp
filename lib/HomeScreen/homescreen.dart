@@ -1,3 +1,4 @@
+import 'package:ERA/ExitAppOption.dart';
 import 'package:ERA/Features/sst.dart';
 // import 'package:ERA/Login.dart';
 import 'package:ERA/Start.dart';
@@ -492,7 +493,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
 
                     Advisors(),
-                    Footer()
+                    Footer(),
+                    ExitApp(),
                   ],
                 ),
               ),
