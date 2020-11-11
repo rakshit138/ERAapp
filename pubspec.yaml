@@ -105,6 +105,7 @@ flutter:
     # - assets/images/LoginBG.png
     # - assets/images/Log-In.png
     # - assets/videos/Intro.mp4
+    - assets/images/headerBackground.jpg
     - assets/images/
     - assets/text/
 

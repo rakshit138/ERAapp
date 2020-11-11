@@ -75,7 +75,7 @@ class _ExitAppState extends State<ExitApp> {
   Widget build(BuildContext context) {
     return new WillPopScope(
       onWillPop: _onWillPop,
-      child: HomeScreen(),
+      child: Container(height: 0, child: Text('')),
     );
   }
 }

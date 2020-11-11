@@ -156,6 +156,10 @@ class _HomeScreenState extends State<HomeScreen> {
             padding: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 0.0),
             children: <Widget>[
               UserAccountsDrawerHeader(
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage('assets/images/headerBackground.jpg'),
+                        fit: BoxFit.cover)),
                 accountName: Text(
                   '${widget.users.name}',
                   style: TextStyle(

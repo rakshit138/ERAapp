@@ -16,7 +16,7 @@ class Footer extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+              padding: EdgeInsets.fromLTRB(10, 5, 10, 0),
               child: Text(
                 'ERA-Assistant to Redefine Education',
                 textAlign: TextAlign.center,
