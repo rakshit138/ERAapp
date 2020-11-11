@@ -1,4 +1,6 @@
 import 'package:ERA/Features/sst.dart';
+// import 'package:ERA/Login.dart';
+import 'package:ERA/Start.dart';
 import 'package:ERA/VideoLibrary/MyHomePage.dart';
 import 'package:ERA/models/users.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -343,6 +345,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 onTap: () {
                   _auth.signOut();
+                  Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(
+                      builder: (BuildContext context) => Start(),
+                    ),
+                    (route) => false,
+                  );
                 },
                 dense: true,
               ),
