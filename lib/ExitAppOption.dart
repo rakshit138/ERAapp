@@ -36,8 +36,6 @@
 // }
 
 import 'dart:async';
-
-import 'package:ERA/HomeScreen/homescreen.dart';
 import 'package:flutter/material.dart';
 
 class ExitApp extends StatefulWidget {
@@ -74,8 +72,10 @@ class _ExitAppState extends State<ExitApp> {
   @override
   Widget build(BuildContext context) {
     return new WillPopScope(
-      onWillPop: _onWillPop,
-      child: Container(height: 0, child: Text('')),
-    );
+        onWillPop: _onWillPop,
+        child: Container(
+          child: Text(''),
+          height: 0,
+        ));
   }
 }
