@@ -16,7 +16,7 @@ class _SstState extends State<Sst> {
         resizeToAvoidBottomPadding: false,
         backgroundColor: Colors.white,
         appBar: AppBar(
-          backgroundColor: Color(0xff03258C),
+          backgroundColor: Color.fromRGBO(0, 51, 100, 1),
           leading: IconButton(
             icon: Icon(
               Icons.arrow_back,
