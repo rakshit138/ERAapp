@@ -15,8 +15,28 @@ class Footer extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: [
+            Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Image(
+                    image: AssetImage('assets/images/logo png 3.png'),
+                    height: 80,
+                    width: 80,
+                  ),
+                  // Padding(
+                  //   padding: EdgeInsets.only(left: 20),
+                  //   child: Text(
+                  //     'ERA',
+                  //     style: TextStyle(
+                  //         fontSize: 35,
+                  //         color: Colors.amber,
+                  //         fontWeight: FontWeight.bold),
+                  //   ),
+                  // )
+                ]),
             Padding(
-              padding: EdgeInsets.fromLTRB(10, 5, 10, 0),
+              padding: EdgeInsets.fromLTRB(10, 5, 10, 10),
               child: Text(
                 'ERA-Assistant to Redefine Education',
                 textAlign: TextAlign.center,
@@ -28,26 +48,6 @@ class Footer extends StatelessWidget {
                 ),
               ),
             ),
-            Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Image(
-                    image: AssetImage('assets/images/logo png 3.png'),
-                    height: 80,
-                    width: 80,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: 20),
-                    child: Text(
-                      'ERA',
-                      style: TextStyle(
-                          fontSize: 35,
-                          color: Colors.amber,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  )
-                ]),
             Padding(
               padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
               child: Text(

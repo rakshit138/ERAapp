@@ -127,7 +127,7 @@ class _VideoPageState extends State<VideoPage> {
             ),
             onPressed: () => Navigator.pop(context),
           ),
-          backgroundColor: Color(0xff03258C),
+          backgroundColor: Color.fromRGBO(0, 51, 100, 1),
           title: Text(
             "ERA",
             style: TextStyle(color: Colors.amber),

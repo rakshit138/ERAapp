@@ -142,7 +142,7 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: Colors.white,
         appBar: AppBar(
           iconTheme: new IconThemeData(color: Colors.amberAccent),
-          backgroundColor: Color(0xff03258C),
+          backgroundColor: Color.fromRGBO(0, 51, 100, 1),
           title: Text(
             'ERA',
             style: TextStyle(
@@ -180,7 +180,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   backgroundColor:
                       Theme.of(context).platform == TargetPlatform.iOS
                           ? Colors.white
-                          : Color(0xff03258C),
+                          : Color.fromRGBO(0, 51, 100, 1),
                   child: Text(
                     widget.users.name
                         .substring(0, 2)

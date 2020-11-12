@@ -390,7 +390,7 @@ class _ScienceSMButtonState extends State<ScienceSMButton> {
             'Study Material',
             style: TextStyle(
                 fontFamily: 'Merriweather',
-                color: Color(0xff03258C),
+                color: Color.fromRGBO(0, 51, 100, 1),
                 fontWeight: FontWeight.w400),
           ),
         ),
